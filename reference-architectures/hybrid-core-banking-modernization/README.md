@@ -5,7 +5,7 @@
 * **Pattern**: Hybrid Cloud-Native, Async Ledger Synchronization, Microservices
 * **Core Artifacts**: 
   * 📊 [Download Architecture Slide Deck](./artifacts/core-banking-deck.pptx)
-  * 📐 [Open Editable Draw.io Diagram](./artifacts/core-banking-topology.drawio)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-banking-topology.png)
 
 ---
 
