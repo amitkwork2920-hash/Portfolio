@@ -14,6 +14,7 @@ Fragmented clinical data silos, legacy healthcare routing protocols (HL7 v2/PACS
 
 ## 🚀 Target State Architecture
 A highly available, secure, and fully serverless multi-tier data Lakehouse architecture connecting corporate on-premises networks and SaaS ecosystems seamlessly to AWS. It securely ingests clinical payloads globally via API endpoints and secure transfer interfaces, processes distributed analytical pipelines into standardized FHIR canonical structures, and hosts strictly isolated data zones (Raw, Curated, Analytics) protected by fine-grained governance controls and dynamic data-masking layers across resilient availability zones.
+
 ---
 
 ## 🛠️ Deep-Tech Stack Matrix
