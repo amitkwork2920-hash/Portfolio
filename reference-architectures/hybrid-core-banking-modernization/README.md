@@ -4,7 +4,7 @@
 * **Domain**: Core Banking Infrastructure / Financial Services
 * **Pattern**: Hybrid Cloud-Native, Async Ledger Synchronization, Microservices
 * **Core Artifacts**: 
-  * 📊 [Download Architecture Slide Deck](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Payment_Modernization.pdf)
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Payment_Modernization.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-banking-topology.png)
 
 ---
