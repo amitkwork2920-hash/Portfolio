@@ -1,23 +1,24 @@
-# Multi Region High Availability IaaS
+# Legacy AWS Mainframe Hybrid Architecture
 
 ## 📌 Overview
 
-* **Domain**: Multi Region High Availability
-* **Pattern**: Cloud-Native, Serverless Lakehouse Pattern, Attribute-Based Access Control (ABAC) \& Dynamic Data Masking, Event-Driven, Guardrail-Backed Ingestion, "Pilot Light" Cross-Region Disaster Recovery, Open-Standard Data Asset Portability
+* **Domain**: Legacy Hybrid Mainframe 
+* **Pattern**: PI Facade / Abstraction Pattern, Hybrid Cloud, Cache-Aside Pattern (Edge Offloading), Mainframe-as-Master, Static Routing with Active-Passive Fallback, 
+               Gateway Routing / Reverse Proxy, Defense-in-Depth / Perimeter Scrubbing, Distributed Tracing
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Azure_Reference_Architecture.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-azure-highly%20available-topology.png)
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_MainFrame_Hybrid.pdf)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-mainframe-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns.
+Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns. This hybrid architecture resolves these bottlenecks by securely bridging modern AWS digital applications with stable on-premises IBM z/OS mainframes. By enforcing edge scrubbing, network micro-segmentation, and local cloud caching, it completely neutralizes security threats and prevents costly mainframe MIPS processing spikes. Ultimately, this approach removes the high financial risks and operational downtime of a legacy "rip-and-replace" migration, enabling fast API-driven innovation while keeping core transactional systems intact.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through a centralized and firewalled Hub virtual network, and hosts strictly isolated, production-grade three-tier workloads across resilient availability zones.
+A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through micro-segmented VPC environments, and hosts strictly isolated, production-grade microservices and caching layers across resilient availability zones.
 
 \---
 
@@ -25,11 +26,14 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Azure Front Door` <br> `Azure Traffic Manager` <br> `Internet Gateway`<br> `DDoS Protection`|Manages global user traffic ingestion, provides intelligent cross-region load balancing with automated failover, and protects downstream networks from edge-level security and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Hub-and-Spoke VNets` <br> `Global VNet Peering`<br> `Azure Firewall (FW)` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `User-Defined Routes (UDR)` <br> `Network Security Groups (NSGs)` <br> `Application Security Groups (ASGs)` <br>|Establishes secure, multi-tier network segmentation and high-speed cross-region transport while enforcing strict, layered traffic isolation, custom routing controls, and micro-perimeter firewalls between services.|
-|**Hybrid Connectivity**|`Azure ExpressRoute` <br> `Azure Site-to-Site (S2S) VPN` <br> `Point-to-Site (P2S) VPN`|Provides dedicated, high-speed corporate private circuits backed by redundant encrypted tunnels to bridge on-premises data centers, office networks, and remote administrators securely to cloud infrastructure resources.|
-|**Compute \& Microservices**|`Azure Virtual Machines (VMs)` <br> `Azure Load Balancers (LBs)` <br> `Autoscale Engines` |Runs scalable, isolated application business workloads across distributed execution environments while optimizing resource consumption and evenly distributing incoming system demands.|
-|**Governance, Databases \& Analytics**|`Azure Management Groups` <br> `Subscription IDs` <br> `Azure SQL Database`<br> `Azure Cosmos DB` <br> `Azure Storage` <br> `Event Hubs` <br> `Log Analytics` <br> `Application Insights` <br> `Monitoring Solutions` <br> `Metrics Explorer` <br> `Ingest \\\& Export APIs` <br> `Power BI dashboards`|Enforces multi-subscription administrative boundaries, manages global persistence and low-latency database replication, and provides unified telemetry ingestion and visual analytics for proactive security monitoring and observability.|
+|**Ingress, Routing \& Edge**|`Amazon Route 53` <br> `Amazon CloudFront` <br> `AWS WAF`<br> `AWS Shield` <br> `Network Load Balancer (NLB)` | Manages global user traffic ingestion, provides intelligent content delivery with automated failover, and protects downstream networks from edge-level application exploits and volumetric DDoS threats.|
+|**Core Networking \& Isolation**|`Amazon VPC Subnets` <br> `VPC Endpoints`<br> `NAT Gateway` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `Security Groups `|Establishes secure, multi-tier network segmentation and high-speed internal transport while enforcing strict, layered traffic isolation and micro-perimeter security boundaries.|
+|**Hybrid Connectivity**|`AWS Direct Connect` <br> `AWS Site-to-Site VPN` <br> `Customer Gateway (CGW)`| Provides a dedicated, low-latency corporate private circuit backed by a redundant encrypted tunnel to bridge the cloud securely to the on-premises data center.|
+|**Integration \& Protocol Transformation**|`IBM z/OS Connect` <br> `Red Hat OpenShift` | Translates cloud-native JSON REST payloads into mainframe-readable binary formats (COBOL copybooks) to safely expose legacy assets without changing core code.|
+|**Compute \& Microservices**|`Amazon ECS` <br> `AWS Lambda` <br> `ECS Auto Scaling` | Runs scalable, containerized, and serverless digital banking business workloads across distributed execution environments while optimizing resource consumption.|
+|**Data \& Local Caching **|`Amazon ElastiCache (Redis)` <br> `Amazon RDS` <br> `Amazon S3` | Intercepts high-frequency queries at the cloud edge to offload processing demands, manages local cloud state data, and handles lifecycle log archiving.|
+|**On-Premise Core Systems **|`IBM z/OS Mainframe` <br> `CICS TS / IMS TM` <br> `BM Db2 / IMS DB` <br> `VSAM` | Acts as the ultimate multi-system transactional source of truth (SSOT), executing core transaction processing groups and enforcing strict ACID compliance.|
+|**Governance, Security \& Observability **|`Amazon Cognito` <br> `AWS Secrets Manager` <br> `IBM RACF` <br> `OpenTelemetry (OTel)` <br> `AWS CloudTrail` <br> `Amazon CloudWatch` <br> `IBM SMF Logs` | Enforces short-lived identity management, handles automated secret rotations, maps cloud tokens to mainframe permissions, and bridges cross-platform telemetry logs.|
 
 \---
 
