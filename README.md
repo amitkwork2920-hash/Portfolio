@@ -1,1 +1,2 @@
-"# My Strategic R&D Portfolio" 
+"# My Strategic R\&D Portfolio"
+
