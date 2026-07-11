@@ -35,11 +35,13 @@ A highly available, serverless multi-tier architecture connecting digital user f
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Azure Front Door` `Azure WAF` and `Azure Firewall` Premium with IDPS to block OWASP Top 10 vectors and lateral threats.
-* **Network Isolation**: Analytical computing engines and processing layers are tightly isolated within private VPC networks with zero direct internet access, moving data exclusively via `private Endpoints`.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Network Security Groups (NSGs) and Application Security Groups (ASGs), allowing no direct public ingress to application or database tiers. 
-* **Data Protection**: Data protection is mandated globally via Azure Key Vault, forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage.
-* **Automated Compliance Auditing**: Regulatory compliance is maintained through Azure Policy blueprints assigned across subscription IDs to enforce continuous auditing, data residency pinning, and immutable backup policies.
+* **Edge Security**: Centralized perimeter defense is enforced at the edge using Amazon CloudFront and AWS WAF to block OWASP Top 10 vectors, filter prompt injection attacks, and mitigate edge-level volumetric DDoS threats.
+* **Network Isolation**: Analytical computing engines, processing layers, and vector databases are tightly isolated within private VPC subnets with zero direct internet access, moving data exclusively via VPC Gateway & Interface Endpoints.
+* **Hybrid Data Transit**: Workloads are strictly isolated across serverless microservices and data lake tiers via granular Security Groups and Network Access Control Lists (NACLs), allowing no direct public ingress to internal application or database layers. 
+* **Data Protection**: Data protection is mandated globally via AWS KMS Customer Managed Keys (CMKs), forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage and models.
+* **Automated Compliance Auditing**: Model responses are programmatically evaluated using Amazon Bedrock Guardrails and Ragas frameworks, enforcing strict PII masking, toxic output filtering, and hallucination containment before payloads reach the presentation layer.
+* **Gen AI Guardrails & Safety**: Regulatory compliance is maintained through AWS Config, AWS Audit Manager, and AWS CloudTrail to enforce continuous auditing, automated PII identification via Amazon Macie, and immutable backup policies.
+
 
 \---
 
@@ -47,17 +49,21 @@ A highly available, serverless multi-tier architecture connecting digital user f
 
 ### Performance \& Availability
 
-* **Latency**: Achieves sub-5 second ad-hoc query speeds via `Amazon Athena`, sub-2 second dashboard responses via `Amazon QuickSight` SPICE, and sub-200 ms execution rates on
-external partner B2B API gateway calls.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records from legacy edge EHR ecosystems into the curated data lake within a strict 15-minute operational window.
-* **Resilience**: Multi-AZ data tier replication guarantees 99.99% high availability for core endpoints, backed by a multi-region disaster recovery standby configuration maintaining
-an RPO of < 15 minutes and an RTO of < 2 hours.
+* **Latency**: Achieves sub-5 second ad-hoc query speeds via Amazon Athena, sub-800 ms Time to First Token (TTFT) via Amazon Bedrock streaming inference, and sub-100 ms execution rates on transactional Amazon API Gateway calls.
+* **Data Sync Ingestion**: Synchronizes and processes live streaming and batch transactional records from source systems into the curated data lake within a strict 1-minute operational sync window.
+* **Resilience**: Multi-AZ data tier replication guarantees 99.99% high availability for core endpoints, backed by automated restore points maintaining a disaster recovery RPO of < 15 minutes and an RTO of < 1 hour.
+* **FinOps Optimization**: Slashes foundational model token fees by 30% to 50% using semantic caching layers and lifecycle-archives raw S3 storage to deliver a 40% to 60% reduction in overall data pipeline operating expenses.
+Intercepts up to 40% of repeated LLM inquiries via a specialized semantic caching layer and lifecycle-archives raw S3 storage to deliver a 40% to 60% reduction in overall 
+system operating expenses
+* **GenAI Context & Quality**: Sustains a minimum RAG context recall score of 0.85 and faithfulness rating above 0.90 via automated evaluation pipelines, while maintaining a 100% block rate for malicious prompt injections and toxic outputs.
+
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours using serverless, scale-to-zero configurations inside `AWS Glue ETL` Spark workers and `Amazon Redshift` Serverless endpoints.
-* **Storage Optimization**: Automates data lifecycle transitions using S3 Lifecycle Policies, shifting heavy clinical assets (like legacy DICOM/PACS medical imagery) into compressed `Apache Parquet` format and deep `Amazon S3 Glacier` Flexible Retrieval storage tiers.
-* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and analytical compute overhead by 40% to 60% compared to traditional, over-provisioned on-premise data warehouses.
+* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours using serverless, scale-to-zero configurations inside AWS Lambda functions, AWS Glue ETL Spark workers, and Amazon Redshift Serverless endpoints.
+* **Storage Optimization**: Automates data lifecycle transitions using S3 Lifecycle Policies, shifting raw and curated ingestion streams into compressed Apache Parquet formats and deep Amazon S3 Glacier Deep Archive storage tiers..
+* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and analytical compute overhead by 30% to 60% compared to traditional, over-provisioned provisioning strategies and uncapped foundational model endpoint deployments.
+* **Gen AI Token Management**: Minimizes LLM model invocation overhead by routing low-complexity prompts to lighter model tiers and deploying a contextual Semantic Cache layer to intercept and fulfill repeated queries without token spend.
 
 \---
 
