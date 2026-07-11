@@ -1,11 +1,11 @@
-# Banking and Capital Markets GenAI Architecture
+# Banking and Capital Markets BI GenAI Architecture
 
 ## 📌 Overview
 
-* **Domain**: Banking and Capital Markets GenAI
+* **Domain**: Banking and Capital Markets BI GenAI
 * **Pattern**: Retrieval-Augmented Generation (RAG), Modern Data Architecture (Lakehouse), Event-Driven Lambda Architecture (Kappa/Lambda Hybrid), Serverless Microservices, Edge-to-Core Security & Zero-Trust, Semantic Cache & Model Routing Pattern
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Banking_GenAI.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-banking-capitalmarkets-genai-topology.png)
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Banking_BI_GenAI.pdf)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-banking-capitalmarkets-bi-genai-topology.png)
 
 \---
 
