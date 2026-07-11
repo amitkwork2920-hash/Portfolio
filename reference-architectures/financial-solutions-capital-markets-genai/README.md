@@ -52,7 +52,7 @@ A highly available, serverless multi-tier architecture connecting digital user f
 * **Latency**: Achieves sub-5 second ad-hoc query speeds via Amazon Athena, sub-800 ms Time to First Token (TTFT) via Amazon Bedrock streaming inference, and sub-100 ms execution rates on transactional Amazon API Gateway calls.
 * **Data Sync Ingestion**: Synchronizes and processes live streaming and batch transactional records from source systems into the curated data lake within a strict 1-minute operational sync window.
 * **Resilience**: Multi-AZ data tier replication guarantees 99.99% high availability for core endpoints, backed by automated restore points maintaining a disaster recovery RPO of < 15 minutes and an RTO of < 1 hour.
-* **FinOps Optimization**: Slashes foundational model token fees by 30% to 50% using semantic caching layers and lifecycle-archives raw S3 storage to deliver a 40% to 60% reduction in overall data pipeline operating expenses.
+* **FinOps Optimization**: 
 Intercepts up to 40% of repeated LLM inquiries via a specialized semantic caching layer and lifecycle-archives raw S3 storage to deliver a 40% to 60% reduction in overall 
 system operating expenses
 * **GenAI Context & Quality**: Sustains a minimum RAG context recall score of 0.85 and faithfulness rating above 0.90 via automated evaluation pipelines, while maintaining a 100% block rate for malicious prompt injections and toxic outputs.
