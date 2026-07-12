@@ -6,7 +6,7 @@
 * **Pattern**: Retrieval-Augmented Generation (RAG), LLM Cascading and Routing, Semantic Caching,Event-Driven Asynchronous Ingestion, Token Streaming & Persistent Connections, 
                Zero Trust Network Architecture & Perimeter Defense, Intercepting Filter / Structural Prompt Guardrails
   * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Conversational_Platform_GenAI.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-conversational platform-genai-topology.png)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-conversational-platform-genai-topology.png)
 
 \---
 
