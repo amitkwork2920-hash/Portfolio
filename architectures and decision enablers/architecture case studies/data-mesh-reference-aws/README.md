@@ -64,11 +64,11 @@ A highly available, serverless multi-tier architecture connecting digital user f
 
 *   **Cost Allocation & Tagging:** Enforces strict, automated tagging policies (e.g., CostCenter, DataDomain, DataProduct) across all S3 buckets, Athena workgroups, and EMR clusters.
 *   **Storage Lifecycle Pricing:** Automates transition rules from S3 Standard to S3 Intelligent-Tiering, Glacier Instant Retrieval, or Deep Archive based on object age and access frequency.
-*   *Compute Query Control:** Allocates dedicated Athena Workgroups per consumer team and configures hard caps on the maximum volume of data scanned per query or per day.
+*   **Compute Query Control:** Allocates dedicated Athena Workgroups per consumer team and configures hard caps on the maximum volume of data scanned per query or per day.
 *   **Warehouse Elasticity:** Implements serverless data warehousing that automatically scales up to handle peak reporting windows and shuts down during idle hours.
 *   **Big Data Optimization:** Automatically provisions Spark/Hive compute instances based on active pipeline queue depth and leverages AWS Graviton-based EC2 instances.
 *   **Metadata Cost Control:** Deploys partition indexes on massive tables to speed up catalog lookups and prevents long crawler runtimes by fine-tuning execution window limits.
-*   *Anomaly Detection & Alerting:**  AWS Cost Anomaly DetectionUtilizes machine learning to establish historical spend baselines and fires immediate alerts via Amazon SNS/Slack if anomalous cost spikes occur.
+*   **Anomaly Detection & Alerting:**  AWS Cost Anomaly DetectionUtilizes machine learning to establish historical spend baselines and fires immediate alerts via Amazon SNS/Slack if anomalous cost spikes occur.
 
 
 \---
