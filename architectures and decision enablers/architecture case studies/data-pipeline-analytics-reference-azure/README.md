@@ -64,7 +64,7 @@ Enforce mandatory TLS 1.3 encryption for all data moving between the on-premises
 *   **Cosmos DB Request Unit (RU) Throttling Rate:** The percentage of database requests blocked or rate-limited due to exceeding provisioned autoscale limits.
 *   **System Uptime (Availability SLA):** Total monthly uptime percentage of the core portal components, targeting a standard enterprise baseline of 99.99% ("four nines").
 *   **Time to First Byte (TTFB):** Time required for the end-user’s browser to receive the first byte of data from the CDN/Edge network.
-*   **API Error Rate (HTTP 5xx): ** Total volume of server-side application errors generated during live user interaction with the portal.
+*   **API Error Rate (HTTP 5xx):** Total volume of server-side application errors generated during live user interaction with the portal.
 
 
 ### FinOps Framework
