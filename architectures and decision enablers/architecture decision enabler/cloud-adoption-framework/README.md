@@ -7,11 +7,6 @@ A structured, automated Excel-based planning calculator built to accelerate your
 * **Cloud Adoption Assessment:** Evaluates current infrastructure and organizational alignment.
 * **Cloud Adoption Blueprint:**  Investigates current organization adoption state from below states 
 
-* 📊 [Download Enabler](CAF_Adoption_Calculator.xlsx)
-* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
-* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
-* 📐 [Dashboards Snapshot](./images/Dashboards.png)
-
 
 |Adoption State|Business Explanation|
 |-|-|
@@ -35,8 +30,10 @@ A structured, automated Excel-based planning calculator built to accelerate your
 
 ## 📁 Repository Structure
 
-* `CAF_Adoption_Calculator.xlsx` — The primary interactive workbook.
-* `README.md` — Project documentation and setup instructions.
+* 📊 [Download Enabler](CAF_Adoption_Calculator.xlsx)
+* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
+* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
+* 📐 [Dashboards Snapshot](./images/Dashboards.png)
 
 ## 🛠️ Getting Started
 

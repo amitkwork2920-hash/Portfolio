@@ -7,11 +7,6 @@ A structured, automated Excel-based planning calculator built to accelerate your
 * **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment.
 * **Cloud Readiness Blueprint:**  Investigates current organization adoption state from below states 
 
-* 📊 [Download Enabler](CRA_Calculator.xlsx)
-* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
-* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
-* 📐 [Dashboards Snapshot](./images/Dashboards.png)
-
 
 |Strategy |Business Explanation|
 |-|-|
@@ -26,8 +21,10 @@ A structured, automated Excel-based planning calculator built to accelerate your
 
 ## 📁 Repository Structure
 
-* `(CRA_Calculator.xlsx` — The primary interactive workbook.
-* `README.md` — Project documentation and setup instructions.
+* 📊 [Download Enabler](CRA_Calculator.xlsx)
+* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
+* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
+* 📐 [Dashboards Snapshot](./images/Dashboards.png)
 
 ## 🛠️ Getting Started
 

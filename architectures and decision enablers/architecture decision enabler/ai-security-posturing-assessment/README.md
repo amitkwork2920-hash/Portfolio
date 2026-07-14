@@ -4,16 +4,10 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 🚀 Key Features
 
-* **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment.
-* **Cloud Readiness Blueprint:**  Investigates current organization adoption state from below states 
+* **AI Security Posturing Assessment:** Evaluates current security practices and organizational alignment.
+* **AI Security Posturing Blueprint:**  Investigates current organization posturing state from below states 
 
-* 📊 [Download Enabler](AI_Security_Assessment_Calculator.xlsx)
-* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
-* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
-* 📐 [Dashboards Snapshot](./images/Dashboards.png)
-
-
-|Strategy |Business Explanation|
+|Current State |Business Explanation|
 |-|-|
 |**Optimized AI Security State:**| The organization has a low risk exposure with mature, proactive AI security controls, continuous monitoring, and strict governance frameworks. |
 |**Resilient AI Security State:**| Core security controls are active, allowing the organization to defend against common AI vulnerabilities and recover quickly from minor incidents. | 
@@ -23,8 +17,11 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 📁 Repository Structure
 
-* `AI_Security.Posturing.xlsx` — The primary interactive workbook.
-* `README.md` — Project documentation and setup instructions.
+* 📊 [Download Enabler](AI_Security_Assessment_Calculator.xlsx)
+* 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
+* 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
+* 📐 [Dashboards Snapshot](./images/Dashboards.png)
+
 
 ## 🛠️ Getting Started
 
