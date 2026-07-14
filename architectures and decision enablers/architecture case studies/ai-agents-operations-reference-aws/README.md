@@ -1,24 +1,24 @@
-# Legacy AWS Mainframe Hybrid Architecture
+# Agentic AI operational foundation architecture on AWS
 
 ## 📌 Overview
 
-* **Domain**: Legacy Hybrid Mainframe 
-* **Pattern**: PI Facade / Abstraction Pattern, Hybrid Cloud, Cache-Aside Pattern (Edge Offloading), Mainframe-as-Master, Static Routing with Active-Passive Fallback, 
-               Gateway Routing / Reverse Proxy, Defense-in-Depth / Perimeter Scrubbing, Distributed Tracing
+* **Domain**: Agentic AI AWS
+* **Pattern**:  Centralized LLM Gateway, Orchestrator-Workers (State Machine) , Decoupled Agent Primitives (Microservices), Hybrid Retrieval-Augmented Generation (RAG), 
+                Dual-Layer Observability, Ingress/Egress Guardrail
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_MainFrame_Hybrid.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-mainframe-topology.png)
+  * 📊 [Download Case Study](@Todo)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-ai-agents-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns. This hybrid architecture resolves these bottlenecks by securely bridging modern AWS digital applications with stable on-premises IBM z/OS mainframes. By enforcing edge scrubbing, network micro-segmentation, and local cloud caching, it completely neutralizes security threats and prevents costly mainframe MIPS processing spikes. Ultimately, this approach removes the high financial risks and operational downtime of a legacy "rip-and-replace" migration, enabling fast API-driven innovation while keeping core transactional systems intact.
+Fragmented AI engineering frameworks and shadow LLM integrations introduce significant latency, security gaps, and operational overhead during complex agentic reasoning tasks. Siloed agent designs lack centralized governance, uniform compliance monitoring, and standardized prompt filtering, threatening data privacy, risking intellectual property leaks, and causing unpredictable API token cost overruns.This production-grade architecture resolves these bottlenecks by securely bridging modern user-facing applications with fully governed Amazon Bedrock foundation models and enterprise data systems. By enforcing real-time input/output guardrails, decoupled agent core microservices (Identity, Memory, and Gateway), and deep dual-layer observability, it completely neutralizes security threats and prevents costly infinite reasoning loops.Ultimately, this approach removes the high financial risks and operational chaos of unmanaged generative AI experimentation, enabling fast, compliant agentic innovation while keeping enterprise compliance and backend infrastructure entirely secure.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through micro-segmented VPC environments, and hosts strictly isolated, production-grade microservices and caching layers across resilient availability zones.
+A highly resilient, secure, and production-ready agentic AI architecture built on the AWS Cloud. It securely ingests user traffic through an intelligent identity-aware frontend, coordinates multi-turn autonomous workflows via stateful orchestrators, and routes all foundation model requests through a centralized, policy-enforced generative AI gateway. Key enterprise primitives—identity context, session memory, and external tool execution—are managed as strictly isolated microservices, while real-time guardrails and dual-layer observability frameworks guarantee continuous data privacy, cost governance, and system-wide compliance across resilient availability zones.
 
 \---
 
@@ -26,24 +26,24 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Amazon Route 53` <br> `Amazon CloudFront` <br> `AWS WAF`<br> `AWS Shield` <br> `Network Load Balancer (NLB)` | Manages global user traffic ingestion, provides intelligent content delivery with automated failover, and protects downstream networks from edge-level application exploits and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Amazon VPC Subnets` <br> `VPC Endpoints`<br> `NAT Gateway` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `Security Groups `|Establishes secure, multi-tier network segmentation and high-speed internal transport while enforcing strict, layered traffic isolation and micro-perimeter security boundaries.|
-|**Hybrid Connectivity**|`AWS Direct Connect` <br> `AWS Site-to-Site VPN` <br> `Customer Gateway (CGW)`| Provides a dedicated, low-latency corporate private circuit backed by a redundant encrypted tunnel to bridge the cloud securely to the on-premises data center.|
-|**Integration \& Protocol Transformation**|`IBM z/OS Connect` <br> `Red Hat OpenShift` | Translates cloud-native JSON REST payloads into mainframe-readable binary formats (COBOL copybooks) to safely expose legacy assets without changing core code.|
-|**Compute \& Microservices**|`Amazon ECS` <br> `AWS Lambda` <br> `ECS Auto Scaling` | Runs scalable, containerized, and serverless digital banking business workloads across distributed execution environments while optimizing resource consumption.|
-|**Data \& Local Caching**|`Amazon ElastiCache (Redis)` <br> `Amazon RDS` <br> `Amazon S3` | Intercepts high-frequency queries at the cloud edge to offload processing demands, manages local cloud state data, and handles lifecycle log archiving.|
-|**On-Premise Core Systems**|`IBM z/OS Mainframe` <br> `CICS TS / IMS TM` <br> `BM Db2 / IMS DB` <br> `VSAM` | Acts as the ultimate multi-system transactional source of truth (SSOT), executing core transaction processing groups and enforcing strict ACID compliance.|
-|**Governance, Security \& Observability**|`Amazon Cognito` <br> `AWS Secrets Manager` <br> `IBM RACF` <br> `OpenTelemetry (OTel)` <br> `AWS CloudTrail` <br> `Amazon CloudWatch` <br> `IBM SMF Logs` | Enforces short-lived identity management, handles automated secret rotations, maps cloud tokens to mainframe permissions, and bridges cross-platform telemetry logs.|
+|**Ingress \& Ingress**|`Amazon Cognito  Frontend Application` | Authenticates users, issues secure tokens, and controls initial access to the agentic workflow.|
+|**Orchestration \& Framework**|`LangGraph`| Manages stateful, multi-turn agent logic, workflow branching, and deterministic execution loops.|
+|**Agent Governance (AgentCore)**|`AgentCore Identity` <br> `AgentCore Memory` <br> `AgentCore Gateway`| Handles runtime permission scoping, maintains conversation history persistence, and intercepts tool executions.|
+|**Multi-Provider LLM Gateway**|`LiteLLM` | Provides a unified, proxy API layer for routing, cost tracking, prompt caching, and fallback management across models.|
+|**Models \& Guardrails**|`Amazon Bedrock` <br> `Foundation Models` <br> `Amazon Bedrock GuardRails` | Executes the core reasoning/generation tasks while enforcing real-time content filtering and PII masking safety policies.|
+|**Knowledge \& Data Retrieval**|`Amazon Bedrock Knowledge Bases` <br> `Amazon OpenSearch` <br> `Vector DB` <br> `Amazon S3` | Powers Retrieval-Augmented Generation (RAG) by converting unstructured documents into searchable vectors for context injection.|
+|**External Integrations \& Actions**|`Zendesk API` <br> `Web Search API` <br> `Create Ticket API` | Executes downstream business transactions and fetches real-time external data to fulfill user intents.|
+|**Observability \& Telemetry**|`Langfuse` <br> `Amazon CloudWatch` <br> `AgentCore Observability` | Delivers dual-layer tracking by combining deep LLM application tracing (prompts, scores, tokens) with infrastructure metrics.|
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Amazon CloudFront`, `AWS WAF`, and `AWS Shield` to aggressively scrub malicious Layer 3/4/7 vectors, mitigate high-volume DDoS threats, and drop unvalidated traffic at the cloud boundary.
-* **Network Isolation**: Analytical containerized microservices and integration runtimes are tightly isolated within private `VPC subnets` with zero direct internet access, routing data exclusively via secure `VPC Endpoints` to shield backend infrastructure.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Security Groups and `Network Access Control Lists (NACLs)`, ensuring no direct public ingress to application tiers, while cloud-to-ground traffic is wrapped in dual-layer encryption via `AWS Direct Connect` over an `IPsec VPN tunnel`. 
-* **Data Protection**: Data protection is mandated globally via `AWS KMS (Customer Managed Keys)` and hardware-enforced `IBM Crypto Express adapters`, enforcing automated key rotations, mandatory `TLS 1.3` for data-in-transit, and `AES-256` encryption-at-rest across all storage structures (`Amazon RDS`, `Amazon S3`, and on-premises `IBM Db2`).
-* **Automated Compliance Auditing**: Regulatory financial compliance (`PCI-DSS` / `SOC 2`) is continuously maintained by streaming `AWS CloudTrail` and on-premises `IBM System Management Facilities (SMF)` logs to an immutable storage engine, while `Amazon Cognito` user tokens are dynamically mapped to native `IBM RACF` profiles to guarantee non-repudiation and strict least-privilege governance.
+* **Edge Security & Safety**: Centralized input and output safety is enforced during user interaction via `Amazon Bedrock Guardrails` to aggressively block malicious injection attacks, mask Personally Identifiable Information (PII), and drop toxic or off-topic prompts before they reach downstream foundation models.
+* **Network Isolation & Secure Egress**: Core agent orchestrators and LLM gateway instances are isolated within private `VPC subnets` with zero direct public egress, routing sensitive data exclusively via secure `VPC Endpoints` to internal AWS services like Bedrock and OpenSearch.
+* **Identity & Tool Access Governance:**: Fine-grained runtime authorization is continuously maintained by `AgentCore Identity` and `AgentCore Gateway`, verifying user-specific scopes and intercepting tool-level executions (such as the Web Search API) to prevent unauthorized lateral data movement.
+* **Data Protection & Secure Storage**: Data protection is mandated across the knowledge lifecycle using `AWS KMS` and automated key rotations, enforcing mandatory `TLS 1.3` encryption-at-rest and in-transit across all chat histories in `AgentCore Memory`, vectors in `Amazon OpenSearch`, and document lakes in `Amazon S3`.
+* **Dual-Layer Compliance Auditing**: Regulatory and AI governance alignment (such as EU AI Act or SOC 2 frameworks) is continuously verified by combining `Amazon CloudWatch` for platform-level infrastructure logs with `Langfuse` to capture immutable traces of prompts, token costs, model versions, and agent reasoning steps..
 
 \---
 
@@ -51,15 +51,24 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves single-digit millisecond read speeds (<15ms) via local `Amazon ElastiCache` nodes and keeps hybrid mainframe execution rates for transactional writes under sub-150ms over dedicated `AWS Direct Connect` lines.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records, completing asynchronous cloud cache invalidation within a strict 2-second window and maintaining `mainframe DR` storage replication lag under 10 seconds.
-* **Resilience**: `Multi-AZ` container and database replication guarantees 99.99% high availability for core cloud endpoints, backed by an active-passive on-premises disaster recovery standby configuration maintaining an RPO of near-zero and an RTO of < 4 hours.
+* **Latency**: Achieves fast initial time-to-first-token (TTFT) by routing requests through optimized `LiteLLM` prompt caches and maintains an end-to-end agentic workflow execution loop under 1.5 seconds via stateful `LangGraph` parallel node execution.
+* **Data Sync Ingestion**: Synchronizes and processes live enterprise context updates, completing asynchronous index updates inside the `Amazon OpenSearch` `Vector DB` within a strict 5-second window from the time documents hit `Amazon S3`.
+* **Resilience**: `Multi-AZ` deployment of the `LiteLLM` gateway, `LangGraph` orchestrators, and OpenSearch clusters guarantees 99.99% high availability for core AI endpoints, backed by native stateless container failover patterns that preserve long-term session state inside resilient `AgentCore Memory`.
+* **Context Precision & Recall**: Achieves a RAG retrieval accuracy score of >85% (using Ragas/Langfuse evaluation metrics), ensuring irrelevant context is filtered out and context chunking matches user queries perfectly.
+* **Agent Task Completion Rate**: Maintains a successful multi-turn tool execution and task resolution rate of >92% on initial contact, keeping agent confusion or unhandled exceptions under 8%.
+* **Guardrail False Positive Rate**: Restricts safe-prompt blockage to <1% via fine-tuned `Amazon Bedrock Guardrails`, ensuring legitimate user prompts pass smoothly without disrupting the user experience.
+* **Tool Execution Latency**: Keeps third-party API processing times (e.g., Zendesk ticket creation) under 400ms per call by implementing strict timeout policies and asynchronous webhooks within the `AgentCore Gateway`.
+* **Token Cache Hit Ratio**: Realises a >30% semantic cache efficiency rate on the `LiteLLM Proxy` for repetitive system prompts and common FAQs, directly cutting down model processing times and infrastructure costs.
+* **Loop Circuit Breaker Triggers**: Tracks and forces immediate shutdown on 100% of runaway loops that exceed a hard limit of 8 iterations inside `LangGraph`, protecting backend APIs from system exhaustion.
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours using target-tracking auto-scaling inside `Amazon ECS` task groups and automated scaling policies across `Red Hat OpenShift` worker instances.
-* **Storage Optimization**: Automates telemetry and transactional log lifecycle transitions using `AWS S3`lifecycle Policies, shifting heavy auditing assets (like hybrid `AWS CloudTrail` traces and `mainframe SMF` logs) into compressed formats and deep `Amazon S3 Glacier` Deep Archive storage tiers.
-* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and legacy compute overhead by 40% to 60% compared to traditional, direct-to-mainframe query routing by intercepting high-frequency read requests within local `Amazon ElastiCache` nodes to slash volatile MIPS scaling costs.
+* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours by utilizing native serverless scaling within `Amazon Bedrock` and auto-scaling container configurations for the `LiteLLM` gateway to scale down compute capacity when agent activity drops.
+* **Storage Optimization**: Automates telemetry and knowledge lifecycle transitions using `Amazon S3` Lifecycle Policies, moving old document versions, long-term Langfuse trace archives, and chat session histories from `AgentCore Memory` into low-cost `Amazon S3 Glacier` Flexible Archive tiers.
+* **Cost Efficiency**: Reduces production operational LLM spend by up to 50% through the centralized `LiteLLM` gateway, which intercepts repetitive prompts using semantic prompt caching, enforces strict token-count quotas per user group, and automatically routes non-critical background tasks to lower-cost model versions.
+* **Vector Dimension Rationalization**: Minimizes storage and compute costs inside `Amazon OpenSearch` by matching vector embedding dimensions strictly to task requirements and utilizing byte-quantized index embeddings to decrease memory requirements by up to 75%.
+* **Guardrail Filtering Optimization**: Lowers upstream foundation model expenses by configuring input filtering directly at the `Amazon Bedrock` Guardrails layer, blocking malicious or malformed requests early to avoid incurring downstream LLM inference token charges.
+* **Orchestration Circuit Breakers**: Mitigates runaway API consumption risks by embedding hard iteration counters and time-to-live (TTL) limits within the `LangGraph` state machine, immediately severing infinite agent logic loops before they exhaust token budgets.
 
 \---
 
