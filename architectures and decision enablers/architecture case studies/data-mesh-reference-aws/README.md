@@ -42,8 +42,8 @@ A highly available, serverless multi-tier architecture connecting digital user f
 *   **Network Isolation:** Deploys S3 and Glue Gateway/Interface Endpoints. Configures strict VPC Endpoint Policies to prevent data exfiltration outside corporate networks.
 *   **Hybrid Data Transit:**  Establishes dedicated network circuits paired with decentralized routing attachment hubs to bridge on-prem data pipelines into the mesh.
 *   **Data Protection:** Enforces customer-managed keys (CMK) with cross-account KMS Key Policies allowing consumer roles to decrypt data encrypted by producer keys.Implements bucket policies explicitly containing aws:SecureTransport: false denial clauses to enforce secure communication protocols.
-*   **Granular Access Governance:**Uses Tag-Based Access Control (LF-TBAC) to evaluate cross-account metadata permissions down to specific tables, rows, or single columns.
-*   **Audit, Compliance & Lineage:**Aggregates localized and centralized API access history. Tracks source-to-target data progression metrics across account boundaries.
+*   **Granular Access Governance:** Uses Tag-Based Access Control (LF-TBAC) to evaluate cross-account metadata permissions down to specific tables, rows, or single columns.
+*   **Audit, Compliance & Lineage:** Aggregates localized and centralized API access history. Tracks source-to-target data progression metrics across account boundaries.
 
 \---
 
@@ -63,7 +63,7 @@ A highly available, serverless multi-tier architecture connecting digital user f
 ### FinOps Framework
 
 *   **Cost Allocation & Tagging:** Enforces strict, automated tagging policies (e.g., CostCenter, DataDomain, DataProduct) across all S3 buckets, Athena workgroups, and EMR clusters.
-*   **Storage Lifecycle Pricing:**Automates transition rules from S3 Standard to S3 Intelligent-Tiering, Glacier Instant Retrieval, or Deep Archive based on object age and access frequency.
+*   **Storage Lifecycle Pricing:** Automates transition rules from S3 Standard to S3 Intelligent-Tiering, Glacier Instant Retrieval, or Deep Archive based on object age and access frequency.
 *   *Compute Query Control:** Allocates dedicated Athena Workgroups per consumer team and configures hard caps on the maximum volume of data scanned per query or per day.
 *   **Warehouse Elasticity:** Implements serverless data warehousing that automatically scales up to handle peak reporting windows and shuts down during idle hours.
 *   **Big Data Optimization:** Automatically provisions Spark/Hive compute instances based on active pipeline queue depth and leverages AWS Graviton-based EC2 instances.
