@@ -3,11 +3,11 @@
 Welcome! This repository documents the trainings that I completed during my professional sabbatical from Dec 2025 to Jul 2026. 
 
 The goal of this sabbatical was to dive deep into: 
-* **Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Multi-Cloud, Gen AI** 
+* **Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Data Eng., Multi-Cloud, Gen AI** 
 * **Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc**
-* **Completed Online trainings in the areas of Cloud, AI, Security, Presales, FinOps**
+* **Completed Online trainings in the areas of Cloud, AI, Security, Big Data, Presales, FinOps**
 
-### 📚 Completed Trainings & Certifications
+### 📚 Completed Trainings 
 
 | Training Name | Provider | Course Completion Link |
 | :--- | :--- | :--- |
@@ -20,5 +20,5 @@ The goal of this sabbatical was to dive deep into:
 | **Complete Azure FinOps Masterclass - Ultimate Cost Savings!** |Udemy|<a href="https://www.udemy.com/certificate/UC-38f62fe5-8af3-404c-9a76-ecb16277f7b2/" target="_blank"><span title="View">View Certificate</span></a> |
 | **Complete AWS FinOps Masterclass - Ultimate Cost Savings!** |Udemy|<a href="https://www.udemy.com/certificate/UC-63c08af8-13c2-481c-a2a4-70c9b50f6007/" target="_blank"><span title="View">View Certificate</span></a> |
 | **The Cloud Strategy Master Class** |Udemy|<a href="https://www.udemy.com/certificate/UC-526a5f30-a701-4ade-ac3d-ee95ea0add50/" target="_blank"><span title="View">View Certificate</span></a> |
-
+| **AWS Data Architect Bootcamp - 43 Services 500 FAQs 20+ Tools** |Udemy|<a href="https://www.udemy.com/certificate/UC-df3374c2-280e-437f-bafa-534d633f8911/" target="_blank"><span title="View">View Certificate</span></a> |
 
