@@ -28,3 +28,19 @@ The goal of this sabbatical was to dive deep into :
 
 
 
+\*\*Dashboards:\*\* Gives the following outputs
+
+&#x20;  |Outputs |
+
+&#x20;  |-|
+
+&#x20;  |\*\*avg scores for each domain view\*\*|
+
+&#x20;  |\*\*master 7-R strategy selector value\*\*|
+
+&#x20;  |\*\*Radar Chart showing the CRA Maturity Profile\*\*|
+
+
+
+
+
