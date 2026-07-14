@@ -35,7 +35,7 @@ A structured, automated Excel-based financial and planning calculator built to a
 ## 📊 Modules Included
 
 1. **Inputs:** 48 point questionnaire to be filled with responses from client stakeholder teams.
-2. **Dashboards:** Gives output on avg scores for each domain view and the final Master 7-R Strategy Selector value
+2. **Dashboards:** Gives the following outputs
    |Outputs |
    |-|
    |**avg scores for each domain view**|
