@@ -13,10 +13,8 @@ A structured, automated Excel-based financial and planning calculator built to a
 |**Critical Capability Collapse:**| The organization suffers from widespread structural deficits across all operational domains. Migrating to the cloud right now will guarantee catastrophic cost spikes, team burnout, and operational failure. | 
 |**Restructure & Remediate (Legacy Operating Model):**| The company is operating with an outdated, fragmented IT mindset. Teams are working in tight silos, utilizing manual infrastructure setups, and lacking unified cloud guidelines. |
 |**Security Landing Zone Block:**| The technical team understands general cloud concepts, but the corporate cloud footprint lacks enterprise guardrails. Identity controls (IAM), perimeter protection, and automated encryption are missing or weak. |
-|**FinOps Budgetary Alert:**| Cloud spending is reactive and unmonitored. The business is at high risk for unexpected, massive monthly cloud bill shocks due to untagged 
-systems and orphan resources. |
-|**Technical Debt Saturation:**| A dual infrastructure and operations deficit. Software development pipelines are manual and resource health tracking is blind, leading 
-to extended downtime risks. |
+|**FinOps Budgetary Alert:**| Cloud spending is reactive and unmonitored. The business is at high risk for unexpected, massive monthly cloud bill shocks due to untagged systems and orphan resources. |
+|**Technical Debt Saturation:**| A dual infrastructure and operations deficit. Software development pipelines are manual and resource health tracking is blind, leading to extended downtime risks. |
 |**Organizational Resistance Anomaly:**| The technology is viable, but the human element is lagging. Corporate change acceleration, executive alignment, and training tracks are failing, causing silent team sabotage. |
 |**Strategic Alignment Disconnect:**| The technical team is building cloud infrastructure in a silo, completely detached from the company’s commercial roadmap, product strategies, or financial metrics. |
 |**Ultralight Composable Mesh:**| The absolute gold standard of enterprise agility. The organization runs an evenly distributed, secure multi-cloud footprint with zero operational dependencies or performance lags. |
