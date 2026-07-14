@@ -6,13 +6,13 @@ Welcome! This repository documents the trainings that I completed during my prof
 
 
 
-The goal of this sabbatical was to dive deep into : 
+The goal of this sabbatical was to dive deep into: 
 
-\*\*Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Multi-Cloud, Gen AI\*\* 
+\* \*\*Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Multi-Cloud, Gen AI\*\* 
 
-\*\*Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc\*\*
+\* \*\*Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc\*\*
 
-\*\*Taking Online trainings in the areas of Cloud, AI, Security\*\*
+\* \*\*Taking Online trainings in the areas of Cloud, AI, Security\*\*
 
 
 
@@ -20,27 +20,27 @@ The goal of this sabbatical was to dive deep into :
 
 
 
-|Training Name|Provider|Course Completion Link|
+| Training Name | Provider | Course Completion Link |
 
-|-|-|-|
+| :--- | :--- | :--- |
 
-|\*\*Agentic AI Architectures with Patterns, Frameworks and MCP\*\*|Udemy|<a href="https://amazonaws.com"><span title="https://amazonaws.com">View Certificate</span></a>|
-
-
-
-\*\*Dashboards:\*\* Gives the following outputs
-
-&#x20;  |Outputs |
-
-&#x20;  |-|
-
-&#x20;  |\*\*avg scores for each domain view\*\*|
-
-&#x20;  |\*\*master 7-R strategy selector value\*\*|
-
-&#x20;  |\*\*Radar Chart showing the CRA Maturity Profile\*\*|
+| \*\*Agentic AI Architectures with Patterns, Frameworks and MCP\*\* | Udemy | <a href="https://amazonaws.com"><span title="https://amazonaws.com">View Certificate</span></a> |
 
 
+
+\### 📊 Dashboards
+
+
+
+| Outputs Generated |
+
+| :--- |
+
+| \*\*avg scores for each domain view\*\* |
+
+| \*\*master 7-R strategy selector value\*\* |
+
+| \*\*Radar Chart showing the CRA Maturity Profile\*\* |
 
 
 
