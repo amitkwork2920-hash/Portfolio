@@ -20,11 +20,11 @@ The goal of this sabbatical was to dive deep into :
 
 
 
-| Training/Course Name | Provider | Key Takeaways / Skills Gained | Certificate / Link |
+| Training Name | Provider | Course Completion Link |
 
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 
-| \*\*Agentic AI Architectures with Patterns, Frameworks and MCP\*\* | Udemy |  <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf"><span title="View"</span></a> |
+| \*\*Agentic AI Architectures with Patterns, Frameworks and MCP\*\* | Udemy | <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf"><span title="View"</span></a> |
 
 
 
