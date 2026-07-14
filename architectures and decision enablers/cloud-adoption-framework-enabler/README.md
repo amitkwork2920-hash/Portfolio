@@ -4,8 +4,16 @@ A structured, automated Excel-based financial and planning calculator built to a
 
 ## 🚀 Key Features
 
-* **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment.
-* **Migration Strategy Blueprint:** Maps workloads using the "7 Rs" framework (Rehost, Replatform, Refactor, etc.).
+* **Cloud Adoption Assessment:** Evaluates current infrastructure and organizational alignment.
+* **Cloud Adoption Blueprint:**  Investigates current organization adoption state from 14 states 
+                                 `System Retirement Phase` 
+				 `Critical Capability Collapse` 
+   				 `Restructure & Remediate (Legacy Operating Model)`
+				 `Security Landing Zone Block`
+				 `FinOps Budgetary Alert`
+				 `Technical Debt Saturation`
+				 `Organizational Resistance Anomaly`
+
 
 ## 📁 Repository Structure
 
