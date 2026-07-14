@@ -1,6 +1,6 @@
-# Cloud Adoption Framework (CAF) Decision Enabler
+# Cloud Readiness Assessment (CRA) Decision Enabler
 
-A structured, automated Excel-based financial and planning calculator built to accelerate your cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness
+A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness for cloud adoption.
 
 ## 🚀 Key Features
 

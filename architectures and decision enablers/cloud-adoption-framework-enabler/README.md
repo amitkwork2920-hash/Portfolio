@@ -1,6 +1,6 @@
 # Cloud Adoption Framework (CAF) Decision Enabler
 
-A structured, automated Excel-based financial and planning calculator built to accelerate your cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness
+A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate the state that they are in with respect to adopting cloud.
 
 ## 🚀 Key Features
 
@@ -44,6 +44,11 @@ A structured, automated Excel-based financial and planning calculator built to a
 ## 📊 Modules Included
 
 1. **Inputs:** 47 point questionnaire to be filled with responses from client stakeholder teams.
-2. **Dashboards:** Gives output on avg scores for each domain view and the final Target Cloud Operating Model & Execution Strategy state
-
+2. **Dashboards:** Gives the following outputs
+   |Outputs |
+   |-|
+   |**avg scores for each domain view**|
+   |**target Cloud Operating Model & Execution Strategy state value**|
+   |**Radar Chart showing the CAF Maturity Profile**|
+ 
 
