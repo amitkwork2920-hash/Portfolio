@@ -24,6 +24,6 @@ A structured, automated Excel-based evaluation calculator built to accelerate yo
    |-|
    |**max possible weighted score for each vendor**|
    |**selects the vendor platform and its score**|
-   |**Provides a radar chart to compare prominent tech vendors**|
+   |**provides a radar chart to compare prominent tech vendors**|
  
 

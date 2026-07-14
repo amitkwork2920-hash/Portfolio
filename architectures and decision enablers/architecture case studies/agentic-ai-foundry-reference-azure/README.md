@@ -1,24 +1,26 @@
-# Legacy AWS Mainframe Hybrid Architecture
+# Agentic AI Azure Architecture
 
 ## 📌 Overview
 
-* **Domain**: Legacy Hybrid Mainframe 
-* **Pattern**: PI Facade / Abstraction Pattern, Hybrid Cloud, Cache-Aside Pattern (Edge Offloading), Mainframe-as-Master, Static Routing with Active-Passive Fallback, 
-               Gateway Routing / Reverse Proxy, Defense-in-Depth / Perimeter Scrubbing, Distributed Tracing
+* **Domain**: Agentic AI Azure 
+* **Pattern**: Retrieval-Augmented Generation (RAG), Agentic Workflow (Orchestration), Data Ingestion & Enrichment Pipeline (ETL), Event-Driven, API Gateway (Facade), 
+               Polyglot Persistence
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_MainFrame_Hybrid.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-mainframe-topology.png)
+  * 📊 [Download Case Study](@Todo)
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-ai-agents-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns. This hybrid architecture resolves these bottlenecks by securely bridging modern AWS digital applications with stable on-premises IBM z/OS mainframes. By enforcing edge scrubbing, network micro-segmentation, and local cloud caching, it completely neutralizes security threats and prevents costly mainframe MIPS processing spikes. Ultimately, this approach removes the high financial risks and operational downtime of a legacy "rip-and-replace" migration, enabling fast API-driven innovation while keeping core transactional systems intact.
+Fragmented AI environments, disconnected data silos, and a lack of centralized governance introduce significant latency, security gaps, and operational overhead during unexpected 
+workload spikes. Siloed agent designs lack uniform evaluation frameworks, token tracking, and standardized safety guardrails, threatening business continuity, 
+risking data leakage, and causing unpredictable infrastructure cost overruns.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through micro-segmented VPC environments, and hosts strictly isolated, production-grade microservices and caching layers across resilient availability zones.
+The target state architecture transitions the organization from fragmented, ad-hoc AI integrations to a fully unified, enterprise-grade Agentic AI platform built on Azure AI Foundry. The state enforces a centralized, event-driven orchestration layer utilizing serverless Function Apps and App Services to manage autonomous, loop-based reasoning workflows. Data ingestion is standardized through automated extraction pipelines that convert multi-format unstructured data into vectorized intelligence hosted within specialized Azure AI Search indices. Comprehensive lifecycle management is natively integrated, embedding continuous tracking for tracing, token consumption, and automated adversarial evaluation directly into the agent ecosystem.
 
 \---
 
@@ -26,24 +28,30 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Amazon Route 53` <br> `Amazon CloudFront` <br> `AWS WAF`<br> `AWS Shield` <br> `Network Load Balancer (NLB)` | Manages global user traffic ingestion, provides intelligent content delivery with automated failover, and protects downstream networks from edge-level application exploits and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Amazon VPC Subnets` <br> `VPC Endpoints`<br> `NAT Gateway` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `Security Groups `|Establishes secure, multi-tier network segmentation and high-speed internal transport while enforcing strict, layered traffic isolation and micro-perimeter security boundaries.|
-|**Hybrid Connectivity**|`AWS Direct Connect` <br> `AWS Site-to-Site VPN` <br> `Customer Gateway (CGW)`| Provides a dedicated, low-latency corporate private circuit backed by a redundant encrypted tunnel to bridge the cloud securely to the on-premises data center.|
-|**Integration \& Protocol Transformation**|`IBM z/OS Connect` <br> `Red Hat OpenShift` | Translates cloud-native JSON REST payloads into mainframe-readable binary formats (COBOL copybooks) to safely expose legacy assets without changing core code.|
-|**Compute \& Microservices**|`Amazon ECS` <br> `AWS Lambda` <br> `ECS Auto Scaling` | Runs scalable, containerized, and serverless digital banking business workloads across distributed execution environments while optimizing resource consumption.|
-|**Data \& Local Caching**|`Amazon ElastiCache (Redis)` <br> `Amazon RDS` <br> `Amazon S3` | Intercepts high-frequency queries at the cloud edge to offload processing demands, manages local cloud state data, and handles lifecycle log archiving.|
-|**On-Premise Core Systems**|`IBM z/OS Mainframe` <br> `CICS TS / IMS TM` <br> `BM Db2 / IMS DB` <br> `VSAM` | Acts as the ultimate multi-system transactional source of truth (SSOT), executing core transaction processing groups and enforcing strict ACID compliance.|
-|**Governance, Security \& Observability**|`Amazon Cognito` <br> `AWS Secrets Manager` <br> `IBM RACF` <br> `OpenTelemetry (OTel)` <br> `AWS CloudTrail` <br> `Amazon CloudWatch` <br> `IBM SMF Logs` | Enforces short-lived identity management, handles automated secret rotations, maps cloud tokens to mainframe permissions, and bridges cross-platform telemetry logs.|
+|**Ingress, Routing \& Edge**|`Azure API Management (APIM)` <br> `Azure App Services` | Manages external client traffic ingestion, enforces API throttling/rate limiting, provides secure endpoint routing, and acts as the entry facade to backend execution environments.|
+|**Data Ingestion \& Enrichment**|`Azure AI Content Understanding` <br> `Azure Function Apps (Ingestion)`<br> `Data Processing Layer` |Ingests raw structured or unstructured multi-modal datasets, parses complex documents, extracts semantic data, and handles multi-stage extraction workflows.|
+|**Vectorization \& Knowledge Base**|`Embeddings Models` <br> `Azure Function Apps` | Transforms enriched text chunks into vector representations and indexes them to enable highly accurate, semantic hybrid-retrieval grounding for the RAG loop.|
+|**Compute, Orchestration & Agent Logic**|`Azure App Services` <br> `Red Hat OpenShift` <br> `(Orchestrators)` | Acts as the primary event-driven serverless compute engines to run autonomous agentic loops, manage multi-turn reasoning steps, and execute code.|
+|**AI Intelligence \& Foundation Models**|`Azure OpenAI Service` <br> `MarketPlace Model Catalog` | Houses foundation language, embedding, and reasoning models providing core intelligence, context interpretation, and generation capabilities for the agents.|
+|**Polyglot Storage \& State Persistence**|`Azure Database for PostgreSQL Server` <br> `Azure Cosmos DB` <br> `Azure Container Registries` | Manages relational system data, preserves semi-structured transactional states or flexible JSON agent memory, and hosts versioned containerized deployment artifacts.|
+|**AI Governance \& Lifecycle Management**|`Azure AI Foundry` <br> `Tracing & Tokens  RedTeam / Evaluation` <br> `Model Context Protocol (MCP)` | Centralizes LLMOps lifecycle operations by tracking real-time costs, verifying agent safety via red-teaming simulations, and standardizing connections to client tools.|
+|**Operations, Security \& Observability**|`Microsoft Entra ID` <br> `Azure Key Vault` <br> `Azure Monitor` <br> `Azure App Insights` <br> `GitHub / Azure DevOps` | Enforces Zero-Trust identity access, secures app secrets, captures cross-tier telemetry/observability logs, and automates CI/CD deployment pipelines.|
+|**Media Parsing \& Cognitive Extraction**|`Azure AI Content Understanding` | Acts as the specialized unstructured data processing engine that decomposes multi-modal files (PDFs, images, video, audio) into clean, structured semantic text schemas before tokenization.|
+|**Asynchronous Pipeline Coordination**| `Azure Function Apps (Data Processing)` <br> `Function Apps (Ingestion)` | Serves as the stateless, event-driven orchestration layer that safely moves processed data chunks from extraction models into embedding endpoints and downstream storage layers without blocking active user sessions.|
+|**Presentation \& Analytical Consumption**| `Fabric Power BI` <br> `Azure App Services (UI Frontend)` | Provides dedicated, multi-role interfaces that expose processed data insights via structured business intelligence dashboards for internal Ops Users while serving rapid API responses to standard end-users.|
+
+
+
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Amazon CloudFront`, `AWS WAF`, and `AWS Shield` to aggressively scrub malicious Layer 3/4/7 vectors, mitigate high-volume DDoS threats, and drop unvalidated traffic at the cloud boundary.
-* **Network Isolation**: Analytical containerized microservices and integration runtimes are tightly isolated within private `VPC subnets` with zero direct internet access, routing data exclusively via secure `VPC Endpoints` to shield backend infrastructure.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Security Groups and `Network Access Control Lists (NACLs)`, ensuring no direct public ingress to application tiers, while cloud-to-ground traffic is wrapped in dual-layer encryption via `AWS Direct Connect` over an `IPsec VPN tunnel`. 
-* **Data Protection**: Data protection is mandated globally via `AWS KMS (Customer Managed Keys)` and hardware-enforced `IBM Crypto Express adapters`, enforcing automated key rotations, mandatory `TLS 1.3` for data-in-transit, and `AES-256` encryption-at-rest across all storage structures (`Amazon RDS`, `Amazon S3`, and on-premises `IBM Db2`).
-* **Automated Compliance Auditing**: Regulatory financial compliance (`PCI-DSS` / `SOC 2`) is continuously maintained by streaming `AWS CloudTrail` and on-premises `IBM System Management Facilities (SMF)` logs to an immutable storage engine, while `Amazon Cognito` user tokens are dynamically mapped to native `IBM RACF` profiles to guarantee non-repudiation and strict least-privilege governance.
+* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Azure API Management (APIM)` and integrated web protection policies to aggressively scrub malicious Layer 7 vectors, manage traffic throttling, and drop unvalidated public API requests directly at the cloud boundary.
+* **Network Isolation**: Analytical agent components, orchestration microservices, and serverless runtimes are tightly isolated within private virtual network environments with zero direct internet access, routing data exclusively via secure private endpoints to shield backend infrastructure.
+* **Hybrid Data Transit**: Workloads are strictly isolated across dedicated subnets via explicit `Network Security Groups (NSGs)`, ensuring no direct public ingress to application tiers, while all internal cloud-to-agent traffic is wrapped in mandatory encryption and routed securely through internal virtual connections.
+* **Data Protection**: Data protection is mandated globally via `Azure Key Vault` customer-managed keys, enforcing automated key rotations, mandatory `TLS 1.3` for data-in-transit, and `AES-256` encryption-at-rest across all underlying storage structures (`Azure Database for PostgreSQL`, `Azure Cosmos DB`, and `Azure AI Search`).
+* **Automated Compliance Auditing**: Regulatory compliance is continuously maintained by streaming `Azure Monitor` and `Azure Application Insights` telemetry to an immutable storage repository, while `Microsoft Entra ID` roles are dynamically integrated with `Azure AI Foundry` tracing policies to guarantee non-repudiation, cost transparency, and strict least-privilege LLMOps governance.
 
 \---
 
@@ -51,15 +59,22 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves single-digit millisecond read speeds (<15ms) via local `Amazon ElastiCache` nodes and keeps hybrid mainframe execution rates for transactional writes under sub-150ms over dedicated `AWS Direct Connect` lines.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records, completing asynchronous cloud cache invalidation within a strict 2-second window and maintaining `mainframe DR` storage replication lag under 10 seconds.
-* **Resilience**: `Multi-AZ` container and database replication guarantees 99.99% high availability for core cloud endpoints, backed by an active-passive on-premises disaster recovery standby configuration maintaining an RPO of near-zero and an RTO of < 4 hours.
+* **Inference Latency**:  Achieves single-digit millisecond retrieval speeds (<15ms) for RAG contexts via local `Azure AI Search` indexing and keeps multi-turn autonomous reasoning loops under sub-500ms using optimized `Azure OpenAI` endpoints.
+* **Pipeline Throughput**: Synchronizes and processes live unstructured data source records, completing complex data parsing within a strict 3-second window and maintaining embedding vector updates under 5 seconds.
+* **Resilience**: `Multi-Region` infrastructure and cross-zone database replication guarantees 99.99% high availability for core cloud endpoints, backed by an active-passive `Azure AI Foundry` and `Azure Cosmos DB` disaster recovery standby configuration maintaining an RPO of near-zero and an RTO of < 4 hours.
+* **Agent Execution Concurrency**: Supports over 10,000 simultaneous multi-agent reasoning paths via asynchronous serverless scaling inside `Azure Function Apps`, keeping thread orchestration overhead and message queue lag under sub-50ms.
+* **Extraction Processing Density**: Sustains a parsing velocity of 500+ multi-modal document pages per minute using `Azure AI Content Understanding`, maintaining structural data extraction fidelity above 99% during peak enterprise ingestion spikes.
+* **Embedding Model Rate-Limits**: : Prevents operational bottlenecks by sustaining up to 250,000 Tokens Per Minute (TPM) across `Azure OpenAI` Service embedding nodes, using localized queuing to eliminate 429 (Too Many Requests) throttling errors.
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours using target-tracking auto-scaling inside `Amazon ECS` task groups and automated scaling policies across `Red Hat OpenShift` worker instances.
-* **Storage Optimization**: Automates telemetry and transactional log lifecycle transitions using `AWS S3`lifecycle Policies, shifting heavy auditing assets (like hybrid `AWS CloudTrail` traces and `mainframe SMF` logs) into compressed formats and deep `Amazon S3 Glacier` Deep Archive storage tiers.
-* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and legacy compute overhead by 40% to 60% compared to traditional, direct-to-mainframe query routing by intercepting high-frequency read requests within local `Amazon ElastiCache` nodes to slash volatile MIPS scaling costs.
+* **Elastic Footprint**:  Dynamically eliminates infrastructure footprint during low-traffic off-hours using event-driven scaling inside serverless `Azure Function Apps` and automated instance-scaling policies across hosting environments inside `Azure App Services`.
+* **Storage Optimization**: Automates telemetry, embedding chunks, and transactional log lifecycle transitions using storage lifecycle policies, shifting heavy auditing assets (like `Azure Monitor` traces and raw extraction files) into compressed formats and low-cost archive storage tiers.
+* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and model compute overhead by 40% to 60% compared to unoptimized LLM queries by utilizing `Azure AI Foundry Tracing & Tokens` to prune prompt sizes, alongside local caching tiers to prevent redundant vectorization overhead.
+* **Model Optimization \& Routing**: Reduces token expenditure by establishing a tiered routing strategy within the `MarketPlace Model Catalog`, shifting routine data filtering and extraction tasks to low-cost small language models (like Phi-3) and reserving premium models (like OpenAI gpt-4o) exclusively for complex agentic reasoning loops.
+* **Granular Tenant Chargebacks**: Enforces strict operational accountability by leveraging `Azure AI Foundry Tracing & Tokens` to tag, monitor, and attribute exact compute and token usage metrics directly to individual business units or specific autonomous agent workflows.
+* **Vector Index Pruning**: Maximizes efficiency within Azure AI Search by implementing automated index maintenance routines that purge stale or redundant vector embeddings, minimizing persistent cloud storage costs and accelerating retrieval query response times.
+
 
 \---
 
