@@ -5,18 +5,12 @@ Welcome! This repository documents the trainings that I completed during my prof
 The goal of this sabbatical was to dive deep into: 
 * **Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Multi-Cloud, Gen AI** 
 * **Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc**
-* **Taking Online trainings in the areas of Cloud, AI, Security**
+* **Completed Online trainings in the areas of Cloud, AI, Security, Presales, FinOps**
 
 ### 📚 Completed Trainings & Certifications
 
 | Training Name | Provider | Course Completion Link |
 | :--- | :--- | :--- |
-| **Agentic AI Architectures with Patterns, Frameworks and MCP** | Udemy | <a href="https://amazonaws.com"><span title="https://amazonaws.com">View Certificate</span></a> |
+| **Agentic AI Architectures with Patterns, Frameworks and MCP** | Udemy | <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf"><span title="View">View Certificate</span></a> |
 
-### 📊 Dashboards
 
-| Outputs Generated |
-| :--- |
-| **avg scores for each domain view** |
-| **master 7-R strategy selector value** |
-| **Radar Chart showing the CRA Maturity Profile** |
