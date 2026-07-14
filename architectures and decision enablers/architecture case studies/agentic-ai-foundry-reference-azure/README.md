@@ -7,7 +7,7 @@
                Polyglot Persistence
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](@Todo)
+  * 📊 [Download Case Study]
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-ai-agents-topology.png)
 
 \---

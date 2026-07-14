@@ -1,22 +1,20 @@
-# Conversational Platform GenAI Architecture
+# Data mesh Reference architecture on AWS
 
 ## 📌 Overview
 
-* **Domain**: Conversational Platform GenAI
-* **Pattern**: Retrieval-Augmented Generation (RAG), LLM Cascading and Routing, Semantic Caching,Event-Driven Asynchronous Ingestion, Token Streaming & Persistent Connections, 
-               Zero Trust Network Architecture & Perimeter Defense, Intercepting Filter / Structural Prompt Guardrails
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Conversational_Platform_GenAI.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-conversational-platform-genai-topology.png)
+* **Domain**: Data mesh architecture on AWS
+* **Pattern**: Data Mesh,  Hub-and-Spoke Governance, Separation of Compute and Storage, Zero-Copy Data Sharing (Cross-Account Federated Access)
+  * 📊 [Download Case Study]
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-datamesh-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Siloed transactional systems, unoptimized data ingestion pipelines, and unmanaged foundational model endpoints introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Non-integrated data designs lack centralized data lake governance, uniform vector sanitization, and intelligent semantic caching layers, threatening business continuity, risking prompt injection and data exposure during breaches, and causing unpredictable token consumption and infrastructure cost overruns
+Siloed transactional systems, unoptimized data ingestion pipelines, and unmanaged foundational model endpoints introduce significant latency, security gaps, and operational overhead during unexpected workload spikes.Non-integrated data designs lack centralized data lake governance, uniform vector sanitization, and intelligent semantic caching layers, threatening business continuity, risking prompt injection and data exposure during breaches, and causing unpredictable token consumption and infrastructure cost overruns.
 
 ## 🚀 Target State Architecture
-
-A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem. It ingests traffic globally via an intelligent content delivery network edge, manages secure transit traffic through a centralized and firewalled API Gateway layer, and hosts strictly isolated, production-grade microservices and Retrieval-Augmented Generation (RAG) workloads across resilient availability zones
+A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem. It ingests traffic globally via an intelligent content delivery network edge, manages secure transit traffic through a centralized and firewalled API Gateway layer, and hosts strictly isolated, production-grade microservices and Retrieval-Augmented Generation (RAG) workloads across resilient availability zones.
 
 \---
 
@@ -24,17 +22,15 @@ A highly available, serverless multi-tier architecture connecting digital user f
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Amazon Route 53` <br> `Amazon CloudFront` <br> `AWS WAF`<br> `AWS Shield` <br> `AWS Amplify` | Manages global user traffic ingestion, delivers low-latency static assets via edge locations, provides intelligent DNS routing, and protects downstream services from malicious web exploits and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`AWS VPC (Subnets, Route Tables)` <br> `Internet Gateway` <br> `NAT Gateway` <br> `NAT Gateway` <br> `VPC Endpoint (PrivateLink)` <br> `NACL & Security Groups` |Establishes secure, multi-tier network segmentation across public, private, and isolated boundaries while enforcing strict, layered traffic isolation, custom routing controls, and micro-perimeter security between microservices and databases without exposing data to the public internet.|
-|**Compute \& Microservices Orchestration**|`Amazon API Gateway` <br> `AWS Lambda` <br> `AWS Step Functions` <br> `Amazon SQS (FIFO)` |Runs highly scalable, event-driven serverless application business workloads that auto-scale instantly with demand, routes API requests, and choreographs complex multi-step distributed logic with zero idle server overhead.|
-|**Generative AI Core & Inference**| `Amazon Bedrock` <br> `Amazon Bedrock Guardrails` <br> `Amazon SageMaker` |Provides fully managed access to high-performing foundation models, enforces custom safety guardrails directly at the inference layer, and hosts specialized fine-tuned models on elastic, scalable infrastructure.|
-|**Semantic Search \& Knowledge Management**|`Amazon OpenSearch Serverless` <br> `Amazon Kendra` <br> `Amazon Bedrock Knowledge Bases` | Powers the vector storage tier by indexing dense multi-dimensional embeddings, executes low-latency hybrid search queries, and automates document syncing pipelines for contextual context enrichment.|
-|**Caching \& Memory Operations**| `Amazon ElastiCache for Redis` <br> `Amazon DynamoDB (Global Tables)`| Accelerates system response times via semantic caching layers to intercept redundant LLM calls, and maintains low-latency, multi-region persistent user session data and conversational history.|
-|**Asynchronous Ingestion \& Processing**| `AWS Lambda (Ingestion Workers)` <br> `AWS Glue (ETL Pipelines)`<br> `Amazon EventBridge`| Decouples long-running document ingestion workflows from user-facing channels, orchestrates automated text extraction parsing pipelines, and triggers event-driven state updates across the system.|
-|**Data Lake Analytics \& Processing**| `Amazon S3 (Raw & Curated Tiers)` <br> `AWS Glue Data Catalog` <br> `Amazon Athena` <br> `Amazon Redshift`| Serves as a highly durable lakehouse foundation that catalogs metadata, processes massive-scale distributed big data workloads, transforms structured/unstructured formats (Parquet), and enables rapid, serverless ad-hoc analytical querying.|
-|**LLM Quality & Guardrail Frameworks**| `LangChain / LlamaIndex` <br> `NeMo Guardrails` <br> `Ragas & TruLens` | Orchestrates multi-turn context construction workflows, provides deterministic runtime input validation to block prompt injections, and continuously assesses context relevance and model hallucination scores.|
-|**Governance, Security & Operations**| `AWS IAM` <br> `Amazon Cognito` <br> `AWS KMS` <br> `AWS CloudTrail` <br> `Amazon Macie` | Enforces unified tenant authentication and granular least-privilege service authorization, safeguards data via managed cryptographic keys, scans for sensitive PII data leaks, and centralizes system telemetry logs for proactive security observability.|
-
+|**Data Production \& Storage**|`Amazon S3` | Provides decentralized, scalable object storage for raw domain-specific data lakes.|
+|**Local Discovery \& Orchestration**|`AWS Glue Data Catalog` <br> `AWS Glue` |Automatically crawls, infers schemas, and builds local metadata catalogs for individual domain business units.|
+|**Central Governance Plane**|`AWS Lake Formation` |Acts as a federated gatekeeper managing fine-grained cross-account permissions at the database, table, and column level.|
+|**Centralized Cataloging**| `Central Data Catalog (AWS Glue)` |Unifies structural metadata from disparate producer accounts into a single searchable index.|
+|**Serverless Query \& Analytics**|`Amazon Athena`  | Empowers consumer-side data analysts to run ad-hoc, interactive SQL queries directly against shared S3 objects.|
+|**Massive Parellel Data Warehousing**| `Amazon Redshift` <br> `Redshift Spectrum` | Enables high-performance, enterprise-grade analytical processing and complex relational reporting for consumer nodes.|
+|**Big Data Processing**| `Amazon EMR` | Executes large-scale distributed computing workloads (e.g., Apache Spark, Hive) over consumed big data meshes.|
+|**Business Intelligence \& Presentation**| `Amazon QuickSight` | Converts queried cross-account assets into actionable interactive visualizations and management dashboards.|
+|**Enterprise Metadata Index**| `Central Data Catalog (Global AWS Glue)` | Aggregates read-only, pointer-based definitions from localized producer catalogs into a single, unified enterprise registry.|
 
 
 \---
@@ -42,14 +38,12 @@ A highly available, serverless multi-tier architecture connecting digital user f
 ## 🔒 Security, Compliance \& Governance
 
 
-*   **Edge Security:** Centralized perimeter defense is enforced at the edge using Amazon CloudFront and AWS WAF to block OWASP Top 10 vectors, filter prompt injection attacks, and mitigate edge-level volumetric DDoS threats.
-*   **Network Isolation:** Analytical computing engines, processing layers, and vector databases are tightly isolated within private VPC subnets with zero direct internet access, moving data exclusively via VPC Gateway & Interface Endpoints.
-*   **Hybrid Data Transit:** Workloads are strictly isolated across serverless microservices and data lake tiers via granular Security Groups and Network Access Control Lists (NACLs), allowing no direct public ingress to internal application or database layers.
-*   **Data Protection:** Data protection is mandated globally via AWS KMS Customer Managed Keys (CMKs), forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage and models.
-*   **Gen AI Guardrails & Safety:** Model responses are programmatically evaluated using Amazon Bedrock Guardrails and Ragas frameworks, enforcing strict PII masking, toxic output filtering, and hallucination containment before payloads reach the presentation layer.
-*   **Automated Compliance Auditing:** Regulatory compliance is maintained through AWS Config, AWS Audit Manager, and AWS CloudTrail to enforce continuous auditing, automated PII identification via Amazon Macie, and immutable backup policies.
-*   **GenAI Contextual Access & Lineage:** Data governance is maintained by applying metadata-driven Row-Level Security (RLS) within vector databases based on Cognito user identity claims, preventing cross-tenant data bleed while recording prompt-to-context linkage audit trails.
-
+*   **Edge Security:** Utilizes ABAC (Attribute-Based Access Control) tags attached to principal roles mapping to corporate identities (SAML 2.0 / OIDC).
+*   **Network Isolation:** Deploys S3 and Glue Gateway/Interface Endpoints. Configures strict VPC Endpoint Policies to prevent data exfiltration outside corporate networks.
+*   **Hybrid Data Transit:**  Establishes dedicated network circuits paired with decentralized routing attachment hubs to bridge on-prem data pipelines into the mesh.
+*   **Data Protection:** Enforces customer-managed keys (CMK) with cross-account KMS Key Policies allowing consumer roles to decrypt data encrypted by producer keys.Implements bucket policies explicitly containing aws:SecureTransport: false denial clauses to enforce secure communication protocols.
+*   **Granular Access Governance:**Uses Tag-Based Access Control (LF-TBAC) to evaluate cross-account metadata permissions down to specific tables, rows, or single columns.
+*   **Audit, Compliance & Lineage:**Aggregates localized and centralized API access history. Tracks source-to-target data progression metrics across account boundaries.
 
 \---
 
@@ -57,21 +51,25 @@ A highly available, serverless multi-tier architecture connecting digital user f
 
 ### Performance \& Availability
 
-*   **Latency:** Achieves sub-5 second ad-hoc query speeds via Amazon Athena, sub-800 ms Time to First Token (TTFT) via Amazon Bedrock streaming inference, and sub-100 ms execution rates on transactional Amazon API Gateway calls.
-*   **Data Sync Ingestion:** Synchronizes and processes live streaming and batch transactional records from source systems into the curated data lake within a strict 1-minute operational sync window.
-*   **Resilience:** Multi-AZ data tier replication guarantees 99.99% high availability for core endpoints, backed by automated restore points maintaining a disaster recovery RPO of < 15 minutes and an RTO of < 1 hour.
-*   **FinOps Optimization:** Intercepts up to 40% of repeated LLM inquiries via a specialized semantic caching layer and lifecycle-archives raw S3 storage to deliver a 40% to 60% reduction in overall system operating expenses.
-*   **GenAI Context & Quality:** Sustains a minimum RAG context recall score of 0.85 and faithfulness rating above 0.90 via automated evaluation pipelines, while maintaining a 100% block rate for malicious prompt injections and toxic outputs.
-*   **GenAI Model Relevance & Routing Accuracy:** Routes 100% of user queries dynamically via an intelligent Lambda classification layer, capturing an average accuracy of 95% in routing intent, ensuring that 70% of low-complexity traffic scales down to cost-effective models.
+*   **Data Access Latency:**  Ad-hoc Queries execution time <10 seconds (P95) BI Dashboards latency <2 seconds (via SPICE/Caching) Metadata Sync latency <5 minutes across accounts.
+*   **Resilience & Fault Tolerance:** RTO (Recovery Time) <1 hour for central catalog RPO (Recovery Point): <15 minutes for data states Storage Durability: 99.999999999% (11 9s)
+*   **FinOps Optimization:** Wasted Compute should be <5% of total budget Untagged Resources should be 0% (Strict enforcement) Storage Decay should be >40% savings via automated lifecycle rules.
+*   **Security & Zero-Trust Access:** Policy Propagation should be <60 seconds across mesh Token Expiration should be Max 1 hour for assumed roles Network Paths should be 100% private.
+*   **Scalability & Throughput:** Data Volume: Scales elastically from TBs to PBs Concurrent Queries should be up to 1,000 parallel execution jobs API Limit Headroom should be >30% margin
+*   **Observability & Traceability:** Audit Log Retention should be Minimum 7 years (Compliance) Lineage Refresh should be Near real-time on schema update Anomaly Alerting should be <2 minutes from breach/cost spike
+*   **Maintainability & Portability:** Infrastructure as Code (IaC) should have 100% deployment coverage Schema Evolution should be Backward-compatible tracking
+
 
 ### FinOps Framework
 
-*   **Elastic Footprint:** Dynamically eliminates infrastructure footprint during low-traffic off-hours using serverless, scale-to-zero configurations inside AWS Lambda functions, AWS Glue ETL Spark workers, and Amazon Redshift Serverless endpoints.
-*   **Storage Optimization:** Automates data lifecycle transitions using S3 Lifecycle Policies, shifting raw and curated ingestion streams into compressed Apache Parquet formats and deep Amazon S3 Glacier Deep Archive storage tiers.
-*   **Cost Efficiency:** Reduces production operational runtime infrastructure spend and analytical compute overhead by 30% to 60% compared to traditional, over-provisioned provisioning strategies and uncapped foundational model endpoint deployments.
-*   **Gen AI Token Management:** Minimizes LLM model invocation overhead by routing low-complexity prompts to lighter model tiers and deploying a contextual Semantic Cache layer to intercept and fulfill repeated queries without token spend.
-*   **GenAI Vector Store & Index Optimization:** Maximizes semantic search cost efficiency by configuring time-to-live (TTL) pruning on transient chat vector indexes and executing scheduled, off-peak bulk delta-upserts rather than continuous linear embedding generation pipelines.
-*   **GenAI Multi-Model Commitment & Tiering:** Leverages AWS Savings Plans for high-volume baseline foundation models via Amazon Bedrock Provisioned Throughput, while utilizing On-Demand pricing paired with dynamic prompt compression tokens for experimental or secondary model pipelines.
+*   **Cost Allocation & Tagging:** Enforces strict, automated tagging policies (e.g., CostCenter, DataDomain, DataProduct) across all S3 buckets, Athena workgroups, and EMR clusters.
+*   **Storage Lifecycle Pricing:**Automates transition rules from S3 Standard to S3 Intelligent-Tiering, Glacier Instant Retrieval, or Deep Archive based on object age and access frequency.
+*   *Compute Query Control:** Allocates dedicated Athena Workgroups per consumer team and configures hard caps on the maximum volume of data scanned per query or per day.
+*   **Warehouse Elasticity:** Implements serverless data warehousing that automatically scales up to handle peak reporting windows and shuts down during idle hours.
+*   **Big Data Optimization:** Automatically provisions Spark/Hive compute instances based on active pipeline queue depth and leverages AWS Graviton-based EC2 instances.
+*   **Metadata Cost Control:** Deploys partition indexes on massive tables to speed up catalog lookups and prevents long crawler runtimes by fine-tuning execution window limits.
+*   *Anomaly Detection & Alerting:**  AWS Cost Anomaly DetectionUtilizes machine learning to establish historical spend baselines and fires immediate alerts via Amazon SNS/Slack if anomalous cost spikes occur.
+
 
 \---
 
