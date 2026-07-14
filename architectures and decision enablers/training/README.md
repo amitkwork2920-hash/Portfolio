@@ -24,9 +24,7 @@ The goal of this sabbatical was to dive deep into :
 
 | :--- | :--- | :--- | :--- |
 
-| \*\*\[Agentic AI Architectures with Patterns, Frameworks and MCP]\*\* | \[Udemy] | \[Introduced to Agentic AI Architectures, Patterns, MCP] | \[View Certificate](https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf) |
-
-
+| \*\*Agentic AI Architectures with Patterns, Frameworks and MCP\*\* | Udemy |  <a href="https://your-certificate-link.com"><span title="https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf</span></a>
 
 
 
