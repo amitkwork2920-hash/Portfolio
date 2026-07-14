@@ -7,7 +7,7 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 * **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment.
 * **Cloud Readiness Blueprint:**  Investigates current organization adoption state from below states 
 
-* 📊 [Download Enabler](CRA_Calculator.xlsx)
+* 📊 [Download Enabler](AI_Security_Assessment_Calculator.xlsx)
 * 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
 * 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
 * 📐 [Dashboards Snapshot](./images/Dashboards.png)
