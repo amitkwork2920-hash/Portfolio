@@ -1,23 +1,24 @@
-# Multi Region High Availability IaaS Architecture
+# Retail PCI-DSS compliant reference architecture on AWS
 
 ## 📌 Overview
 
-* **Domain**: Multi Region High Availability
-* **Pattern**: Cloud-Native, Hub & Spoke, Multi Region DR, Hybrid Connectivity, Perimeter Network (DMZ) 
+* **Domain**: Retail PCI-DSS 
+* **Pattern**: Multi-Tier Architecture, Demilitarized Zone (DMZ) / Network Segmentation, Edge Routing and Security Filter, Stateless Microservices / Containerization, Secure Data Layer,
+Hub-and-Spoke Private Connectivity, Centralized Observability and Auditing, Continuous Compliance and Governance
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Azure_Reference_Architecture.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-azure-highly%20available-topology.png)
+  * 📊 [Download Case Study]
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-aws-retail-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns.
+This architecture serves high-volume e-commerce, FinTech, and payment processing organizations that must handle credit cardholder data securely under strict PCI DSS compliance standards. It employs a heavily segmented Multi-Tier and DMZ network topology to isolate the sensitive Cardholder Data Environment within private subnets, which radically shrinks the business’s compliance audit scope and reduces overall operational costs. External customer traffic from web and mobile applications is strictly filtered at the perimeter using an Edge Routing and Security pattern (combining Route 53, CloudFront, API Gateway, WAF, and Shield) to neutralize threats before they can reach the backend. The core processing tier relies on a Stateless Microservices pattern using Amazon ECS/Fargate behind Network Load Balancers, ensuring the high availability, automatic scaling, and fault tolerance necessary to prevent business revenue loss during peak transaction spikes. Below this, a Secure Data Layer pattern uses Amazon Aurora, ElastiCache, and DynamoDB coupled with dedicated AWS CloudHSM cryptography to protect data at rest, while Hub-and-Spoke Private Connectivity (AWS PrivateLink) guarantees that data transmission to external payment processors remains entirely off the public internet. Finally, the entire footprint is continuously monitored through Centralized Observability and Governance patterns (CloudTrail, GuardDuty, AWS Config), providing the automated, real-time auditing and threat detection required to protect the business against devastating financial or reputational liability from data breaches.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through a centralized and firewalled Hub virtual network, and hosts strictly isolated, production-grade three-tier workloads across resilient availability zones.
+The target state architecture transitions the workload to a highly secure, micro-segmented Payment Card Industry (PCI) compliant environment on AWS that isolates cardholder data and minimizes regulatory audit scope. External traffic from users is intercepted at the edge by Route 53, CloudFront, and API Gateway, where it is actively scrubbed by AWS WAF and Shield before hitting the internal network. The application tier uses Amazon ECS and Fargate inside private subnets to run stateless, auto-scaling containers, ensuring the platform remains highly resilient and capable of handling transaction spikes without downtime. The underlying storage tier separates transactional and session data across Amazon Aurora, DynamoDB, and ElastiCache, relying on dedicated hardware security modules (AWS CloudHSM) for rigorous database encryption. Finally, secure outbound transactions to external payment processors are handled entirely off the public internet via AWS PrivateLink, while the entire infrastructure maintains a continuous compliance and threat-detection posture through AWS Config, GuardDuty, CloudTrail, and CloudWatch.
 
 \---
 
@@ -25,21 +26,33 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Azure Front Door` <br> `Azure Traffic Manager` <br> `Internet Gateway`<br> `DDoS Protection`|Manages global user traffic ingestion, provides intelligent cross-region load balancing with automated failover, and protects downstream networks from edge-level security and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Hub-and-Spoke VNets` <br> `Global VNet Peering`<br> `Azure Firewall (FW)` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `User-Defined Routes (UDR)` <br> `Network Security Groups (NSGs)` <br> `Application Security Groups (ASGs)` <br>|Establishes secure, multi-tier network segmentation and high-speed cross-region transport while enforcing strict, layered traffic isolation, custom routing controls, and micro-perimeter firewalls between services.|
-|**Hybrid Connectivity**|`Azure ExpressRoute` <br> `Azure Site-to-Site (S2S) VPN` <br> `Point-to-Site (P2S) VPN`|Provides dedicated, high-speed corporate private circuits backed by redundant encrypted tunnels to bridge on-premises data centers, office networks, and remote administrators securely to cloud infrastructure resources.|
-|**Compute \& Microservices**|`Azure Virtual Machines (VMs)` <br> `Azure Load Balancers (LBs)` <br> `Autoscale Engines` |Runs scalable, isolated application business workloads across distributed execution environments while optimizing resource consumption and evenly distributing incoming system demands.|
-|**Governance, Databases \& Analytics**|`Azure Management Groups` <br> `Subscription IDs` <br> `Azure SQL Database`<br> `Azure Cosmos DB` <br> `Azure Storage` <br> `Event Hubs` <br> `Log Analytics` <br> `Application Insights` <br> `Monitoring Solutions` <br> `Metrics Explorer` <br> `Ingest & Export APIs` <br> `Power BI dashboards`|Enforces multi-subscription administrative boundaries, manages global persistence and low-latency database replication, and provides unified telemetry ingestion and visual analytics for proactive security monitoring and observability.|
+|**Edge Defense \& Routing**|`Amazon Route 53` <br> `AWS WAF` <br> `AWS Shield` |Resolves DNS requests safely, mitigates volumetric DDoS attacks, and inspects layer-7 HTTP payloads to block malicious traffic at the perimeter.|
+|**Content Delivery & API Gateway**|`Amazon CloudFront` <br> `Amazon API Gateway` |Caches static assets globally to lower latency, terminates SSL/TLS certificates, manages API lifecycles, and acts as the entry reverse-proxy.|
+|**Compute \& Processing**|`Amazon ECS` <br> `Amazon Fargate` |Runs stateless, microsegmented container tasks in an isolated, serverless execution environment that dynamically scales according to real-time transaction volumes.|
+|**Network \& Isolation**|`AWS VPC` <br> `NAT Gateway` <br> `Network Load Balancer` |Segment environments into public and private subnets, handle high-throughput TCP/UDP load balancing, and permit secure egress for private tasks.|
+|**Cryptographic Boundaries**|`AWS PrivateLink` <br> `AWS Certificate Manager` |Keeps inter-service and external communication off the public internet via private endpoints and automates public/private TLS certificate rotation.|
+|**Core Storage \& Caching**| `Amazon Aurora` <br> `Amazon DynamoDB` <br> `Amazon ElastiCache` |Manages highly available relational transaction logs, stores structured low-latency customer data, and caches session tokens to accelerate read operations.|
+|**Hardware-Level Protection**| `AWS CloudHSM` |Delivers dedicated single-tenant cryptographic hardware generation and storage to fulfill the strict key-management requirements of PCI DSS|
+|**Centralized Observability**| `AWS CloudTrail` <br> `Amazon CloudWatch` <br> `Amazon OpenSearch` Service |Captures system-wide API calls, centralizes log aggregation, and provides real-time search capabilities for proactive operational and security troubleshooting.|
+|**Continuous Compliance**| `Amazon GuardDuty` <br> `AWS Config` <br> `AWS Secrets Manager`| Executes continuous intelligent threat detection, maintains a time-ordered configuration history for external auditors, and rotates database credentials safely.|
+
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Azure Front Door` `Azure WAF` and `Azure Firewall` Premium with IDPS to block OWASP Top 10 vectors and lateral threats.
-* **Network Isolation**: Analytical computing engines and processing layers are tightly isolated within private VPC networks with zero direct internet access, moving data exclusively via `private Endpoints`.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Network Security Groups (NSGs) and Application Security Groups (ASGs), allowing no direct public ingress to application or database tiers. 
-* **Data Protection**: Data protection is mandated globally via Azure Key Vault, forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage.
-* **Automated Compliance Auditing**: Regulatory compliance is maintained through Azure Policy blueprints assigned across subscription IDs to enforce continuous auditing, data residency pinning, and immutable backup policies.
+* **Edge Protection**: Meets Requirement 1 & 6 by blocking application-layer attacks (SQLi, XSS) and mitigating volumetric DDoS threats at the perimeter.
+* **Network Isolation**: Enforces Requirement 1 by establishing a firewall configuration that restricts traffic to the Cardholder Data Environment (CDE) from untrusted networks.
+* **Private Transit**: Aligns with Requirement 4 by keeping all payment-routing traffic off the public internet, using private endpoints for internal and external API calls.
+* **Data At Rest**: Satisfies Requirement 3 by providing single-tenant, hardware-backed cryptographic key generation and storage to protect stored cardholder data.
+* **Secrets Management**: Supports Requirement 2 & 8 by securely storing, auditing, and automatically rotating database credentials and API keys without hardcoding them.
+* **Identity \& Access**: Enforces Requirement 7 by implementing strict Least Privilege access control and Role-Based Access Control (RBAC) across the entire AWS infrastructure.
+* **Continuous Audit**: Fulfills Requirement 11 by continuously recording, tracking, and evaluating resource configurations against baseline compliance compliance standards.
+* **Threat Detection**: Aligns with Requirement 10 & 11 by using machine learning to analyze network logs and actively detect anomalous behavior or malicious activity.
+* **Immutable Logging**: Meets Requirement 10 by tracking all system-wide user activity and API calls, providing an immutable audit trail for forensic investigators.
+* **Endpoint Security**: Fulfills Requirement 2 & 7 by assigning distinct identities directly to containers, preventing lateral movement if a microservice is compromised.
+* **Vulnerability Scanning**: Satisfies Requirement 11 by automating regular, software-level vulnerability assessments on the Fargate container images hosted in the registry.
+* **Log Management**: Supports Requirement 10 by indexing system event logs to allow security teams to instantly query, analyze, and report on security anomalies.
 
 \---
 
@@ -47,21 +60,28 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves sub-5 second ad-hoc log query speeds via Log Analytics, sub-2 second dashboard responses via Power BI, and sub-200 ms execution rates on external partner requests through the Ingest & Export APIs.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records from edge ecosystems through the Ingest & Export APIs and Event Hubs into the backend SQL database tier within a strict 15-minute operational window.
-* **Resilience**: Multi-Availability Zone deployment within Azure Region - A guarantees 99.99% high availability for core endpoints, backed by a secondary disaster recovery site in Azure Region - B managed via Traffic Manager & Front Door to maintain an RPO of < 15 minutes and an RTO of < 2 hours.
+* **Transaction Processing Latency**: Measures the end-to-end time (< 150 milliseconds) from API Gateway ingress to Aurora commit and Fargate response.
+* **API Error Rate**: Tracks HTTP 5xx errors (< 0.01%) across CloudFront and API Gateway to ensure transaction reliability.
+* **System Availability (Uptime)**:  Enforced (99.999% (Five Nines)) by multi-AZ deployments of Fargate, Aurora, and Network Load Balancers.
+* **Compute Auto-Scaling Velocity**:  The duration (< 60 seconds) required for Amazon ECS to provision and register fresh Fargate tasks during load spikes.
+* **Database Replication Lag**:  Keeps Amazon Aurora Read Replicas synchronized (< 20 milliseconds) with the primary writer node to guarantee data consistency.
+* **Cache Hit Ratio**:  Measures Amazon ElastiCache efficiency (> 85%) in serving session tokens and metadata to offload primary databases.
+* **Edge Time-to-First-Byte (TTFB)**:  Tracks Amazon CloudFront performance (< 30 milliseconds) globally to ensure fast handshake initiation for mobile and web apps.
+* **PrivateLink Network Throughput**:  Monitored to prevent bandwidth (> 10 Gbps) choking during high-volume external payment gateway settlement sweeps.
+* **HSM Crypto-Operations/Sec**:  Measures the structural throughput limit (> 1,000 TPS) of AWS CloudHSM instances during peak bulk-encryption cycles.
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Uses Autoscale and load balancers to scale virtual machines up or down automatically based on real-time traffic. This ensures you only pay for compute capacity when user demand peaks.
-* **Storage Optimization**: By separating database storage and disk types (DB STORAGE) across multiple tiers, you can move older backup data to lower-cost Azure Archive or Cool storage. This prevents high premium disk storage fees for inactive data.
-* **Cost Efficiency**: Centralizing firewalls, NAT gateways, and ExpressRoute gateways inside the Shared service Hub VNet allows all spoke workloads to share a single set of network appliances. This eliminates the massive cost of duplicating expensive network security licenses in every network.
-* **Non-Production Workload Management**: The clear separation of the Non-Prod-App-VNet allows engineering teams to aggressively power down development environments during weekends and evenings. This practice can eliminate up to 60% of non-production compute waste.
-* **Cross-Region Traffic Governance**: Because the architecture spans Region - A and Region - B, using Global VNet Peering instead of routing cross-region traffic over the public internet provides the lowest possible data egress rates between data centers.
-
-
-
-
+* **Unit Economics**: Maps infrastructure spend directly to transactions by tagging resources with keys like `Environment:CDE` or `Application:PaymentGateway`.
+* **Right-Sizing Compute**: Analyzes historical CPU and memory utilization of Amazon ECS Fargate tasks to eliminate over-provisioning without compromising application throughput.
+* **Commitment Discounts**: Offers up to 66% discount on serverless compute (Fargate) by committing to a consistent hourly usage amount over a 1 or 3-year term.
+* **Storage Tiering**: Lowers storage costs by automatically moving immutable audit logs (CloudTrail, CloudWatch) from standard tiers to Amazon S3 Glacier Flexible Archive.
+* **Data Lifecycle Policy**: Lowers storage costs by automatically moving immutable audit logs (CloudTrail, CloudWatch) from standard tiers to Amazon S3 Glacier Flexible Archive.
+* **Cost Anomalies**: Utilizes machine learning models to monitor daily spending trends and instantly alerts teams via Slack or email when unusual architectural spikes occur.
+* **Shared Resource Allocation**: Defines hard and soft financial thresholds across shared network services (NAT Gateways, CloudFront) to prevent compliance infrastructure from blowing out budgets.
+* **Data Transfer Efficiency**: Lowers multi-AZ and NAT Gateway data processing fees by keeping internal application-to-database traffic local to AWS PrivateLink endpoints.
+* **Caching Optimization**: Minimizes expensive primary database read overhead by fine-tuning Time-to-Live settings on hot payment metadata and session keys.
+* **Log Storage Slicing**: Segregates operational security logs into Hot, Warm, and Cold tiers to retain long-term audit readiness without maintaining massive active clusters.
 
 \---
 

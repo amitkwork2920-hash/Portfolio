@@ -1,4 +1,4 @@
-# Modernized Retail Platform DataLake  on AWS
+# Modernized Retail Platform DataLake on AWS
 
 ## 📌 Overview
 
