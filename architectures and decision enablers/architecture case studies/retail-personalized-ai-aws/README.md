@@ -26,7 +26,7 @@ The target state architecture transitions the platform from a traditional contai
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Edge \& Acceleration**|`AWS CloudFront` <br> `AWS CloudFront` |Low-latency DNS routing, global TLS termination, and static asset edge-caching.|
+|**Edge \& Acceleration**|`AWS CloudFront` <br> `Amazon Route 53` |Low-latency DNS routing, global TLS termination, and static asset edge-caching.|
 |**Ingestion \& Event Mesh**|`Amazon Kinesis Data Streams` <br> `Amazon EventBridge` | Real-time, decoupled clickstream capture and schema-validated event routing.|
 |**Serverless Compute**|`AWS Lambda` <br> `AWS Step Functions` | Zero-idle-cost, event-driven execution and complex microservice workflow orchestration.|
 |**Vector Search Engine**|`Amazon OpenSearch Serverless (with Vector Engine)` |High-dimensional k-NN (k-Nearest Neighbor) semantic search and RAG data retrieval.|
@@ -54,7 +54,7 @@ The target state architecture transitions the platform from a traditional contai
 * **Identity \& Access Management**: Strict Zero-Trust Principle of Least Privilege; enforced Multi-Factor Authentication (MFA); secure OAuth2.0/OIDC tokens.
 * **Continuous Audit \& Monitoring**: Immutable, encrypted API logging; real-time configuration drift detection; centralized multi-account security scoring.
 * **Vulnerability \& Threat Detection**: Intelligent ML-driven log anomaly detection (VPC, DNS, CloudTrail); continuous container and Lambda code scanning.
-* *AI Governance \& Safety**: Configurable PII masking filters; toxic input/output content blocking; strict prompt injection prevention layers.
+* **AI Governance \& Safety**: Configurable PII masking filters; toxic input/output content blocking; strict prompt injection prevention layers.
 
 \---
 
