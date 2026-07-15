@@ -1,23 +1,24 @@
-# Multi Region High Availability IaaS Architecture
+# Customer Personalized Multi-Tier Retail Platform on AWS
 
 ## 📌 Overview
 
-* **Domain**: Multi Region High Availability
-* **Pattern**: Cloud-Native, Hub & Spoke, Multi Region DR, Hybrid Connectivity, Perimeter Network (DMZ) 
+* **Domain**: Personalized Retail on AWS
+* **Pattern**: Microservices, Multi-Tier, Edge Cache, Database Caching, Load Balancing, Polyglot Persistence, Database Replication, Event-Driven Personalization, 
+               Notification, ML Training Loop, Real-Time Inference Injection, AI-Driven Omnichannel Marketing 
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Azure_Reference_Architecture.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-azure-highly%20available-topology.png)
+  * 📊 [Download Case Study]
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-aws-retail-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns.
+This architecture represents a high-volume, modern B2C e-commerce platform designed to maximize user engagement and customer lifetime value (LTV) through data-driven personalization. In a highly competitive digital marketplace, the business context centers on reducing customer churn and cart abandonment by delivering a seamless, low-latency shopping experience alongside tailor-made product recommendations. By leveraging automated cloud scaling and managed machine learning pipelines, the company minimizes expensive infrastructure overhead and avoids manual merchandising, allowing the business to efficiently handle sudden traffic spikes (such as Black Friday sales) while maintaining a hyper-targeted, omnichannel marketing strategy.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through a centralized and firewalled Hub virtual network, and hosts strictly isolated, production-grade three-tier workloads across resilient availability zones.
+The target state architecture transitions the platform from a traditional containerized, batch-trained system to an agile, fully serverless, event-driven, and Generative AI-powered ecosystem to minimize operational overhead and maximize conversion rates. Traditional compute clusters like EC2 and Fargate are replaced with event-driven AWS Lambda functions integrated via Amazon EventBridge, enabling real-time streaming data ingestion through Amazon Kinesis. The legacy predictive engine and traditional search indexing migrate to a unified retrieval-augmented generation (RAG) pattern powered by Amazon Bedrock, which combines large language models (LLMs) with Amazon OpenSearch Serverless vector databases to deliver conversational shopping assistants, semantic search, and hyper-personalized recommendations in real time. Finally, the transactional layer evolves into a completely serverless structure utilizing Amazon Aurora Serverless v2, creating an ultra-low-latency, zero-management framework that scales dynamically from zero to massive enterprise peaks.
 
 \---
 
@@ -25,21 +26,35 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Azure Front Door` <br> `Azure Traffic Manager` <br> `Internet Gateway`<br> `DDoS Protection`|Manages global user traffic ingestion, provides intelligent cross-region load balancing with automated failover, and protects downstream networks from edge-level security and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Hub-and-Spoke VNets` <br> `Global VNet Peering`<br> `Azure Firewall (FW)` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `User-Defined Routes (UDR)` <br> `Network Security Groups (NSGs)` <br> `Application Security Groups (ASGs)` <br>|Establishes secure, multi-tier network segmentation and high-speed cross-region transport while enforcing strict, layered traffic isolation, custom routing controls, and micro-perimeter firewalls between services.|
-|**Hybrid Connectivity**|`Azure ExpressRoute` <br> `Azure Site-to-Site (S2S) VPN` <br> `Point-to-Site (P2S) VPN`|Provides dedicated, high-speed corporate private circuits backed by redundant encrypted tunnels to bridge on-premises data centers, office networks, and remote administrators securely to cloud infrastructure resources.|
-|**Compute \& Microservices**|`Azure Virtual Machines (VMs)` <br> `Azure Load Balancers (LBs)` <br> `Autoscale Engines` |Runs scalable, isolated application business workloads across distributed execution environments while optimizing resource consumption and evenly distributing incoming system demands.|
-|**Governance, Databases \& Analytics**|`Azure Management Groups` <br> `Subscription IDs` <br> `Azure SQL Database`<br> `Azure Cosmos DB` <br> `Azure Storage` <br> `Event Hubs` <br> `Log Analytics` <br> `Application Insights` <br> `Monitoring Solutions` <br> `Metrics Explorer` <br> `Ingest & Export APIs` <br> `Power BI dashboards`|Enforces multi-subscription administrative boundaries, manages global persistence and low-latency database replication, and provides unified telemetry ingestion and visual analytics for proactive security monitoring and observability.|
+|**Edge \& Acceleration**|`AWS CloudFront` <br> `AWS CloudFront` |Low-latency DNS routing, global TLS termination, and static asset edge-caching.|
+|**Ingestion \& Event Mesh**|`Amazon Kinesis Data Streams` <br> `Amazon EventBridge` | Real-time, decoupled clickstream capture and schema-validated event routing.|
+|**Serverless Compute**|`AWS Lambda` <br> `AWS Step Functions` | Zero-idle-cost, event-driven execution and complex microservice workflow orchestration.|
+|**Vector Search Engine**|`Amazon OpenSearch Serverless (with Vector Engine)` |High-dimensional k-NN (k-Nearest Neighbor) semantic search and RAG data retrieval.|
+|**Generative AI \& LLM**|`Amazon Bedrock (Anthropic Claude / Amazon Titan)` |Conversational agents, multi-turn shopping assistance, and contextual intent understanding.|
+|**Serverless Data Tier**|`Amazon Aurora Serverless v2` <br> `Amazon DynamoDB` |Auto-scaling relational transactions (ACID) and single-digit millisecond NoSQL catalog reads.|
+|**MLOps \& Pipeline**|`Amazon SageMaker Pipelines` <br> `AWS Glue` |Continuous automated model monitoring, feature store management, and ETL processing.|
+|**Omnichannel Outreach**|`AWS Pinpoint` <br> `Amazon SES` |Real-time, behavior-triggered customer notifications across SMS, email, and push channels.|
+|**Identity \& Access (IAM)**|`Amazon Cognito` <br> `AWS IAM Identity Center` |Secure OAuth2.0/OIDC customer authentication and fine-grained, role-based resource access control.|
+|**API Management \& Gateway**|`Amazon API Gateway` |Ultra-low latency session state tracking, rate-limit counters, and shopping cart persistence.|
+|**In-Memory Acceleration**|`Amazon ElastiCache for Redis Serverless` |Ultra-low latency session state tracking, rate-limit counters, and shopping cart persistence.|
+|**Security \& Edge Protection**|`Amazon ElastiCache for Redis Serverless` |Ultra-low latency session state tracking, rate-limit counters, and shopping cart persistence.|
+|**Observability \& LLMOps**|`Amazon ElastiCache for Redis Serverless` |Distributed tracing across microservices, application performance monitoring (APM), and LLM cost/prompt tracking.|
+|**Infrastructure as Code (IaC)**|`AWS Cloud Development Kit (CDK)` <br> `TerraForm` |Declarative, type-safe infrastructure definition to replicate the serverless stacks across environments.|
+|**Secrets \& Config Control**|`AWS Secrets Manager` <br> `AWS Systems Manager` |Automated rotation of database credentials, third-party payment keys, and LLM API configurations.|
+
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Azure Front Door` `Azure WAF` and `Azure Firewall` Premium with IDPS to block OWASP Top 10 vectors and lateral threats.
-* **Network Isolation**: Analytical computing engines and processing layers are tightly isolated within private VPC networks with zero direct internet access, moving data exclusively via `private Endpoints`.
+* **Data Protection (At Rest)**: Customer-Managed Keys (CMK) with automated annual rotation; PII discovery and classification via automated ML.
+* **Data Protection (In Transit)**: Enforced TLS 1.3 protocol validation with perfect forward secrecy (PFS) at CloudFront and API Gateway tiers.
 * **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Network Security Groups (NSGs) and Application Security Groups (ASGs), allowing no direct public ingress to application or database tiers. 
-* **Data Protection**: Data protection is mandated globally via Azure Key Vault, forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage.
-* **Automated Compliance Auditing**: Regulatory compliance is maintained through Azure Policy blueprints assigned across subscription IDs to enforce continuous auditing, data residency pinning, and immutable backup policies.
+* **Perimeter \& Network Security**: Layer 7 OWASP Top 10 mitigation; automated Layer 3/4 DDoS protection; strict private-subnet VPC isolation.
+* **Identity \& Access Management**: Strict Zero-Trust Principle of Least Privilege; enforced Multi-Factor Authentication (MFA); secure OAuth2.0/OIDC tokens.
+* **Continuous Audit \& Monitoring**: Immutable, encrypted API logging; real-time configuration drift detection; centralized multi-account security scoring.
+* **Vulnerability \& Threat Detection**: Intelligent ML-driven log anomaly detection (VPC, DNS, CloudTrail); continuous container and Lambda code scanning.
+* *AI Governance \& Safety**: Configurable PII masking filters; toxic input/output content blocking; strict prompt injection prevention layers.
 
 \---
 
@@ -47,17 +62,30 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves sub-5 second ad-hoc log query speeds via Log Analytics, sub-2 second dashboard responses via Power BI, and sub-200 ms execution rates on external partner requests through the Ingest & Export APIs.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records from edge ecosystems through the Ingest & Export APIs and Event Hubs into the backend SQL database tier within a strict 15-minute operational window.
-* **Resilience**: Multi-Availability Zone deployment within Azure Region - A guarantees 99.99% high availability for core endpoints, backed by a secondary disaster recovery site in Azure Region - B managed via Traffic Manager & Front Door to maintain an RPO of < 15 minutes and an RTO of < 2 hours.
+* **API P99 Latency**: < 200ms for standard checkout and catalog endpoints via Amazon API Gateway.
+* **LLM P99 Time-to-First-Token (TTFT)**: < 800ms for conversational AI shopping assistance using Amazon Bedrock.
+* **Max Concurrent Throughput**: System auto-scales seamlessly up to 50,000 requests per second (RPS) during peak events without manual intervention.
+* **Edge Cache Hit Ratio (CHR)**: > 90% for static web and media assets served globally via AWS CloudFront.
+* **Service Uptime (SLA)**: 99.99% multi-region annual availability for the entire core transactional platform path.
+* **Recovery Point Objective (RPO)**: < 1 second for transaction logs utilizing Amazon Aurora Serverless v2 active replication.
+* **Recovery Time Objective (RTO)**: < 30 seconds for automated regional multi-AZ cluster failover.
+* **Database Read Latency**: Single-digit millisecond response time for catalog data fetched via Amazon DynamoDB.
+* **Token Expiry & Rotation**: Short-lived JWT session access tokens valid for exactly 15 minutes via Amazon Cognito.
+* **WAF Block Rate**: Real-time automated mitigation of 100% of Layer 7 OWASP Top 10 and malicious bot traffic.
+* **Compute Idle Resource Waste**: < 5% due to the completely serverless, event-driven execution design.
+* **Max Storage Footprint Elasticity**: Automated archiving of clickstream and application logs to S3 Glacier Deep Archive within 90 days.
+* **Unit Cost Target**: Infrastructure cost per completed checkout transaction maintained below ₹4.20 ($0.05 USD).
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Uses Autoscale and load balancers to scale virtual machines up or down automatically based on real-time traffic. This ensures you only pay for compute capacity when user demand peaks.
+* **Inform (Visibility & Attribution)**: Enforce strict user-defined cost allocation tags (e.g., `Environment`, `Microservice`, `Cost-Center`). Implement automated tag enforcement via AWS Organizations service control policies (SCPs).
 * **Storage Optimization**: By separating database storage and disk types (DB STORAGE) across multiple tiers, you can move older backup data to lower-cost Azure Archive or Cool storage. This prevents high premium disk storage fees for inactive data.
-* **Cost Efficiency**: Centralizing firewalls, NAT gateways, and ExpressRoute gateways inside the Shared service Hub VNet allows all spoke workloads to share a single set of network appliances. This eliminates the massive cost of duplicating expensive network security licenses in every network.
-* **Non-Production Workload Management**: The clear separation of the Non-Prod-App-VNet allows engineering teams to aggressively power down development environments during weekends and evenings. This practice can eliminate up to 60% of non-production compute waste.
-* **Cross-Region Traffic Governance**: Because the architecture spans Region - A and Region - B, using Global VNet Peering instead of routing cross-region traffic over the public internet provides the lowest possible data egress rates between data centers.
+* **Inform (Anomaly & Budgeting)**: Configure daily machine-learning-driven slack/email alerts for unexpected spending spikes. Deploy automated budget alerts at 80%, 90%, and 100% thresholds.
+* **Optimize (Data & Lifecycle)**: Automatically transition stale clickstream logs from S3 Standard to Glacier Deep Archive after 90 days. Evict expired Redis/DynamoDB user sessions using Time-to-Live settings.
+* **Optimize (Rate Reduction)**: Commit to baseline compute spending (Lambda, Fargate, EC2) across a 1 or 3-year term. Leverage Amazon Bedrock provisioned throughput for predictable LLM inference volumes.
+* **Optimize (Continuous Culture))**: Establish a central FinOps Cloud Center of Excellence (CCoE). Deliver automated weekly QuickSight operational cost reports directly to engineering and product squad leads.
+
+
 
 
 
