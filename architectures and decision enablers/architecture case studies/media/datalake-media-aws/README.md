@@ -57,9 +57,18 @@ The target state architecture transitions this framework from a modular serverle
 
 ### Performance \& Availability
 
-* **Latency**: Achieves sub-5 second ad-hoc log query speeds via Log Analytics, sub-2 second dashboard responses via Power BI, and sub-200 ms execution rates on external partner requests through the Ingest & Export APIs.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records from edge ecosystems through the Ingest & Export APIs and Event Hubs into the backend SQL database tier within a strict 15-minute operational window.
-* **Resilience**: Multi-Availability Zone deployment within Azure Region - A guarantees 99.99% high availability for core endpoints, backed by a secondary disaster recovery site in Azure Region - B managed via Traffic Manager & Front Door to maintain an RPO of < 15 minutes and an RTO of < 2 hours.
+* **Pipeline Latency**: Processing completes within 1.5x the native duration of the ingested media file (e.g., a 60-minute video finishes under 90 minutes).
+* **Message & Event Delivery**: 99.99% of events and triggers route from the S3 storage connectors to processing functions in under 200 milliseconds.
+* **Compute Execution Reliability**: ≥ 99.99% successful executions across media transformation and API integration tasks, capturing unhandled faults in dead-letter queues.
+* **Search & Discovery Latency**: Ad-hoc searches, hybrid searches, and reverse media queries return indexed metadata results in under 500 milliseconds.
+* **GenAI Processing Efficiency**: GenAI asset creation and proxy metadata extraction finish processing within 15 seconds per single media request.
+* **Metadata DB Read/Write Speed**: Low-latency state tracking and user-defined metadata updates complete with sub-10 millisecond single-digit response times.
+* **API Integration Availability**: ≥ 99.95% availability for incoming REST API calls, asset transformation triggers, and external downstream service webhooks.
+* **Security Credential Fetch Time**: Secure retrieval of upstream authentication tokens and model keys executes in under 100 milliseconds without impacting execution loops.
+* **Storage Event Responsiveness**: 100% of "New Media Events" are detected and published to the event bus within 1 second of file upload completion on S3 or Disk.
+* **Orchestration Workflow Success**: ≥ 99.9% of Media Lake Pipelines execute to completion without manual operational intervention or state serialization failures.
+* **Observability Telemetry Intake**: Zero dropped log streams or metric points across the entire system, ensuring comprehensive auditing of asynchronous transformation tasks.
+
 
 ### FinOps Framework
 
