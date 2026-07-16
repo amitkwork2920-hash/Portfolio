@@ -12,12 +12,12 @@ A structured, automated Excel-based evaluation calculator built to accelerate yo
    |**Language \& SDK**|
    |**Query Capabilities**|
    |**Scale \& Performance**|
-   |**Operational Overhead*|
-   |**Dev Experience*|
-   |**Deployment \& Cost*|
-   |**Language \& SDK*|
-   |**Query Capabilities*|
-   |**Scale & Performance*|
+   |**Operational Overhead**|
+   |**Dev Experience**|
+   |**Deployment \& Cost**|
+   |**Language \& SDK**|
+   |**Query Capabilities**|
+   |**Scale & Performance**|
 
 
 ## 📁 Repository Structure
