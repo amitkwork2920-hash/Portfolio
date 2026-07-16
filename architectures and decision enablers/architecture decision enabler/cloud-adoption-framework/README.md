@@ -4,9 +4,19 @@ A structured, automated Excel-based planning calculator built to accelerate your
 
 ## 🚀 Key Features
 
-* **Cloud Adoption Assessment:** Evaluates current infrastructure and organizational alignment.
-* **Cloud Adoption Blueprint:**  Investigates current organization adoption state from below states 
+* **Cloud Adoption Assessment:** Evaluates current infrastructure and organizational alignment based on the following parameters :
 
+|Parameters|
+   |-|
+   |**Business Perspective**|
+   |**Human Perspective**|
+   |**Governance Perspective**|
+   |**Platform Perspective**|
+   |**Security Perspective**|
+   |**Operations Perspective**|
+
+
+* **Cloud Adoption Blueprint:**  Investigates current organization adoption state from below states : 
 
 |Adoption State|Business Explanation|
 |-|-|
