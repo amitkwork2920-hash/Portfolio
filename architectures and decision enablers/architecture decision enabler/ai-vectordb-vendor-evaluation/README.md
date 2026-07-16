@@ -4,7 +4,21 @@ A structured, automated Excel-based evaluation calculator built to accelerate yo
 
 ## 🚀 Key Features
 
-* **AI Tech Vendor Assessment:** Evaluates VectorDB vendor evaluation across organizational alignment.
+* **AI Tech Vendor Assessment:** Evaluates VectorDB vendor evaluation across organizational alignment based on the below parameters :
+
+|Parameters|
+   |-|
+   |**Deployment \& Cost**|
+   |**Language \& SDK**|
+   |**Query Capabilities**|
+   |**Scale \& Performance**|
+   |**Operational Overhead*|
+   |**Dev Experience*|
+   |**Deployment \& Cost*|
+   |**Language \& SDK*|
+   |**Query Capabilities*|
+   |**Scale & Performance*|
+
 
 ## 📁 Repository Structure
 

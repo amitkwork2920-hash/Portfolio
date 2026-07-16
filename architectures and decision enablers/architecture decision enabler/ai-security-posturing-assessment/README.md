@@ -4,8 +4,27 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 🚀 Key Features
 
-* **AI Security Posturing Assessment:** Evaluates current security practices and organizational alignment.
-* **AI Security Posturing Blueprint:**  Investigates current organization posturing state from below states 
+* **AI Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
+
+|Parameters|
+   |-|
+   |**Prompt Injection Defenses**|
+   |**Insecure Output Handling**|
+   |**Training Data Privacy \& PII Leakage**|
+   |**Excessive Agency \& Authorization Guardrails**|
+   |**Model Data Poisoning \& Supply Chain**|
+   |**Model Inversion & Membership Inference**|
+   |**Overreliance, Hallucination \& Output Validation**|
+   |**Insecure Plugin \& Agency Design**|
+   |**AI Logging, Shadow LLM Detection \& Observability**|
+   |**AI Infrastructure Configuration Drift \& IaC**|
+   |**Cross-Model/SaaS AI API Trust Boundaries**|
+   |**Training Data \& Model Secret Theft**|
+   |**Model Red Teaming & Continuous Evaluation**|
+   |**DevSecOps for GenAI & Pipeline Auditing**|
+
+
+* **AI Security Posturing Blueprint:**  Investigates current organization posturing state from below states: 
 
 |Current State |Business Explanation|
 |-|-|
