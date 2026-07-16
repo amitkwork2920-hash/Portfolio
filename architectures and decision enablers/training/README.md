@@ -12,6 +12,7 @@ The goal of this sabbatical was to dive deep into:
 | Training Name | Provider | Course Completion Link |
 | :--- | :--- | :--- |
 | **Agentic AI Architectures with Patterns, Frameworks and MCP** |Udemy|<a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-319f8d8e-ee0c-476d-9faa-daad026d35d6.pdf"         target="_blank"><span title="View">View Certificate</span></a> |
+| **Generative AI Engineering: LLMs, RAG, MCP and Agentic Systems** |Udemy|<a href="hhttps://www.udemy.com/certificate/UC-9d32274e-cabe-4553-9788-a93b8ec64598/" target="_blank"><span title="View">View Certificate</span></a> |
 | **Ultimate AWS Certified AI Practitioner AIF** |Udemy|<a href="https://www.udemy.com/certificate/UC-d83e889f-7c4a-4fed-8fb9-a3acbb3c7840/" target="_blank"><span title="View">View Certificate</span></a> |
 | **Microsoft Azure AI Fundamentals in a Weekend** |Udemy|<a href="https://www.udemy.com/certificate/UC-147fa059-5c6e-46b6-861d-335fcd866b4d/" target="_blank"><span title="View">View Certificate</span></a> |
 | **CompTIA AI Architect+ Certification Prep Course** |Udemy|<a href="https://www.udemy.com/certificate/UC-85435803-d9cb-4a26-85ac-7762b080140b/" target="_blank"><span title="View">View Certificate</span></a> |
