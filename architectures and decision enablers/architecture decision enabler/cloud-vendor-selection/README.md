@@ -4,7 +4,8 @@ A structured, automated Excel-based selection calculator built to accelerate you
 
 ## 🚀 Key Features
 
-* **Cloud Vendor Assessment:** Evaluates different cloud vendors (AWS, Azure, GCP, OCI, IBM, Alibaba) on the below parameters
+* **Cloud Vendor Assessment:** Evaluates different cloud vendors (AWS, Azure, GCP, OCI, IBM, Alibaba) on the below parameters :
+
 |Parameters|
    |-|
    |**Market Share & Industry Presence**|

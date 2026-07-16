@@ -4,9 +4,18 @@ A structured, automated Excel-based planning calculator built to accelerate your
 
 ## 🚀 Key Features
 
-* **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment.
-* **Cloud Readiness Blueprint:**  Investigates current organization adoption state from below states 
+* **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment based on the below parameters :
 
+|Parameters|
+   |-|
+   |**Compute \& Operating System Fit**|
+   |**Data \& Storage Tier Compatibility**|
+   |**Networking, Integration \& Performance**|
+   |**Security, Identity \& Compliance**|
+   |**Software Lifecycle \& Maintainability**|
+   |**Commercial, Legal \& Operational Readiness**|
+   
+* **Cloud Readiness Blueprint:**  Investigates current organization adoption state from below states : 
 
 |Strategy |Business Explanation|
 |-|-|
