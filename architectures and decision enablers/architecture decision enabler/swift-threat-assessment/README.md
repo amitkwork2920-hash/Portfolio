@@ -24,7 +24,15 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
    |**RMA (Relationship Management Application) Business Controls**|
    |**Identity, Access, and Hygiene**|
 
-* **SWIFT Security Posturing Blueprint:**  Investigates current organization posturing state based on scores for above domains.  
+* **SWIFT Security Posturing Blueprint:**  Investigates current organization posturing state based on below states:
+
+|Current State |Business Explanation|
+|-|-|
+|**Optimized Security Posture:**| The organization exhibits a highly mature security architecture. Technical controls are automated, segmentation is pristine, and privileged activities are stringently managed. |
+|**Resilient Security Posture:**| Core defensive perimeters are functional, and critical business validations are in place. However, some gaps exist due to manual dependencies or minor tracking lapses in asset lifecycles. | 
+|**Elevated Exposure Posture:**| Major control vulnerabilities are present. The environment lacks robust segmentation, identity management has clear gaps, and security operations are reactive.|
+|**Critical Threat Posture:**|Widespread failure or complete absence of standard security baselines. Credential hygiene is absent, access groups are unmonitored, and third-party interactions introduce severe risk. |
+  
 
 ## 📁 Repository Structure
 
