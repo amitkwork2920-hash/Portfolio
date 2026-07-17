@@ -26,7 +26,7 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
    |**DevSecOps \& CI/CD Pipeline Security**|   
 
 
-* **AI Security Posturing Blueprint:**  Investigates current organization posturing state from below states: 
+* **Cloud Security Posturing Blueprint:**  Investigates current organization posturing state from below states: 
 
 |Current State |Business Explanation|
 |-|-|
@@ -40,7 +40,7 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 * 📊 [Download Enabler](Cloud_Security_Assessment.xlsx)
 * 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
-* 📐 [Organization Security State Interpretation ](./images/Inputs-Resp.png)
+* 📐 [Organization Security State Interpretation ](./images/Interpretstate.png)
 * 📐 [Dashboards Snapshot](./images/Dashboards.png)
 
 
