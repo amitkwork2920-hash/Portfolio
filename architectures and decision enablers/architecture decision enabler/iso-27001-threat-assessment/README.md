@@ -4,7 +4,7 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 🚀 Key Features
 
-* ** ISO 27001 Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
+* **ISO 27001 Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
 
 |Parameters|
    |-|
