@@ -8,14 +8,14 @@ The goal of this sabbatical was to dive deep into:
 
 # 💼 Domains 
 
-| Domain Name |
-| :--- | 
-| **Banking \& Financial Services** |
-| **Insurance** |
-| **Retail** |
-| **Travel** |
-| **Media** |
-| **Automation** |
+| Domain Name | Sub Domains | 
+| :--- | :--- | 
+| **Banking \& Financial Services** |  **Banking \& Financial Services** |
+| **Insurance** | **Insurance** |
+| **Retail** | **Retail** |
+| **Travel** | **Travel** |
+| **Media** | **Media** |
+| **Automation** | **Automation** |
 
 # 💼 Technologies 
 
