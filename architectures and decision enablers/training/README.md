@@ -1,12 +1,3 @@
-# 🚀 6-8 Months Sabbatical: Professional Development Portfolio
-
-Welcome! This repository documents the trainings that I completed during my professional sabbatical from Dec 2025 to Jul 2026. 
-
-The goal of this sabbatical was to dive deep into: 
-* **Preparing Case-Studies for Reference Architectures in the areas of AWS, Azure, BFSI, Retail, Data Eng., Multi-Cloud, Gen AI** 
-* **Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc**
-* **Completed Online trainings in the areas of Cloud, AI, Security, Big Data, Presales, FinOps**
-
 ### 📚 Completed Trainings 
 
 | Training Name | Provider | Course Completion Link |
