@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-* **Domain**: Agentic AI Azure 
+* **Domain**:  Automation 
 * **Pattern**: Retrieval-Augmented Generation (RAG), Agentic Workflow (Orchestration), Data Ingestion & Enrichment Pipeline (ETL), Event-Driven, API Gateway (Facade), 
                Polyglot Persistence
 * **Core Artifacts**:
