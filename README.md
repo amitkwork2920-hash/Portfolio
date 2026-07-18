@@ -10,27 +10,27 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-\* \*\*Prepared 25 Case-Studies for Reference Architectures in the following domains \& Technologies: 
+\### 📚 Prepared 25 Case-Studies for Reference Architectures in the following domains \& Technologies: 
 
 
 
-|Domains|							
+| Domains |							
 
-|-|                                                                
+| -|                                                                
 
-|\*\*Banking \\\& Financial Services\*\*|                         
+| \*\*Banking \\\& Financial Services\*\* |                         
 
-|\*\*Healthcare\*\*|                                             
+| \*\*Healthcare\*\* |                                             
 
-|\*\*Insurance\*\*|                                              
+| \*\*Insurance\*\* |                                              
 
-|\*\*Media\*\*|                                                  
+| \*\*Media\*\* |                                                  
 
-|\*\*Retail\*\*|
+| \*\*Retail\*\* |
 
-|\*\*Travel\*\*|
+| \*\*Travel\*\* |
 
-|\*\*Automation\*\*|
+| \*\*Automation\*\* |
 
 
 
