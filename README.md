@@ -10,35 +10,79 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-\* \*\*Preparing Case-Studies for Reference Architectures in the following domains : 
+\* \*\*Prepared 25 Case-Studies for Reference Architectures in the following domains \& Technologies: 
 
 
 
-|Domains|							|Technologies|
+|Domains|							
 
-&#x20;  |-|                                                          |-|      
+|-|                                                                
 
-&#x20;  |\*\*Banking \\\& Financial Services\*\*|                          |AWS|
+|\*\*Banking \\\& Financial Services\*\*|                         
 
-&#x20;  |\*\*Healthcare\*\*|                                             |Azure|
+|\*\*Healthcare\*\*|                                             
 
-&#x20;  |\*\*Insurance\*\*|                                              |MultiCloud| 
+|\*\*Insurance\*\*|                                              
 
-&#x20;  |\*\*Media\*\*|                                                  
+|\*\*Media\*\*|                                                  
 
-&#x20;  |\*\*Retail\*\*|
+|\*\*Retail\*\*|
 
-&#x20;  |\*\*Travel\*\*|
+|\*\*Travel\*\*|
 
-&#x20; 
+|\*\*Automation\*\*|
 
 
 
-Banking \& Financial Services, Insurance, Retail, Travel Media, Data Eng., Legacy, Multi-Cloud, AI\*\* 
 
-\* \*\*Preparing Architecture decision enablers for decisions in the areas of Cloud, AI, Security, Tech Vendor Evaluations etc\*\*
 
-\* \*\*Completed Online trainings in the areas of Cloud, AI, Security, Big Data, Presales, FinOps\*\*
+|Technologies|
+
+|-|
+
+|\*\*AWS\*\*|
+
+|\*\*Azure\*\*|
+
+|\*\*MultiCloud\*\*|
+
+|\*\*AI\*\*|
+
+|\*\*Data Engineering\*\*|
+
+
+
+\* \*\*Prepared 10 Architecture decision enablers for decisions in the following areas :\*\* 
+
+|Areas|
+
+|-|
+
+|\*\*Cloud\*\*|
+
+|\*\*AI\*\*|
+
+|\*\*Security\*\*|
+
+
+
+
+
+\* \*\*Completed 15 Online trainings in the following areas :\*\*
+
+|Areas|
+
+|-|
+
+|\*\*Cloud\*\*|
+
+|\*\*AI\*\*|
+
+|\*\*FinOps\*\*|
+
+|\*\*Presales\*\*|
+
+
 
 
 
