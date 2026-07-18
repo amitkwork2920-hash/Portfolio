@@ -27,3 +27,14 @@ The goal of this sabbatical was to dive deep into:
 | **Legacy Hybrid** |
 | **AI** |
 | **Data Engineering** |
+
+📚 Prepared 10 Architecture Decision Enablers in the following areas:
+
+# 💼 Areas 
+
+| Areas |
+| :--- | 
+| **Cloud** |
+| **AI** |
+| **Security** |
+ 
