@@ -18,43 +18,21 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-|Parameters|
-
-&#x20;  |-|
-
-&#x20;  |\*\*SWIFT Environment Protection\*\*|
-
-&#x20;  |\*\*Operating System Privileged Account Control\*\*|
-
-&#x20;  |\*\*Virtualization or Cloud Platform Protection\*\*|
-
-&#x20;  |\*\*Restriction of Internet Access\*\*|
-
-&#x20;  |\*\*Internal Data Flow Security\*\*|
-
-&#x20;  |\*\*Security Updates\*\*|
-
-&#x20;  |\*\*Security Hardening\*\*|
-
-&#x20;  |\*\*Back Office Data Flow Security\*\*|
-
-&#x20;  |\*\*External Transmission Data Protection\*\*|
-
-&#x20;  |\*\*Operator Session Confidentiality and Integrity\*\*|
-
-&#x20;  |\*\*Vulnerability Scanning\*\*|
-
-&#x20;  |\*\*Critical Activity Outsourcing\*\*|
-
-&#x20;  |\*\*Transaction Business Controls\*\*|
-
-&#x20;  |\*\*RMA (Relationship Management Application) Business Controls\*\*|
-
-&#x20;  |\*\*Identity, Access, and Hygiene\*\*|
 
 
+| Domain Focus | Strategic Decision Enablers | Completed Online Trainings |
 
+| :--- | :--- | :--- |
 
+| \*\*Cloud\*\* | Frameworks for multi-cloud vs. hybrid trade-offs | Advanced infrastructure \& platform engineering |
+
+| \*\*AI\*\* | Cost vs. performance optimization matrices | MLOps \& Generative AI integration |
+
+| \*\*Security\*\* | Risk models for Zero Trust implementation | \*Not Applicable\* |
+
+| \*\*FinOps\*\* | \*Not Applicable\* | Cloud cost optimization \& budgeting |
+
+| \*\*Presales\*\* | \*Not Applicable\* | Solutioning \& technical value-selling |
 
 
 
