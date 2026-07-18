@@ -12,6 +12,9 @@
 | **Banking and Capital Markets BI GenAI Architecture** |  **Banking \& Capital Markets** | **A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem.** |
 | **Hybrid Core Banking Modernization & Core Ledger Synchronizer** |  **Core Banking Infrastructure \& Financial Services** | **A secure, hybrid cloud-native architecture connecting the legacy bank data centre to AWS.** |
 | **Open Banking Reference Architecture on AWS** |  **Core Banking Infrastructure \& Financial Services** | **A secure, multi-tier hybrid cloud topology engineered for modern Open Banking modernization by decoupling public API endpoints from core backend compute layers.** |
+| **Data mesh Reference architecture on AWS** |  **Data Engineering** | **A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem.** |
+| **Data Engineering and Analytics pipeline on Azure** |  **Data Engineering** | **The target state architecture transitions this workflow into a highly optimized, cloud-native Lakehouse platform that eliminates data silos and reduces latency across the entire ecosystem.** |
+| **Multi Region High Availability IaaS Architecture** |  **Generic Cloud** | **A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure.** |
 
 📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
 
