@@ -8,25 +8,14 @@ The goal of this sabbatical was to dive deep into:
 
 # 💼 Domains 
 
-| Domain Name | Description | 
+| Domain Name | Description | Technology | 
 | :--- | :--- | 
-| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** |
-| **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** |
-| **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** |
-| **Travel** | **Dynamic booking engines, reservation management systems, and loyalty program integrations.** |
-| **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** |
-| **Automation** | **Intelligent robotic process automation, workflow orchestration, and CI/CD pipeline optimization.** |
-
-# 💼 Technologies 
-
-| Technology Name |
-| :--- | 
-| **Cloud-AWS** |
-| **Cloud-Azure** |
-| **Multi-Cloud** |
-| **Legacy Hybrid** |
-| **AI** |
-| **Data Engineering** |
+| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
+| **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Travel** | **Dynamic booking engines, reservation management systems, and loyalty program integrations.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Data Engineering** | **Intelligent pipeline optimization, modern data lakes** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 
 📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
 
