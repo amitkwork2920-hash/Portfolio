@@ -9,7 +9,7 @@ The goal of this sabbatical was to dive deep into:
 # 💼 Domains 
 
 | Domain Name | Description | Technology | 
-| :--- | :--- | 
+| :--- | :--- | :--- | 
 | **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
 | **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
