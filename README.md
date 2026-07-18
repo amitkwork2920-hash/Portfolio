@@ -14,23 +14,23 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-| Domains |							
+|Domains|							
 
-| -|                                                                
+|-|                                                                
 
-| \*\*Banking \\\& Financial Services\*\* |                         
+|\*\*Banking \\\& Financial Services\*\*|                         
 
-| \*\*Healthcare\*\* |                                             
+|\*\*Healthcare\*\*|                                             
 
-| \*\*Insurance\*\* |                                              
+|\*\*Insurance\*\*|                                              
 
-| \*\*Media\*\* |                                                  
+|\*\*Media\*\*|                                                  
 
-| \*\*Retail\*\* |
+|\*\*Retail\*\*|
 
-| \*\*Travel\*\* |
+|\*\*Travel\*\*|
 
-| \*\*Automation\*\* |
+|\*\*Automation\*\*|
 
 
 
