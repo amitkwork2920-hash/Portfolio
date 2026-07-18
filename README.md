@@ -10,7 +10,11 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-\### 📚 Prepared 25 Case-Studies for Reference Architectures in the following domains \& Technologies: 
+📚 Prepared 25 Case-Studies for Reference Architectures in the following domains \& Technologies: 
+
+
+
+\* \*\*SWIFT Security Posturing Assessment:\*\*
 
 
 
