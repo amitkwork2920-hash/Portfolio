@@ -1,29 +1,19 @@
 # 🚀 Technical Sabbatical: Professional Development Portfolio
 
-Welcome! This repository documents the different activities that I completed during my professional technical sabbatical from Dec 2025 to Jul 2026. 
+📚 Architecture Decision Enablers :
 
-The goal of this sabbatical was to dive deep into: 
+# 💼 Decision 
 
-📚 Prepared 25 Case-Studies for Reference Architectures in the following domains & Technologies: 
+|Architecture Decision|Description|
+|-|-|
+|**AI Security Posturing Assessment Decision Enabler**|A structured, automated Excel-based assessment calculator built to accelerate your AI security current posturing.|
+|**AI Tech Vendor Evaluation for Vector DB Selection Decision Enabler**|A structured, automated Excel-based evaluation calculator built to accelerate your vendor selection.|
+|**Cloud Adoption Framework (CAF) Decision Enabler**|A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate the state that they are in with respect to adopting cloud.|
+|**Cloud Readiness Assessment (CRA) Decision Enabler**|A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness for cloud adoption.|
+|**Cloud Security Posturing Assessment Decision Enabler**|A structured, automated Excel-based assessment calculator built to accelerate your Cloud security current posturing.|
+|**Cloud Vendor Selection Decision Enabler**|A structured, automated Excel-based selection calculator built to accelerate your pre-cloud migration journey. This tool helps organizations evaluate vendors.|
+|**ISO 27001 Security Posturing Assessment Decision Enabler**|A structured, automated Excel-based assessment calculator built to accelerate your ISO 27001 Security current posturing.|
+|**SWIFT Security Posturing Assessment Decision Enabler**|A structured, automated Excel-based assessment calculator built to accelerate your SWIFT Security current posturing.|
 
-# 💼 Domains 
 
-| Domain Name | Description | Technology | 
-| :--- | :--- | :--- | 
-| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
-| **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Travel** | **Dynamic booking engines, reservation management systems, and loyalty program integrations.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Data Engineering** | **Intelligent pipeline optimization, modern data lakes** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 
-📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
-
-# 💼 Decision Domains 
-
-| Decision Domains | Domain Description |         
-| :--- | :--- | 
-| **Cloud** | **Frameworks for cloud adoption, strategic vendor selection, comprehensive readiness assessments, and Well-Architected reviews.** |
-| **AI** | **Methodologies for governance-focused audit assessments and rigorous emerging AI-technology evaluations.** |
-| **Security** | **Comprehensive risk analysis covering SWIFT threats, ISO 27001 compliance, AI systems, and cloud security posturing.** |
- 
