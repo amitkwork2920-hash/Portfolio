@@ -1,4 +1,4 @@
-# 🚀 6-8 Months Sabbatical: Professional Development Portfolio
+# 🚀 Technical Sabbatical: Professional Development Portfolio
 
 Welcome! This repository documents the different activities that I completed during my professional technical sabbatical from Dec 2025 to Jul 2026. 
 
