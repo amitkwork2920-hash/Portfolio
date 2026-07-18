@@ -14,23 +14,41 @@ The goal of this sabbatical was to dive deep into:
 
 
 
-|Domains|
+|Parameters|
 
-&#x20;|-|
+&#x20;  |-|
 
-&#x20;|\*\*Banking \\\& Financial Services\*\*|
+&#x20;  |\*\*SWIFT Environment Protection\*\*|
 
-&#x20;|\*\*Healthcare\*\*|
+&#x20;  |\*\*Operating System Privileged Account Control\*\*|
 
-&#x20;|\*\*Insurance\*\*|
+&#x20;  |\*\*Virtualization or Cloud Platform Protection\*\*|
 
-&#x20;|\*\*Media\*\*|
+&#x20;  |\*\*Restriction of Internet Access\*\*|
 
-&#x20;|\*\*Retail\*\*|
+&#x20;  |\*\*Internal Data Flow Security\*\*|
 
-&#x20;|\*\*Travel\*\*|
+&#x20;  |\*\*Security Updates\*\*|
 
-&#x20;|\*\*Automation\*\*|
+&#x20;  |\*\*Security Hardening\*\*|
+
+&#x20;  |\*\*Back Office Data Flow Security\*\*|
+
+&#x20;  |\*\*External Transmission Data Protection\*\*|
+
+&#x20;  |\*\*Operator Session Confidentiality and Integrity\*\*|
+
+&#x20;  |\*\*Vulnerability Scanning\*\*|
+
+&#x20;  |\*\*Critical Activity Outsourcing\*\*|
+
+&#x20;  |\*\*Transaction Business Controls\*\*|
+
+&#x20;  |\*\*RMA (Relationship Management Application) Business Controls\*\*|
+
+&#x20;  |\*\*Identity, Access, and Hygiene\*\*|
+
+
 
 
 
