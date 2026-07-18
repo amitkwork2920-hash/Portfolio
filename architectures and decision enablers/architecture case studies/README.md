@@ -15,6 +15,8 @@
 | **Data mesh Reference architecture on AWS** |  **Data Engineering** | **A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem.** |
 | **Data Engineering and Analytics pipeline on Azure** |  **Data Engineering** | **The target state architecture transitions this workflow into a highly optimized, cloud-native Lakehouse platform that eliminates data silos and reduces latency across the entire ecosystem.** |
 | **Multi Region High Availability IaaS Architecture** |  **Generic Cloud** | **A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure.** |
+| **Multi Tenancy Architecture on AWS** |  **Multi Tenancy** | **The target state architecture transitions this system into a mature, production-ready Serverless Multi-Tenant SaaS platform centered on high agility, zero-trust security, and operational excellence.** |
+| **Multi Cloud (AWS,Azure) IaaS Architecture** |  **Generic Cloud** | **An architecture focussing on consolidating management, standardizing container platforms, and minimizing multi-cloud data egress costs by shifting from a fragmented multi-cloud setup to a unified, cloud-native design.** |
 
 📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
 

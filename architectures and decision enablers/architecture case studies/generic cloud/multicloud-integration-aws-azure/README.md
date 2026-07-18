@@ -1,23 +1,23 @@
-# Multi Region High Availability IaaS Architecture
+# Multi Cloud (AWS, Azure) IaaS Architecture
 
 ## 📌 Overview
 
-* **Domain**: Multi Region High Availability
-* **Pattern**: Cloud-Native, Hub & Spoke, Multi Region DR, Hybrid Connectivity, Perimeter Network (DMZ) 
+* **Domain**: Multi Cloud Architecture
+* **Pattern**: Hybrid and Multi-Cloud, Hub-and-Spoke Traffic Routing, Environment Isolation (Dev / Test / Prod), Microservices and Service Mesh, Event-Driven Messaging and Asynchronous Processing, Serverless Integration (Middleware), Zero Trust / Secure Perimeter 
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Azure_Reference_Architecture.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-azure-highly%20available-topology.png)
+  * 📊 [Download Case Study]
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-multi-cloud-topology.png)
 
 \---
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns.
+This multi-cloud architecture is designed for a highly regulated enterprise—such as a large financial institution, healthcare provider, or global customer support corporation—that balances modern cloud scaling with legacy data sovereignty requirements. The setup supports a high-volume, multi-environment software lifecycle (Dev, Test, and Prod) to continuously roll out digital services, while a decoupled AWS backend manages complex, asynchronous operations like call center automated workflows and transactional notifications. By linking modern Azure public cloud infrastructure to a secure, firewalled on-premises environment through Azure Arc, the business can rapidly scale user-facing web applications globally without compromising strict compliance mandates regarding private data storage.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through a centralized and firewalled Hub virtual network, and hosts strictly isolated, production-grade three-tier workloads across resilient availability zones.
+The target state architecture focuses on consolidating management, standardizing container platforms, and minimizing multi-cloud data egress costs by shifting from a fragmented multi-cloud setup to a unified, cloud-native design. In this optimized state, the decoupled AWS workflow and messaging components are migrated into Azure—replacing AWS SQS, SNS, and SWF with Azure Service Bus, Event Grid, and Logic Apps—to achieve single-cloud operational efficiency. The secure on-premises perimeter is fully integrated under Azure Arc-enabled Kubernetes, allowing the Dev, Test, and Prod clusters to share a standardized GitOps deployment pipeline and a centralized, zero-trust key management system. Finally, the fragmented databases are consolidated into a fully managed, auto-scaling distributed database system (such as Azure Cosmos DB or Azure SQL) that utilizes managed identities, eliminating cross-cloud latency and providing a single pane of glass for enterprise observability.
 
 \---
 
@@ -25,21 +25,31 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Azure Front Door` <br> `Azure Traffic Manager` <br> `Internet Gateway`<br> `DDoS Protection`|Manages global user traffic ingestion, provides intelligent cross-region load balancing with automated failover, and protects downstream networks from edge-level security and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Hub-and-Spoke VNets` <br> `Global VNet Peering`<br> `Azure Firewall (FW)` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `User-Defined Routes (UDR)` <br> `Network Security Groups (NSGs)` <br> `Application Security Groups (ASGs)` <br>|Establishes secure, multi-tier network segmentation and high-speed cross-region transport while enforcing strict, layered traffic isolation, custom routing controls, and micro-perimeter firewalls between services.|
-|**Hybrid Connectivity**|`Azure ExpressRoute` <br> `Azure Site-to-Site (S2S) VPN` <br> `Point-to-Site (P2S) VPN`|Provides dedicated, high-speed corporate private circuits backed by redundant encrypted tunnels to bridge on-premises data centers, office networks, and remote administrators securely to cloud infrastructure resources.|
-|**Compute \& Microservices**|`Azure Virtual Machines (VMs)` <br> `Azure Load Balancers (LBs)` <br> `Autoscale Engines` |Runs scalable, isolated application business workloads across distributed execution environments while optimizing resource consumption and evenly distributing incoming system demands.|
-|**Governance, Databases \& Analytics**|`Azure Management Groups` <br> `Subscription IDs` <br> `Azure SQL Database`<br> `Azure Cosmos DB` <br> `Azure Storage` <br> `Event Hubs` <br> `Log Analytics` <br> `Application Insights` <br> `Monitoring Solutions` <br> `Metrics Explorer` <br> `Ingest & Export APIs` <br> `Power BI dashboards`|Enforces multi-subscription administrative boundaries, manages global persistence and low-latency database replication, and provides unified telemetry ingestion and visual analytics for proactive security monitoring and observability.|
+|**Global Edge \& Traffic Routing**|`Envoy Proxy / NGINX Ingress` <br> `AWS Global Accelerator` | Replaces Front Door and Application Gateway for unified global load balancing, SSL termination, and cloud-agnostic edge routing. |
+|**Container Orchestration**|`Amazon EKS (Elastic Kubernetes Service)` <br> `Kubernetes` | Replaces AKS to provide a standardized, managed container platform for running Dev, Test, and Prod application clusters.|
+|**Service Mesh**|`Istio / Linkerd` |Replaces the cloud-specific AKS Service Mesh to manage secure, observable, and resilient microservice-to-microservice communication.|
+|**Asynchronous Messaging**|`Amazon SQS (Simple Queue Service)` <br> `Apache Kafka` | Ingests, buffers, and decouples high-volume system events and incoming transactional messages to prevent bottlenecking.|
+|**Workflow Orchestration**|`Amazon SWF (Simple Workflow Service)` <br> `Temporal.io` | Coordinates complex, distributed call center workflows and stateful business processes across multiple microservices.|
+|**Serverless Compute \& Middleware**|`AWS Lambda` <br> `Temporal.io` | Executes stateless event processing, data transformation, and integration logic between messaging queues and databases.|
+|**Data Tier**|`Amazon RDS/Amazon Aurora` <br> `PostgreSQL` | Hosts isolated relational databases for Prod, Test, and Staging tiers with automated scaling and cross-region replication.|
+|**Hybrid Cloud Management**|`OpenGitOps` <br> `ArgoCD` | Replaces Azure Arc to automate and synchronize declarative software deployments across public cloud and on-premises clusters.|
+|**Secrets \& Security Management**|`HashiCorp Vault` | Replaces Azure Key Vault to serve as a cloud-neutral, zero-trust repository for securely managing application credentials, keys, and tokens.|
+|**Unified Observability**|`Prometheus & Grafana` <br> `OpenTelemetry` | Replaces proprietary observability tools to collect metrics, logs, and traces into a single pane of glass across all infrastructure layers.|
+
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Azure Front Door` `Azure WAF` and `Azure Firewall` Premium with IDPS to block OWASP Top 10 vectors and lateral threats.
-* **Network Isolation**: Analytical computing engines and processing layers are tightly isolated within private VPC networks with zero direct internet access, moving data exclusively via `private Endpoints`.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Network Security Groups (NSGs) and Application Security Groups (ASGs), allowing no direct public ingress to application or database tiers. 
-* **Data Protection**: Data protection is mandated globally via Azure Key Vault, forcing automated rotation of symmetric keys, mandatory TLS 1.3 for data-in-transit, and standard encryption-at-rest for storage.
-* **Automated Compliance Auditing**: Regulatory compliance is maintained through Azure Policy blueprints assigned across subscription IDs to enforce continuous auditing, data residency pinning, and immutable backup policies.
+* **Identity & Access Management (IAM)**: Enforces multi-cloud role federation, least-privilege `IAM` policies, and Just-In-Time (`JIT`) access to satisfy `NIST SP 800-53`, `SOC 2`, and `HIPAA`. Managed operationally through mandatory MFA, bi-annual user access reviews, and automated stale-account decommissioning.
+* **Data Protection (At Rest & In Transit)**: Secures data using `AES-256` storage encryption, `TLS 1.3` for all transmission paths, and `FIPS 140-3` validated `HSMs` via `HashiCorp Vault`. This meets `PCI-DSS v4.0` and `GDPR` Article 32 mandates through automated 90-day key rotations and egress DLP scanning.
+* **Network & Perimeter Security**: Implements `Cloud WAF`, service mesh micro-segmentation, and `Private Link endpoints` to satisfy `ISO 27001` network standards and `FedRAMP` boundary rules. Governed via automated firewall rule auditing and continuous network topology drift detection.
+* **Vulnerability & Threat Management**: Embeds `DevSecOps` by running `SAST` in CI/CD pipelines, container registry scanning, and `agentless CSPM` to comply with `SOC 2` risk mitigation rules. Operationally maintained through strict patch SLAs and automated deployment blocks for vulnerable code images.
+* **Audit, Logging & Observability**: Captures immutable `OpenTelemetry` audit trails in `Write-Once-Read-Many` (WORM) storage to satisfy strict `PCI-DSS Req 10`, `GDPR Article 30`, and `SOX 404` tracking mandates. Managed via 7-year retention rules and automated anomaly alerting.
+* **Software Supply Chain & CI/CD Security**: Secures pipelines using cryptographic container signing (`Cosign`), Software `Bill of Materials` (SBOM) generation, and locked third-party dependencies to align with `EO 14028` and `SLSA Level 3`. Governed by automated pipeline dependency break alerts and unsigned image admission blocks.
+* **Business Continuity & Disaster Recovery (BCDR)**: Implements multi-region automated database replication, immutable block-storage snapshots, and infrastructure-as-code (`IaC`) failover playbooks to satisfy `ISO 27001 (A.17)` and `FINRA` resiliency mandates. Maintained operationally through quarterly unannounced chaos engineering drills and automated RPO/RTO drift alerting.
+* **Cloud Configuration Posture & Drift Control**: Utilizes continuous automated Policy-as-Code (`Open Policy Agent/Rego`) to scan `Terraform` blueprints and cloud runtimes against `CIS Foundations Benchmarks`. Governed through automatic remediation of non-compliant resources (e.g., public `S3` buckets) and immediate security team notifications for unapproved manual cloud alterations.
+
 
 \---
 
@@ -47,20 +57,26 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves sub-5 second ad-hoc log query speeds via Log Analytics, sub-2 second dashboard responses via Power BI, and sub-200 ms execution rates on external partner requests through the Ingest & Export APIs.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records from edge ecosystems through the Ingest & Export APIs and Event Hubs into the backend SQL database tier within a strict 15-minute operational window.
-* **Resilience**: Multi-Availability Zone deployment within Azure Region - A guarantees 99.99% high availability for core endpoints, backed by a secondary disaster recovery site in Azure Region - B managed via Traffic Manager & Front Door to maintain an RPO of < 15 minutes and an RTO of < 2 hours.
+* **Edge Routing & Ingress**: Tracked via edge proxy logs. Spikes trigger (`Global Ingress` Error Rate (HTTP 5xx) < 0.01%) automated `CDN-to-gateway` failover routing.
+* **System Latency**: Monitored by OpenTelemetry. Latency drift (End-to-End P99 Transaction Latency < 200 ms) triggers microservice container auto-scaling.
+* **Compute Availability**: Tracked by Prometheus, Node failure (Kubernetes Cluster Node Availability ≥ 99.99%) triggers automated cloud provider self-healing.
+* **Messaging & Queues**: Polled by cloud monitoring metrics, High lag triggers (Amazon SQS Message Queue Age (Lag) < 5 seconds) AWS Lambda concurrency scale-up.
+* **Database Resiliency**: Checked via storage heartbeat, (Database Failover Time (RTO) < 30 seconds) Primary database crash initiates automated multi-region promotion.
+* **Workflow Processing**: Tracked via orchestration engines, (Stateful Workflow Execution Success Rate ≥ 99.9%) Failures trigger automated dead-letter queue (DLQ) routing.
+* **Hybrid Connectivity**: Monitored by Azure Arc heartbeats, (Hybrid Cloud Control Plane Sync Latency < 60 seconds) Dropouts trigger automated backup VPN tunnel routing.
+* **Service Mesh Health**: Tracked via Istio/Envoy telemetry, (Internal Sidecar Proxy Error Rate < 0.05%) Excess failures trigger automated mutual TLS (mTLS) certificate renewals.
+* **Serverless Execution**: Polled via CloudWatch, (AWS Lambda Cold Start Duration < 400ms) Duration spikes trigger automated provisioned concurrency adjustments.
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Uses Autoscale and load balancers to scale virtual machines up or down automatically based on real-time traffic. This ensures you only pay for compute capacity when user demand peaks.
-* **Storage Optimization**: By separating database storage and disk types (DB STORAGE) across multiple tiers, you can move older backup data to lower-cost Azure Archive or Cool storage. This prevents high premium disk storage fees for inactive data.
-* **Cost Efficiency**: Centralizing firewalls, NAT gateways, and ExpressRoute gateways inside the Shared service Hub VNet allows all spoke workloads to share a single set of network appliances. This eliminates the massive cost of duplicating expensive network security licenses in every network.
-* **Non-Production Workload Management**: The clear separation of the Non-Prod-App-VNet allows engineering teams to aggressively power down development environments during weekends and evenings. This practice can eliminate up to 60% of non-production compute waste.
-* **Cross-Region Traffic Governance**: Because the architecture spans Region - A and Region - B, using Global VNet Peering instead of routing cross-region traffic over the public internet provides the lowest possible data egress rates between data centers.
-
-
-
+* **Cloud Rate Optimization**: Leverages multi-cloud committed use discounts (`AWS Savings Plans`, `Azure Reserved Instances`) and spot instances for non-production environments to align with the FinOps Framework Rate Optimization capability. Governed through automated commitment coverage tracking and quarterly automated renewal alerts.
+* **Resource Allocation & Tagging**: Enforces 100% automated metadata tagging (cost center, environment, owner) via `Infrastructure-as-Code` (IaC) deployment gates to satisfy `FinOps Cost Allocation standards`. Operationally maintained by automated scripts that flag or terminate untagged resources within 24 hours of creation.
+* **Workload Optimization & Rightsizing**: Minimizes infrastructure waste by running daily automated CPU/Memory utilization scans via `Kubernetes Horizontal Pod Autoscalers` (HPA) and cloud-native advisors. Aligns with `FinOps Resource Optimization` goals through mandatory down-scheduling profiles for Dev/Test environments outside of business hours.
+* **Data Lifecycle & Egress Management**: Reduces multi-cloud data transfer fees and storage overhead by implementing automated object lifecycle policies (moving cold data to Glacier/Archive tiers) and prioritizing localized caching. Governed through automated threshold alerting on cross-cloud egress paths to intercept budget-draining data movements.
+* **Budgeting, Forecasting & Anomalies**: Establishes rolling 12-month cloud spend forecasts and strict budget boundaries integrated directly into Slack/Teams communication channels for real-time visibility. Satisfies the FinOps Budget Management capability via automated anomaly-detection ML models that alert engineering teams to unexpected daily cost spikes over 15%.
+* **Licensing Optimization & BYOL**: Minimizes multi-cloud enterprise licensing costs by enforcing Bring-Your-Own-License (BYOL) policies for operating systems and databases using hybrid benefit programs (e.g., Azure Hybrid Benefit). Aligns with the FinOps Framework License Management capability through automated compliance audits and active core-utilization tracking.
+* **Kubernetes Cost Allocation & Multi-Tenancy**: Employs open-source tooling (e.g., `Kubecost`) to break down shared cluster expenses into distinct microservices, namespaces, and engineering teams within the Dev, Test, and Prod clusters. Governed operationally by setting hard resource quotas, container limit constraints, and sending automated alerts for over-provisioned workloads.
+* **Sustainability & GreenOps Alignment**: Integrates cloud carbon footprint tracking into standard cost dashboards to measure the environmental impact of cloud infrastructure alongside financial expenditures. Satisfies FinOps sustainability initiatives by dynamically scheduling carbon-aware compute workloads and decommissioning zombie infrastructure to minimize both cloud spend and environmental waste.
 
 
 \---

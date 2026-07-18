@@ -17,7 +17,7 @@ The goal of this sabbatical was to dive deep into:
 | **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Data Engineering** | **Intelligent pipeline optimization, modern data lakes** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Automation** | **Modern Automation architectures** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Generic Cloud** | **Cloud Native, Cloud Hybrid generic architecture** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Generic Cloud** | **Cloud Native, Multi Cloud, Cloud Hybrid generic architecture** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Multi-Tenancy** | **Multi tenancy architecture on cloud** | `Cloud (AWS, Azure)` |
 
 📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
