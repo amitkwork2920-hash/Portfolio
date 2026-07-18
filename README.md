@@ -8,14 +8,14 @@ The goal of this sabbatical was to dive deep into:
 
 # 💼 Domains 
 
-| Domain Name | Sub Domains | 
+| Domain Name | Description | 
 | :--- | :--- | 
-| **Banking \& Financial Services** |  **Banking \& Financial Services** |
-| **Insurance** | **Insurance** |
-| **Retail** | **Retail** |
-| **Travel** | **Travel** |
-| **Media** | **Media** |
-| **Automation** | **Automation** |
+| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** |
+| **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** |
+| **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** |
+| **Travel** | **Dynamic booking engines, reservation management systems, and loyalty program integrations.** |
+| **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** |
+| **Automation** | **Intelligent robotic process automation, workflow orchestration, and CI/CD pipeline optimization.** |
 
 # 💼 Technologies 
 
