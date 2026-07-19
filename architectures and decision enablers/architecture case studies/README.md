@@ -23,6 +23,7 @@
 |**Agentic AI Azure Architecture**|**The target state architecture transitions the organization from fragmented, ad-hoc AI integrations to a fully unified, enterprise-grade Agentic AI platform built on Azure AI Foundry.**|
 |**Agentic AI operational foundation architecture on AWS**|**A highly resilient, secure, and production-ready agentic AI architecture built on the AWS Cloud.**|
 |**Conversational Platform GenAI Architecture**|**A highly available, serverless multi-tier architecture connecting digital user frontends securely to an integrated AWS lakehouse ecosystem.**|
+|<br />**Enterprise Agentic AI Reference Architecture**|An architecture that defines a fully mature, scalable, and secure autonomous enterprise environment where disparate systems are replaced by unified, department-specific AI Front Doors.|
 
 
 
