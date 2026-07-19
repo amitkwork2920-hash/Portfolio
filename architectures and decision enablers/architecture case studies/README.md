@@ -2,7 +2,7 @@
 
 📚 Case-Studies for Reference Architectures:
 
-# 💼 Case Studies
+# 💼 Architecture Case Studies
 
 |Case Study Name|Domain|Description|
 |-|-|-|
@@ -29,6 +29,7 @@
 |**Customer Personalized Multi-Tier Retail Platform on AWS**|**Retail**|**An architecture that transitions the platform from a traditional containerized, batch-trained system to an agile, fully serverless, event-driven, and Generative AI-powered ecosystem to minimize operational overhead and maximize conversion rates.**|
 |**Retail PCI-DSS compliant reference architecture on AWS**|**Retail**|**An architecture that transitions the workload to a highly secure, micro-segmented Payment Card Industry (PCI) compliant environment on AWS that isolates cardholder data and minimizes regulatory audit scope.** |
 |**Passenger Callback Platform on AWS**|**Travel**|**An architecture that transitions this system from a reactive, batch-driven callback process into a fully proactive, predictive, and hyper-personalized traveler engagement hub.** |
+|**Transportation Logistics \& SupplyChain on AWS**|**Travel**|**An architecture that transitions into a highly optimized, intelligent, and hyper-automated global logistics network that achieves maximum operational efficiency and zero-trust security.**|
 
 
 
