@@ -12,6 +12,7 @@
 |-|-|
 |**AI Security Posturing Assessment Decision Enabler**|A structured, automated Excel-based assessment calculator built to accelerate your AI security current posturing.|
 |**AI Tech Vendor Evaluation for Vector DB Selection Decision Enabler**|A structured, automated Excel-based evaluation calculator built to accelerate your vendor selection.|
+|**Enterprise Agentic AI Reference Architecture**|An architecture that defines a fully mature, scalable, and secure autonomous enterprise environment where disparate systems are replaced by unified, department-specific AI Front Doors.|
 
 
 
