@@ -1,10 +1,9 @@
-# Legacy AWS Mainframe Hybrid Architecture
+# Legacy AWS SAP Hybrid Architecture
 
 ## 📌 Overview
 
-* **Domain**: Legacy Hybrid Mainframe 
-* **Pattern**: PI Facade / Abstraction Pattern, Hybrid Cloud, Cache-Aside Pattern (Edge Offloading), Mainframe-as-Master, Static Routing with Active-Passive Fallback, 
-               Gateway Routing / Reverse Proxy, Defense-in-Depth / Perimeter Scrubbing, Distributed Tracing
+* **Domain**: Legacy Hybrid SAP 
+* **Pattern**: Extraction, Deployment Topology
 * **Core Artifacts**:
 
   * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_MainFrame_Hybrid.pdf)
@@ -14,11 +13,11 @@
 
 ## 💼 Business Context
 
-Fragmented cloud environments and legacy on-premises routing patterns introduce significant latency, security gaps, and operational overhead during unexpected workload spikes. Siloed network designs lack centralized governance and uniform firewalls, threatening business continuity, risking lateral movement during breaches, and causing unpredictable infrastructure cost overruns. This hybrid architecture resolves these bottlenecks by securely bridging modern AWS digital applications with stable on-premises IBM z/OS mainframes. By enforcing edge scrubbing, network micro-segmentation, and local cloud caching, it completely neutralizes security threats and prevents costly mainframe MIPS processing spikes. Ultimately, this approach removes the high financial risks and operational downtime of a legacy "rip-and-replace" migration, enabling fast API-driven innovation while keeping core transactional systems intact.
+This architecture enables enterprises to modernize their data platforms and break down data silos by extracting operational data from diverse, legacy, or modern SAP systems (on-premises, AWS, or RISE with SAP) and consolidating it into a centralized AWS cloud landing zone to establish a single source of truth. By utilizing various integration paths—including fully managed serverless tools (Amazon AppFlow, AWS Glue), instance-based middleware (SAP SLT, Partner Solutions), or application-embedded ABAP add-ons—organizations can flexibly balance technical maturity, licensing budgets, and legacy constraints. This infrastructure ultimately hydrates data lakes (Amazon S3), feeds data warehouses (Amazon Redshift), and drives live tracking systems (Amazon Kinesis) to support critical business use cases like advanced analytics, machine learning, real-time reporting, and hybrid cloud transitions.
 
 ## 🚀 Target State Architecture
 
-A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud. It ingests traffic globally via an intelligent anycast routing edge, manages secure transit traffic through micro-segmented VPC environments, and hosts strictly isolated, production-grade microservices and caching layers across resilient availability zones.
+The target state architecture establishes a centralized, cloud-native AWS Analytics Services Landing Zone as the unified data foundation for the enterprise, moving away from fragmented storage by consolidating all ingested SAP data into purpose-built cloud destinations. Raw, high-volume operational data is pooled continuously into an Amazon S3 data lake for low-cost historical archiving, while structured financial and business intelligence data is loaded into Amazon Redshift to power high-performance enterprise data warehousing. Simultaneously, real-time data streams are captured via Amazon Kinesis to feed live analytical pipelines, and operational data stores are maintained within Amazon RDS, creating a scalable, highly secure target ecosystem that decouples heavy analytical workloads from core SAP transactional engines.
 
 \---
 
@@ -26,24 +25,32 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 |Architecture Layer|AWS \& Open-Source Tooling|Architectural Purpose|
 |-|-|-|
-|**Ingress, Routing \& Edge**|`Amazon Route 53` <br> `Amazon CloudFront` <br> `AWS WAF`<br> `AWS Shield` <br> `Network Load Balancer (NLB)` | Manages global user traffic ingestion, provides intelligent content delivery with automated failover, and protects downstream networks from edge-level application exploits and volumetric DDoS threats.|
-|**Core Networking \& Isolation**|`Amazon VPC Subnets` <br> `VPC Endpoints`<br> `NAT Gateway` <br> `NAT Gateway` <br> `Network Access Control Lists (NACLs)`<br> `Security Groups `|Establishes secure, multi-tier network segmentation and high-speed internal transport while enforcing strict, layered traffic isolation and micro-perimeter security boundaries.|
-|**Hybrid Connectivity**|`AWS Direct Connect` <br> `AWS Site-to-Site VPN` <br> `Customer Gateway (CGW)`| Provides a dedicated, low-latency corporate private circuit backed by a redundant encrypted tunnel to bridge the cloud securely to the on-premises data center.|
-|**Integration \& Protocol Transformation**|`IBM z/OS Connect` <br> `Red Hat OpenShift` | Translates cloud-native JSON REST payloads into mainframe-readable binary formats (COBOL copybooks) to safely expose legacy assets without changing core code.|
-|**Compute \& Microservices**|`Amazon ECS` <br> `AWS Lambda` <br> `ECS Auto Scaling` | Runs scalable, containerized, and serverless digital banking business workloads across distributed execution environments while optimizing resource consumption.|
-|**Data \& Local Caching**|`Amazon ElastiCache (Redis)` <br> `Amazon RDS` <br> `Amazon S3` | Intercepts high-frequency queries at the cloud edge to offload processing demands, manages local cloud state data, and handles lifecycle log archiving.|
-|**On-Premise Core Systems**|`IBM z/OS Mainframe` <br> `CICS TS / IMS TM` <br> `BM Db2 / IMS DB` <br> `VSAM` | Acts as the ultimate multi-system transactional source of truth (SSOT), executing core transaction processing groups and enforcing strict ACID compliance.|
-|**Governance, Security \& Observability**|`Amazon Cognito` <br> `AWS Secrets Manager` <br> `IBM RACF` <br> `OpenTelemetry (OTel)` <br> `AWS CloudTrail` <br> `Amazon CloudWatch` <br> `IBM SMF Logs` | Enforces short-lived identity management, handles automated secret rotations, maps cloud tokens to mainframe permissions, and bridges cross-platform telemetry logs.|
+|**Ingestion \& Integration Layer**|`Amazon AppFlow` <br> `AWS Glue` <br> `SAP SLT`<br> `SAP Datasphere` | Extracts and transforms data from source SAP systems using serverless APIs or dedicated middleware.|
+|**Streaming \& Messaging Layer**|`Amazon Kinesis` | Captures, processes, and stores continuous, real-time data streams for immediate downstream consumption.|
+|**Storage \& Data Lake Layer**|`Amazon S3` | Serves as the centralized object store for low-cost, scalable, and raw historical data archiving..|
+|**Data Warehousing Layer**|`Amazon Redshift` | Aggregates structured corporate data to execute complex analytics and high-performance enterprise business reporting.|
+|**Database Layer**|`Amazon RDS`| Manages relational operational data stores and handles transactional workloads outside the main SAP engine.|
+|**Data Landing Layer**|`Amazon S3`| Stores raw, unstructured, and historical SAP data at high scale and low cost.|
+|**Analytical Warehouse Layer**|`Amazon Redshift` | Runs high-performance SQL queries over structured SAP data for enterprise business intelligence.|
+|**Real-Time Streaming Layer**|`Amazon Kinesis` | Ingests continuous event streams from SAP sources for instant operational monitoring.|
+|**Operational Database Layer**|`Amazon RDS` | Hosts transactional target databases to offload heavy reporting queries from core production SAP.|
+|**SAP Source Layer**|`SAP HANA Database` <br> `SAP S/4HANA / ECC / BW` | Hosts transactional target databases to offload heavy reporting queries from core production SAP.|
 
 \---
 
 ## 🔒 Security, Compliance \& Governance
 
-* **Edge Security**: Centralized perimeter defense is enforced at the edge using `Amazon CloudFront`, `AWS WAF`, and `AWS Shield` to aggressively scrub malicious Layer 3/4/7 vectors, mitigate high-volume DDoS threats, and drop unvalidated traffic at the cloud boundary.
-* **Network Isolation**: Analytical containerized microservices and integration runtimes are tightly isolated within private `VPC subnets` with zero direct internet access, routing data exclusively via secure `VPC Endpoints` to shield backend infrastructure.
-* **Hybrid Data Transit**: Workloads are strictly isolated across subnets via explicit Security Groups and `Network Access Control Lists (NACLs)`, ensuring no direct public ingress to application tiers, while cloud-to-ground traffic is wrapped in dual-layer encryption via `AWS Direct Connect` over an `IPsec VPN tunnel`. 
-* **Data Protection**: Data protection is mandated globally via `AWS KMS (Customer Managed Keys)` and hardware-enforced `IBM Crypto Express adapters`, enforcing automated key rotations, mandatory `TLS 1.3` for data-in-transit, and `AES-256` encryption-at-rest across all storage structures (`Amazon RDS`, `Amazon S3`, and on-premises `IBM Db2`).
-* **Automated Compliance Auditing**: Regulatory financial compliance (`PCI-DSS` / `SOC 2`) is continuously maintained by streaming `AWS CloudTrail` and on-premises `IBM System Management Facilities (SMF)` logs to an immutable storage engine, while `Amazon Cognito` user tokens are dynamically mapped to native `IBM RACF` profiles to guarantee non-repudiation and strict least-privilege governance.
+* **Data At-Rest Protection**: Enforces centralized envelope encryption across `Amazon S3`, `Redshift`, and `RDS` storage volumes.
+* **Network Isolation**: Establishes a private, dedicated network pipe connecting SAP Source Systems to the AWS Cloud.
+* **Identity & Access Management**: Grants granular, least-privilege API permissions to ingestion tools like Amazon AppFlow and AWS Glue.
+* **Audit & Activity Logging**: Records all management API actions, user logins, and configuration changes across the AWS landing zone.
+* **Data In-Transit Protection**: Safeguards replication streams moving from SAP application layers to AWS Analytics Services.
+* **Network Perimeter Security**: Restricts inbound infrastructure traffic strictly to validated SAP SLT and Instance-Based endpoints.
+* **Data Lineage & Metadata**: Catalogues ingested schemas and provides a centralized governance repository for multi-source SAP data.
+* **Secrets Management**: Rotates and secures database credentials, API keys, and connection strings required by Partner Solutions.
+* **SAP Application Security**: Restricts extraction users within the ABAP layer to query only approved tables, protecting sensitive master data.
+* **SAP Change Data Capture Governance**: Monitors delta queues and manages data compliance policies before records leave the SAP source environment.
+* **SAP Connection Authentication**: Authenticates and secures RFC network paths between instance-based middleware and the SAP ABAP application server.
 
 \---
 
@@ -51,15 +58,31 @@ A highly available, active-active multi-region hybrid architecture connecting co
 
 ### Performance \& Availability
 
-* **Latency**: Achieves single-digit millisecond read speeds (<15ms) via local `Amazon ElastiCache` nodes and keeps hybrid mainframe execution rates for transactional writes under sub-150ms over dedicated `AWS Direct Connect` lines.
-* **Data Sync Ingestion**: Synchronizes and processes live transactional records, completing asynchronous cloud cache invalidation within a strict 2-second window and maintaining `mainframe DR` storage replication lag under 10 seconds.
-* **Resilience**: `Multi-AZ` container and database replication guarantees 99.99% high availability for core cloud endpoints, backed by an active-passive on-premises disaster recovery standby configuration maintaining an RPO of near-zero and an RTO of < 4 hours.
+* **Data Replication Latency**: Measures end-to-end delay (< 5 seconds continuous replication lag) to guarantee immediate data updates for live operational dashboards.
+* **Target Storage Availability**: Guarantees continuous (99.99% monthly uptime commitment) multi-Availability Zone access to the landing zone data for downstream applications.
+* **Pipeline Extraction Throughput**: Monitors the volume of gigabytes processed (> 500 GB / Hour for batch extraction windows) per hour during high-volume bulk historical loads.
+* **Extraction System Load Limit**: Tracks CPU and memory impact on production SAP servers (< 10% SAP Dialog/Background process utilization) to prevent analytical pipelines from slowing 
+down business users.
+* **Analytical Query Response**: Measures execution speed (95% of queries < 3 seconds under load) of complex SQL queries against ingested SAP schemas under heavy concurrent user loads.
+* **API Integration Uptime**: Ensures continuous availability (99.9% availability per billing cycle) of the serverless extraction endpoints connecting SAP to AWS services.
+* **Delta Capture Queue Health**: Tracks and manages the accumulation of changed records waiting (0 records stuck or failed for over 15 minutes) for transport inside the SAP application layer.
+* **Database Compute Availability**: Guarantees operational uptime (99.99% uptime SLA commitment) for the analytical processing layers during core enterprise business intelligence hours.
+
 
 ### FinOps Framework
 
-* **Elastic Footprint**: Dynamically eliminates infrastructure footprint during low-traffic off-hours using target-tracking auto-scaling inside `Amazon ECS` task groups and automated scaling policies across `Red Hat OpenShift` worker instances.
-* **Storage Optimization**: Automates telemetry and transactional log lifecycle transitions using `AWS S3`lifecycle Policies, shifting heavy auditing assets (like hybrid `AWS CloudTrail` traces and `mainframe SMF` logs) into compressed formats and deep `Amazon S3 Glacier` Deep Archive storage tiers.
-* **Cost Efficiency**: Reduces production operational runtime infrastructure spend and legacy compute overhead by 40% to 60% compared to traditional, direct-to-mainframe query routing by intercepting high-frequency read requests within local `Amazon ElastiCache` nodes to slash volatile MIPS scaling costs.
+* **Tiered Storage Optimization**: Automatically shifts raw, aging `SAP` historical data to cold storage tiers to minimize lifecycle costs..
+* **Data Warehouse Cost Control**: Scales compute up for heavy financial reporting spikes and cuts resources to zero during idle hours.
+* **Idle Resource Elimination**: Power-cycles non-production Pattern B `(SLT/Partner)` `EC2` servers outside of corporate working hours.
+* **Serverless Ingestion Pricing**: Eliminates fixed infrastructure overhead by charging strictly for the volume of `SAP` data processed.
+* **Compute Sizing Efficiency**: Analyzes and resizes underutilized `Partner Solution (B1)` virtual instances to prevent over-provisioning.
+* **Cost Allocation & Tagging**: Tracks and groups cloud consumption costs specifically by SAP source module or target business unit.
+* **SAP License Cost Mitigation**: Minimizes high-cost SAP runtime database consumption by leveraging standard application-layer extraction APIs.
+* **SAP Replication Offloading**: Cuts down target storage and network transfer bills by replicating only modified data blocks instead of full tables.
+* **Serverless Ingestion Pricing**: Eliminates fixed infrastructure overhead by charging strictly for the volume of SAP data processed.
+* **Compute Sizing Efficiency**: Analyzes and resizes underutilized Partner Solution (B1) virtual instances to prevent over-provisioning.
+
+
 
 \---
 
