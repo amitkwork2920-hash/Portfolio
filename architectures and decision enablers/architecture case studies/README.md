@@ -70,6 +70,7 @@
 |Case Study Name|Description|
 |-|-|
 |**Legacy AWS Mainframe Hybrid Architecture**|**A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud.**|
+|**Legacy AWS Salesforce Hybrid Architecture**|**An architecture that shifts from a hybrid, scheduled-batch hybrid setup toward a fully synchronized, sub-second real-time event-driven ecosystem that eliminates processing delays and enhances enterprise scalability.** |
 
 
 
