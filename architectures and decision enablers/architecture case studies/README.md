@@ -31,16 +31,37 @@
 
 
 
+# 💼 Generic Cloud Case Studies
+
 |Case Study Name|Domain|Description|
 |-|-|-|
 |**Multi Region High Availability IaaS Architecture**|**Generic Cloud**|**A highly available, active-active multi-region hybrid architecture connecting corporate on-premises networks securely to Azure.**|
 |**Multi Tenancy Architecture on AWS**|**Multi Tenancy**|**The target state architecture transitions this system into a mature, production-ready Serverless Multi-Tenant SaaS platform centered on high agility, zero-trust security, and operational excellence.**|
 |**Multi Cloud (AWS,Azure) IaaS Architecture**|**Generic Cloud**|**An architecture focussing on consolidating management, standardizing container platforms, and minimizing multi-cloud data egress costs by shifting from a fragmented multi-cloud setup to a unified, cloud-native design.**|
-|**Healthcare Data Mesh**|**Healthcare**|**An architecture that defines a decentralized, domain-driven ecosystem where autonomous data products are delivered across a scalable healthcare enterprise.** |
-|**Healthcare Analytics**|**Healthcare**|**A highly available, secure, and fully serverless multi-tier data Lakehouse architecture connecting corporate on-premises networks and SaaS ecosystems seamlessly to AWS.** |
-|**Modern Claims Processing**|**Insurance**|**An architecture that transitions the current workflow into a fully cloud-native, production-hardened platform designed for enterprise-grade scalability, security, and low-latency decision-making.** |
+
+
+
+# 💼 Healthcare Cloud Case Studies
+
+|Case Study Name|Domain|Description|
+|-|-|-|
+|**Healthcare Data Mesh**|**Healthcare**|**An architecture that defines a decentralized, domain-driven ecosystem where autonomous data products are delivered across a scalable healthcare enterprise.**|
+|**Healthcare Analytics**|**Healthcare**|**A highly available, secure, and fully serverless multi-tier data Lakehouse architecture connecting corporate on-premises networks and SaaS ecosystems seamlessly to AWS.**|
+
+
+
+# 💼 Insurance Cloud Case Studies
+
+|Case Study Name|Domain|Description|
+|-|-|-|
+|**Modern Claims Processing**|**Insurance**|**An architecture that transitions the current workflow into a fully cloud-native, production-hardened platform designed for enterprise-grade scalability, security, and low-latency decision-making.**|
 |**Modern Digital Insurance Cloud Platform**|**Insurance**|**An architecture that transitions this platform into a cloud-native, fully managed ecosystem by replacing the self-managed NGINX and EC2 instances with serverless compute containers (AWS Fargate) managed via Amazon ECS or EKS to eliminate infrastructure overhead.**|
 |**Insurance Distribution Transformation Platform**|**Insurance**|**An architecture that transforms traditional, legacy insurance infrastructure into a highly decoupled, cloud-native ecosystem centered on serverless microservices and intelligent automation.**|
+
+
+
+|Case Study Name|Domain|Description|
+|-|-|-|
 |**Legacy AWS Mainframe Hybrid Architecture**|**Legacy**|**A highly available, active-active multi-region hybrid architecture connecting corporate on-premises IBM z/OS mainframes securely to the AWS Cloud.** |
 |**Media Content Analysis on AWS**|**Media**|**An architecture that delivers an optimized, highly scalable, and secure production environment that extends the foundational reference pipeline into a mature enterprise platform.**|
 |**Media Lake Architecture on AWS**|**Media**|**An architecture that transitions from a modular serverless pipeline into a fully unified, intelligence-driven, and multi-modal data platform.**|
