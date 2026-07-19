@@ -6,8 +6,8 @@
 * **Pattern**: Extraction, Deployment Topology
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_MainFrame_Hybrid.pdf)
-  * 📐 [Open End-End Architecture Diagram](./artifacts/core-mainframe-topology.png)
+  * 📊 [Download Case Study]
+  * 📐 [Open End-End Architecture Diagram](./artifacts/core-sap-topology.png)
 
 \---
 
@@ -67,7 +67,7 @@ down business users.
 * **API Integration Uptime**: Ensures continuous availability (99.9% availability per billing cycle) of the serverless extraction endpoints connecting SAP to AWS services.
 * **Delta Capture Queue Health**: Tracks and manages the accumulation of changed records waiting (0 records stuck or failed for over 15 minutes) for transport inside the SAP application layer.
 * **Database Compute Availability**: Guarantees operational uptime (99.99% uptime SLA commitment) for the analytical processing layers during core enterprise business intelligence hours.
-
+* **Network Interface Delivery**: Measures network stability and packet loss (100% packet delivery with zero link drops) across the dedicated link separating SAP servers from the AWS Cloud.
 
 ### FinOps Framework
 
