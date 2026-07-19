@@ -10,15 +10,16 @@ The goal of this sabbatical was to dive deep into:
 
 | Domain Name | Description | Technology | 
 | :--- | :--- | :--- | 
-| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
+| **Banking \& Financial Services** |  **Core systems modernization, secure payment gateways, open banking and AI-driven fraud detection analytics.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Mainframe` |
 | **Insurance** | **Automated claims processing, digital underwriting platforms, and predictive risk modeling.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Retail** | **Omnichannel e-commerce infrastructure, inventory optimization, and personalized customer experiences.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
-| **Travel** | **Dynamic booking engines, reservation management systems, and loyalty program integrations.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
+| **Healthcare** | **Healthcare datameshes, Health Lakes.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Media** | **Content delivery networks, digital asset management, and targeted audience streaming services.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Data Engineering** | **Intelligent pipeline optimization, modern data lakes** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Automation** | **Modern Automation architectures** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Generic Cloud** | **Cloud Native, Multi Cloud, Cloud Hybrid generic architecture** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` |
 | **Multi-Tenancy** | **Multi tenancy architecture on cloud** | `Cloud (AWS, Azure)` |
+| **Legacy** | **Legacy modernization.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
 
 📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
 
