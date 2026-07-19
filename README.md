@@ -30,3 +30,5 @@ The goal of this sabbatical was to dive deep into:
 | **AI** | **Methodologies for governance-focused audit assessments and rigorous emerging AI-technology evaluations.** |
 | **Security** | **Comprehensive risk analysis covering SWIFT threats, ISO 27001 compliance, AI systems, and cloud security posturing.** |
  
+📚 Completed 15 online courses in the areas of AI, Cloud and Data Engineering.
+
