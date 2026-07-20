@@ -6,7 +6,7 @@
 * **Pattern**: Event-Driven, Enterprise Application Integration (EAI), Change Data Capture (CDC), Serverless Pattern, Dead Letter Channel / Exception Handling, Scheduled Batch Synchronization
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_SalesForce_Hybrid.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-salesforce-topology.png)
 
 \---
