@@ -6,7 +6,7 @@
 * **Pattern**: Extraction, Deployment Topology
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_SAP_Hybrid.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-sap-topology.png)
 
 \---
