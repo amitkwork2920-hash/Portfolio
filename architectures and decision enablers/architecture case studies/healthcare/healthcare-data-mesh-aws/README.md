@@ -1,10 +1,10 @@
 # Healthcare Data Mesh
 
 ## 📌 Overview
-* **Domain**: Healthcare Infrastructure / Data Services
+* **Domain**: Healthcare DataMesh / Data Services
 * **Pattern**: Data Decentralization (Data Domains), Data as a Product, Federated Data Governance, Automated Data Quality & Observability, Separation of Producers and Consumers 
 * **Core Artifacts**: 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Healthcare_DataMesh.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-healthcare-topology.png)
 
 ---
