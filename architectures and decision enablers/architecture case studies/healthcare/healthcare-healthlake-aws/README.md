@@ -1,10 +1,10 @@
 # Modern HealthLake Analytics
 
 ## 📌 Overview
-* **Domain**: Healthcare Infrastructure / Analytical Services
+* **Domain**: Healthcare HealthLake / Analytical Services
 * **Pattern**: Orchestrator-Workers , Specialized Agent, Memory and State Retention, Observability and Tracing, API Gateway, Model Context Protocol (MCP), Federated Identity / External Authentication, Front-End Hosting & Backend Integration 
 * **Core Artifacts**: 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study] (./artifacts/Amit_Kulkarni_System_Design_Case_Study_Healthcare_HealthLake.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-healthcare-topology.png)
 
 ---
