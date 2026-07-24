@@ -1,7 +1,7 @@
 # Open Banking Reference Architecture on AWS
 
 ## 📌 Overview
-* **Domain**: Core Banking Infrastructure / Financial Services
+* **Domain**: Open Banking / Financial Services
 * **Pattern**: Zero-Trust Landing Zone, Financial-Grade API (FAPI) Edge Gateway, Read-Optimized Cloud Replica Pattern (CQRS / Change Data Capture),
                Hub-and-Spoke Private Interconnect, Asynchronous Event-Driven Webhook 
 * **Core Artifacts**: 
