@@ -6,7 +6,7 @@
 * **Pattern**: Multi-Tenancy Isolation, Identity and Access, API Gateway & Security, Frontend & Static Content, Deployment & CI/CD, Cross-Cutting Concerns
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Multi_Tenant_Reference_Architecture.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-saas-aws-topology.png)
 
 \---

@@ -6,7 +6,8 @@
 * **Pattern**: Hybrid and Multi-Cloud, Hub-and-Spoke Traffic Routing, Environment Isolation (Dev / Test / Prod), Microservices and Service Mesh, Event-Driven Messaging and Asynchronous Processing, Serverless Integration (Middleware), Zero Trust / Secure Perimeter 
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Multi_Cloud_Reference_Architecture.pdf)
+
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-multi-cloud-topology.png)
 
 \---
