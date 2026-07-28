@@ -7,7 +7,7 @@
                Polyglot Persistence
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_AgenticAI_Platform_Azure.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-ai-agents-topology.png)
 
 \---
