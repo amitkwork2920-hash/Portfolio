@@ -7,7 +7,7 @@
                 Dual-Layer Observability, Ingress/Egress Guardrail
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_AgenticAI_Opers_Platform_AWS.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-ai-agents-topology.png)
 
 \---
