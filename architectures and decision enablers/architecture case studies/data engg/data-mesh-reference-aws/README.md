@@ -4,7 +4,7 @@
 
 * **Domain**: Data mesh architecture on AWS
 * **Pattern**: Data Mesh,  Hub-and-Spoke Governance, Separation of Compute and Storage, Zero-Copy Data Sharing (Cross-Account Federated Access)
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_DataMesh_Platform_AWS.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-datamesh-topology.png)
 
 \---

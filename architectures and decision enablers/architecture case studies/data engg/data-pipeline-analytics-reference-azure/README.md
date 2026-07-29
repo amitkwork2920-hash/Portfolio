@@ -4,7 +4,7 @@
 
 * **Domain**: Data analytics pipeline on Azure
 * **Pattern**: Lambda Architecture, Event-Driven Architecture, Backend-for-Frontend (BFF), Modern Data Lakehouse, Change Data Capture (CDC) Replication
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Data_Pipeline_Platform_Azure.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-dataanalytics-topology.png)
 
 \---
