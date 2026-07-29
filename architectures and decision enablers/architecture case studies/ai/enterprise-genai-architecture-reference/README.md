@@ -2,11 +2,11 @@
 
 ## 📌 Overview
 
-* **Domain**: Automation Agentic AI
+* **Domain**: Enterprise Automation Agentic AI
 * **Pattern**: Layered Architecture, Orchestration and Interaction, Cross-Cutting Concerns (Sidecar / Orchestrated).
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_AgenticAI_EA_AWS.pdf)                                                               
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-enterprise-topology.png)
 
 \---
