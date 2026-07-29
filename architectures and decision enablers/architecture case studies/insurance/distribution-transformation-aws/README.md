@@ -4,7 +4,7 @@
 * **Domain**: Insurance Distribution
 * **Pattern**: Serverless Microservices, Event-Driven & Workflow Orchestration, Intelligent Ingestion & AI-Assisted Processing, Modern Lake House Architecture, Machine Learning Lifecycle Loop (MLOps) 
 * **Core Artifacts**: 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Distri_trans_AWS.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-insurance-topology.png)
 
 ---
