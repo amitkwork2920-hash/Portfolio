@@ -4,7 +4,7 @@
 * **Domain**: Digital Insurance
 * **Pattern**: High Availability (Multi-AZ), Multi-Tier Networking, Decoupled Traffic Routing, Horizontal Elastic Scaling, Primary-Standby Data, Centralized Management & Security 
 * **Core Artifacts**: 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Digital_Insurance_Platform_AWS.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-insurance-topology.png)
 
 ---

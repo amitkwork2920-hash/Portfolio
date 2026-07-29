@@ -4,7 +4,7 @@
 * **Domain**: Insurance Claims Processing
 * **Pattern**: Choreographed Event Ingestion , Orchestration , Asynchronous Messaging, Valet Key / Staging Area, Polyglot Storage, Separation of Storage and Compute, Pipeline Specialization, Retrieval / Evaluation Loop, Observability 
 * **Core Artifacts**: 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Claims_Modernization_Platform_Azure.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-insurance-topology.png)
 
 ---
