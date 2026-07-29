@@ -7,7 +7,7 @@
 Hub-and-Spoke Private Connectivity, Centralized Observability and Auditing, Continuous Compliance and Governance
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Retail_PCI-DSS_AWS.pdf)                                                                  
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-aws-retail-topology.png)
 
 \---
