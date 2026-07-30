@@ -2,11 +2,11 @@
 
 ## 📌 Overview
 
-* **Domain**: MediaLake
+* **Domain**: Media Content Analysis
 * **Pattern**: Event-Driven,  Orchestration Workflow, Serverless Compute and Microservice, Data Lake / Staging Storage, Generative AI Enrichment Pipeline, Modern Analytics Consumption Pattern
 * **Core Artifacts**:
 
-  * 📊 [Download Case Study]
+  * 📊 [Download Case Study](./artifacts/Amit_Kulkarni_System_Design_Case_Study_Media_Content_Analysis_AWS.pdf)
   * 📐 [Open End-End Architecture Diagram](./artifacts/core-aws-media-topology.png)
 
 \---
