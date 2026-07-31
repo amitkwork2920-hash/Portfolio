@@ -80,17 +80,27 @@ The target state architecture transitions the organization from fragmented, ad-h
 
 ## 🗃️ Complete Architecture Artifacts
 
-*All supporting enterprise governance and execution documents are located in the `/artifacts` folder:*
+*All supporting enterprise governance, architecture and execution sections are located in `/artifacts/Amit_Kulkarni_System_Design_Case_Study_AgenticAI_Platform_Azure.pdf`:*
 
 <details>
-<summary>📋 Click to expand the Enterprise Artifacts Directory</summary>
+<summary>📋 Click to expand the governance, architecture and execution sections</summary>
 
-1. **Non-Functional Requirements (NFR) Matrix**: Quantified constraints for latency, security, and DR/RTO/RPO objectives.
-2. **End-to-End Customer Transaction Journey**: Sequential message-flow diagram tracing a payload from mobile client to legacy HSM ledger.
-3. **Enterprise Hybrid Cost Matrix (CapEx / OpEx)**: Comprehensive Total Cost of Ownership (TCO) breakdown comparing legacy baseline to cloud target state.
-4. **RACI Matrix**: Operational governance mapping roles across the migration engineering, cloud platform, and security operations teams.
-5. **Security Overview**: Deep dive into data classifications, transit protocols, and key rotation lifecycles.
-6. **Risk Register**: Mitigations for fallback mechanisms, network edge failure modes, and synchronization lag boundaries.
+1. **Target State Architecture & Structural Design**: Future blueprint of an organization's IT systems, data, and processes to align with long-term business goals.
+2. **Comprehensive Solution Summary**: Bridges strategic enterprise goals with tactical physical implementation.
+3. **End-to-End Customer Transaction Journey**: Maps every touchpoint of a transaction moving from the user interface down to the physical hardware and infrastructure.
+4. **Transaction Data-Flows**: Maps every touchpoint of a transaction moving from the user interface down to the physical infrastructure.
+5. **Security Architecture**: Cohesive design of frameworks, policies, and physical controls that protects an organization’s digital assets, network infrastructure, and facilities from unauthorized access and threats.
+6. **Disaster Recovery (DR) Plan**: Ensures business continuity by aligning digital backup strategies with physical infrastructure resilience to recover systems after a major outage.
+7. **Architecture Tradeoffs**: Evaluates the necessary compromises between competing technical capabilities and physical design constraints to achieve the optimal balanced system.
+8. **Architecture Decision Records**: Captures a significant technical or structural decision, its context, and its consequences ensuring alignment across different technical teams.
+9. **Azure Well-Architected Framework Review**:
+10. **Architecture Risks**:
+11. **Architecture Recommendations**:
+12. **Boundary Conditions for Reference Architecture**:
+13. **Non-Functional Requirements (NFR) Matrix**: Quantified constraints for latency, security, and DR/RTO/RPO objectives.
+14. **Cost Optimization & Attribution Matrix**: Comprehensive Total Cost of Ownership (TCO) breakdown comparing legacy baseline to cloud target state.
+15. **Enterprise Security Risk Register**: Mitigations for fallback mechanisms, network edge failure modes, and synchronization lag boundaries.
+16. **RACI Matrix**: Operational governance mapping roles across the migration engineering, cloud platform, and security operations teams.
 
 </details>
 
