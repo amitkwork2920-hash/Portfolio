@@ -2,6 +2,11 @@
 
 A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness for cloud adoption.
 
+## 🛠️ Problem 
+
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
+
 ## 🚀 Key Features
 
 * **Cloud Readiness Assessment:** Evaluates current infrastructure and organizational alignment based on the below parameters :
