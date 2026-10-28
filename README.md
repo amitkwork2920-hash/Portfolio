@@ -1,6 +1,6 @@
 # 🚀 Technical Sabbatical: Professional Development Portfolio
 
-Welcome! This repository documents the different activities that I completed during my professional technical sabbatical from Dec 2025 to Jul 2026. 
+Welcome! This repository documents the different activities that I completed during my professional technical sabbatical from Dec 2025 - Present. 
 
 The goal of this sabbatical was to dive deep into: 
 
