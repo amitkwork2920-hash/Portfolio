@@ -2,6 +2,8 @@
 
 A structured, automated Excel-based assessment calculator built to accelerate your SWIFT Security current posturing. 
 
+## 🛠️ Problem (./images/problem.jpg)
+      
 ## 🚀 Key Features
 
 * **SWIFT Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
