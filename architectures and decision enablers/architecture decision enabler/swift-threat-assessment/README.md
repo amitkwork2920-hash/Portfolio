@@ -2,9 +2,9 @@
 
 A structured, automated Excel-based assessment calculator built to accelerate your SWIFT Security current posturing. 
 
-## 🛠️ Problem (./images/problem.jpg)
+## 🛠️ Problem 
 
-* 📊 [Why?] (./images/problem.jpg)
+* 📊 [Why?](./images/problem.jpg)
 
       
 ## 🚀 Key Features
