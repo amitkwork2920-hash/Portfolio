@@ -2,6 +2,11 @@
 
 A structured, automated Excel-based selection calculator built to accelerate your pre-cloud migration journey. This tool helps organizations evaluate vendors.
 
+## 🛠️ Problem 
+
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
+
 ## 🚀 Key Features
 
 * **Cloud Vendor Assessment:** Evaluates different cloud vendors (AWS, Azure, GCP, OCI, IBM, Alibaba) on the below parameters :
