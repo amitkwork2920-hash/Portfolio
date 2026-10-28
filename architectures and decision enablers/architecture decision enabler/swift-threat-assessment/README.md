@@ -4,8 +4,8 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 🛠️ Problem 
 
-* 📊 [Why?](./images/problem.jpg)
-
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
       
 ## 🚀 Key Features
 
