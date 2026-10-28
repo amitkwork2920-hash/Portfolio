@@ -2,6 +2,11 @@
 
 A structured, automated Excel-based assessment calculator built to accelerate your Cloud security current posturing. 
 
+## 🛠️ Problem 
+
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
+
 ## 🚀 Key Features
 
 * **Cloud Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
