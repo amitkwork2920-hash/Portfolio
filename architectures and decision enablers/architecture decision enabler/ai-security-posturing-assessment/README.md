@@ -41,7 +41,7 @@ A structured, automated Excel-based assessment calculator built to accelerate yo
 
 ## 📁 Repository Structure
 
-* 📊 [Download Enabler](AI_Security_Assessment_Calculator.xlsx)
+* 📊 [Download Enabler](AI_Security_Assessment.xlsx)
 * 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
 * 📐 [Questionnaire Responses Snapshot](./images/Inputs-Resp.png)
 * 📐 [Dashboards Snapshot](./images/Dashboards.png)
