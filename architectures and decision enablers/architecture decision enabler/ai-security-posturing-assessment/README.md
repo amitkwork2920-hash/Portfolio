@@ -2,6 +2,11 @@
 
 A structured, automated Excel-based assessment calculator built to accelerate your AI security current posturing. 
 
+## 🛠️ Problem 
+
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
+
 ## 🚀 Key Features
 
 * **AI Security Posturing Assessment:** Evaluates current security practices and organizational alignment based on the below parameters: 
