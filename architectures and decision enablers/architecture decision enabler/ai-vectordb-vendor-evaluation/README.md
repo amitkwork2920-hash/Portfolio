@@ -2,6 +2,11 @@
 
 A structured, automated Excel-based evaluation calculator built to accelerate your vendor selection. 
 
+## 🛠️ Problem 
+
+* 📐 [What?](./images/problem.jpg)
+* 📊 [How?](./images/solution.jpg)
+
 ## 🚀 Key Features
 
 * **AI Tech Vendor Assessment:** Evaluates VectorDB vendor evaluation across organizational alignment based on the below parameters :
