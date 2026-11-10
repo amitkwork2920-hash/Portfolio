@@ -1,4 +1,4 @@
-# Cloud Vendor Selection Decision Enabler
+# ESB (Middleware platform) Vendor Selection Decision Enabler
 
 A structured, automated Excel-based selection calculator built to accelerate your middleware platform building journey. This tool helps organizations evaluate vendors.
 
