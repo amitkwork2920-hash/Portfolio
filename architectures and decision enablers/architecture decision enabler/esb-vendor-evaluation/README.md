@@ -36,7 +36,7 @@ A structured, automated Excel-based selection calculator built to accelerate you
 
 ## 📁 Repository Structure
 
-* 📊 [Download Enabler](ESB Integration Layer Vendor Evals.xlsx)
+* 📊 [Download Enabler](ESB_Integration_Layer_Vendor_Evals.xlsx)
 * 📐 [Questionnaire Inputs Snapshot](./images/Inputs.png)
 * 📐 [Platforms weights](./images/Platform.png)
 * 📐 [Dashboards Snapshot](./images/Dashboards.png)
