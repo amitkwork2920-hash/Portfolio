@@ -18,7 +18,7 @@ A structured, automated Excel-based selection calculator built to accelerate you
    |**Legacy SAS Compatibility & Migration Pathways**|
    |**Automated Operations, MLOps & Model Serving**|
    |**Data Architecture, Governance & Mesh Fabric**|
-   |*UI Workspace UX, Usability & Collaboration**|
+   |**UI Workspace UX, Usability & Collaboration**|
    |**Vendor Support Ecosystem, SLAs & Advanced Guardrails**|
    |**Reliability & Fault Tolerance**|
    |**Monitoring & Management**|
