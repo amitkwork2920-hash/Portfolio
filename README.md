@@ -21,7 +21,7 @@ The goal of this sabbatical was to dive deep into:
 | **Multi-Tenancy** | **Multi tenancy architecture on cloud** | `Cloud (AWS, Azure)` |
 | **Legacy** | **Legacy modernization.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
 
-📚 Prepared 10 Architecture Decision Enablers in the following decision domains:
+📚 Prepared 10+ Architecture Decision Enablers in the following decision domains:
 
 # 💼 Decision Domains 
 
@@ -30,6 +30,8 @@ The goal of this sabbatical was to dive deep into:
 | **Cloud** | **Frameworks for cloud adoption, strategic vendor selection, comprehensive readiness assessments, and Well-Architected reviews.** |
 | **AI** | **Methodologies for governance-focused audit assessments and rigorous emerging AI-technology evaluations.** |
 | **Security** | **Comprehensive risk analysis covering SWIFT threats, ISO 27001 compliance, AI systems, and cloud security posturing.** |
+| **Enterprise & Legacy** | **Frameworks for evaluating Legacy and Enterprise COTS platforms.** |
+
  
 📚 Completed 15 online courses in the areas of AI, Cloud and Data Engineering.
 
