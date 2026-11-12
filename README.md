@@ -27,7 +27,7 @@ The goal of this sabbatical was to dive deep into:
 
 | Decision Domains | Domain Description |         
 | :--- | :--- | 
-| **Cloud** | **Frameworks for cloud adoption, strategic vendor selection, comprehensive readiness assessments, and Well-Architected reviews.** |
+| **Cloud** | **Frameworks for cloud adoption, strategic vendor selection, comprehensive readiness assessments, pre-TCO (Macro 7-R) analysis and Well-Architected reviews.** |
 | **AI** | **Methodologies for governance-focused audit assessments and rigorous emerging AI-technology evaluations.** |
 | **Security** | **Comprehensive risk analysis covering SWIFT threats, ISO 27001 compliance, AI systems, and cloud security posturing.** |
 | **Enterprise & Legacy** | **Frameworks for evaluating Legacy and Enterprise COTS platforms.** |
