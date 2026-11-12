@@ -22,6 +22,7 @@
 |**Cloud Adoption Framework (CAF) Decision Enabler**|A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate the state that they are in with respect to adopting cloud.|
 |**Cloud Readiness Assessment (CRA) Decision Enabler**|A structured, automated Excel-based planning calculator built to accelerate your pre-cloud migration journey. This tool aligns directly with Cloud Adoption Framework (CAF) best practices to help organizations evaluate readiness for cloud adoption.|
 |**Cloud Vendor Selection Decision Enabler**|A structured, automated Excel-based selection calculator built to accelerate your pre-cloud migration journey. This tool helps organizations evaluate vendors.|
+|**Cloud Migrate or Not Macro (Pre-TCO analysis) Decision Enabler** |A structured, automated Excel-based selection calculator built to confirm your pre-cloud migration journey. This tool helps to decide if a particular application should be migrated to cloud or not and if not which of the 7-R (Refactor, Re-Architect, Replace) applies to it.|
 
 
 
