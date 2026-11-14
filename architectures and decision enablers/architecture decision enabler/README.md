@@ -50,6 +50,7 @@
 |**ESB COTS Evaluation Decision Enabler**|A structured Excel calculator that automates COTS ESB vendor selection to replace aging integration systems. It empowers enterprises to orchestrate complex workflows, reduce custom coding overhead, and scale data exchange across the entire ecosystem.|
 |**API Gateway COTS Evaluation Decision Enabler**|A structured Excel calculator that automates COTS API Gateway vendor selection. It empowers organizations to govern their digital ecosystems, protect backend systems from traffic spikes, and streamline developer onboarding through a single, unified control <br />plane.|
 |**SAS COTS Evaluation Decision Enabler**|A structured Excel-based tool designed to objective-score and accelerate vendor selection for replacing legacy mainframe SAS. It empowers enterprises to compare COTS features, evaluate MIPS-reduction potential, and analyze total cost of ownership (TCO) across the analytics ecosystem.|
+|**Legacy (Mainframe) Batch jobs 5-R Analysis Decision Enabler**|A structured Excel-based framework designed to accelerate legacy mainframe modernization strategies. It enables teams to evaluate and finalize key disposition decisions—whether to replace, refactor, rearchitect, retire, or retain systems as-is.|
 
 
 
