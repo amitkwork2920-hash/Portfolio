@@ -30,6 +30,14 @@ an application to cloud or replace, refactor, rearchitect.
    |**Financial**|
    |**Risk**|
 
+* **6-R Macro (pre-TCO) future Blueprint:**  Investigates future application strategy from below states : 
+
+|Strategy |Business Explanation|
+|-|-|
+|**Migrate to Cloud:**| Highly suitable for migrating to cloud. |
+|**Rearchitect/Refactor :**| Highly suitable for Rearchitecting or Refactoring. | 
+|**SaaS/COTS:**| Highly suitable as SaaS or COTS application. |
+|**Refactor/Reuse:**| Highly suitable for Refactoring or Reuse. |
  
 ## 📁 Repository Structure
 

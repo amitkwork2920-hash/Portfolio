@@ -9,7 +9,7 @@ A structured, automated Excel-based selection calculator built to accelerate you
 
 ## 🚀 Key Features
 
-* **6-R Macro (pre-TCO) analysis :** Decides by evaluating through 40 point (15 parameters) whether to migrate an application to cloud or refactor or replace or rearchitect:
+* **5-R Macro (pre-TCO) analysis:** Decides by evaluating through 150 point (15 parameters) whether to retain, retire, refactor, replace or rearchitect a legacy batch application:
 
 |Parameters|
    |-|
@@ -28,6 +28,8 @@ A structured, automated Excel-based selection calculator built to accelerate you
    |**Integration Complexity**|
    |**Expected Lifecycle**|
    |**Long-term Strategic Alignment**|
+
+* **Legacy Job Future Blueprint:**  Investigates legacy job future strategy from below states :
 
 |Strategy |Business Explanation|
 |-|-|
