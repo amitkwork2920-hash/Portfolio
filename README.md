@@ -21,7 +21,7 @@ The goal of this sabbatical was to dive deep into:
 | **Multi-Tenancy** | **Multi tenancy architecture on cloud** | `Cloud (AWS, Azure)` |
 | **Legacy** | **Legacy modernization.** | `Cloud (AWS, Azure)` <br> `AI (AWS, Azure)` <br> `Legacy (Mainframe)` |
 
-📚 Prepared 10+ Architecture Decision Enablers in the following decision domains:
+📚 Prepared 15+ Architecture Decision Enablers in the following decision domains:
 
 # 💼 Decision Domains 
 
