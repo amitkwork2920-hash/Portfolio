@@ -4,7 +4,7 @@ Welcome! This repository documents the different activities that I completed dur
 
 The goal of this sabbatical was to dive deep into: 
 
-📚 Prepared 25 Case-Studies for Reference Architectures in the following domains & Technologies: 
+📚 Evaluated 25+ case studies to define standardized reference architectures for below domains, producing complete architectural documentation spanning customer journeys, ADRs, trade-off analyses, AWS, Azure Well-Architected reviews, and cost/security governance/Risk matrices.: 
 
 # 💼 Domains 
 
